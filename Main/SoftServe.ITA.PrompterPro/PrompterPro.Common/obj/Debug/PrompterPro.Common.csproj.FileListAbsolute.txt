@@ -1,0 +1,12 @@
+E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
+E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
+E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\PrompterPro.Common.csprojResolveAssemblyReference.cache
+E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\SoftServe.ITA.PrompterPro.Common.dll
+E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\SoftServe.ITA.PrompterPro.Common.pdb
+C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
+C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
+C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll.CodeAnalysisLog.xml
+C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll.lastcodeanalysissucceeded
+C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\PrompterPro.Common.csprojResolveAssemblyReference.cache
+C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\SoftServe.ITA.PrompterPro.Common.dll
+C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\SoftServe.ITA.PrompterPro.Common.pdb

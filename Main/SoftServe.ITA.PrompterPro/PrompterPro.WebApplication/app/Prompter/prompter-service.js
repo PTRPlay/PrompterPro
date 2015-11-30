@@ -20,7 +20,7 @@
 
     	    var textBox = $('#area');
     	    var animation;
-    	    var maxSpeed = 10;
+    	    var maxSpeed = 5;
     	    var minSpeed = 1;
     	    var velocity = 15;
 	        var resolutionMultiplier = 1;
