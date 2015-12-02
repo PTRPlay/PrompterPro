@@ -30,7 +30,7 @@
     var textBox = $('#area');
 
     var animation;
-    var maxSpeed = 12;
+    var maxSpeed = 10;
     var minSpeed = 1;
     var velocity = 40;
 
@@ -50,7 +50,7 @@
     function setDefaultProps() {
         $scope.isMirroredX = undefined;
         $scope.isMirroredY = undefined;
-        $scope.speed = 2;
+        $scope.speed = 5;
         $scope.leftPadding = 0;
         $scope.rightPadding = 0;
         $scope.textSize = 90;
