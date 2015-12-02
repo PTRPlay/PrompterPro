@@ -207,11 +207,13 @@
     <Content Include="app\errorLogger.js" />
     <Content Include="app\Operator\controllers\playerController.js" />
     <Content Include="app\Operator\controllers\customizePromptersDialog.js" />
+    <Content Include="app\Operator\controllers\actorsController.js" />
     <Content Include="app\Operator\controllers\prompterController.js" />
     <Content Include="app\Operator\controllers\scriptController.js" />
     <Content Include="app\Operator\directives\dndLists.js" />
     <Content Include="app\Operator\directives\focusMe.js" />
     <Content Include="app\Operator\filters\scriptFilter.js" />
+    <Content Include="app\Operator\services\actorsServices\fetchActors-service.js" />
     <Content Include="app\Operator\services\init\initScriptCtrlFunctions.js" />
     <Content Include="app\Operator\services\init\initScriptCtrlProps.js" />
     <Content Include="app\Operator\services\modals\operatorDialog.js" />
@@ -219,6 +221,7 @@
     <Content Include="app\Operator\services\prompterServices\prompterChecked.js" />
     <Content Include="app\Operator\services\prompterServices\prompterClass.js" />
     <Content Include="app\Operator\services\prompterServices\prompterOrder.js" />
+    <Content Include="app\Operator\services\prompterServices\actorRepository.js" />
     <Content Include="app\Operator\services\scriptServices\broadcastOperator.js" />
     <Content Include="app\Operator\services\scriptServices\scriptService.js" />
     <Content Include="app\Operator\services\prompterServices\prompterRepository.js" />

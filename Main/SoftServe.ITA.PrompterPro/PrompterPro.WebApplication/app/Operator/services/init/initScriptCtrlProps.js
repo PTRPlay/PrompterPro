@@ -32,6 +32,11 @@
                 $scope.showPrompterList = !$scope.showPrompterList;
             }
 
+            $scope.showActorList = true;
+            $scope.actorListClick = function () {
+                $scope.showActorList = !$scope.showActorList;
+            }
+
             $scope.newScriptName = constants.scriptDefaultName;
 
 

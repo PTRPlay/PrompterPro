@@ -5,6 +5,7 @@
         prompter                : "/api/prompter",
         diagnostics             : "/api/diagnostics",
         userActivity            : "/api/userActivity",
-        userActivityActivator   : "/api/userActivityActivator"
+        userActivityActivator: "/api/userActivityActivator",
+        actor                   : "api/actor"
     });
 });
