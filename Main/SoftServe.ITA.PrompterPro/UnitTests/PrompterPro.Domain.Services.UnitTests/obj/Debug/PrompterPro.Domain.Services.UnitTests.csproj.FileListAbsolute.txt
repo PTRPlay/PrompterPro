@@ -17,3 +17,22 @@ E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Dom
 E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\PrompterPro.Domain.Services.UnitTests.csprojResolveAssemblyReference.cache
 E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.dll
 E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\EntityFramework.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\Moq.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\nunit.framework.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\EntityFramework.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\Moq.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\nunit.framework.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\PrompterPro.Domain.Services.UnitTests.csprojResolveAssemblyReference.cache
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.pdb
