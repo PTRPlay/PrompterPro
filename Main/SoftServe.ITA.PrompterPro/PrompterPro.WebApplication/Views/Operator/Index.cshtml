@@ -417,11 +417,11 @@
                                                             <input type="range"
                                                                    min="70"
                                                                    max="109"
-                                                                   ng-model="textSize"
+                                                                   ng-model="textSizeInput"
+                                                                   ng-change="changeTextSize()"
                                                                    data-toggle="tooltip"
                                                                    data-placement="top"
-                                                                   tooltip="size:{{textSize}}" />
-                                                            {{changeTextSize(textSize)}}
+                                                                   tooltip="size:{{textSize}}" />                                                            
                                                         </div>
                                                         <div class="col-xs-6">
                                                             <button class="btn btn-default glyphicon glyphicon-play move-left"

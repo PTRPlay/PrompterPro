@@ -20,14 +20,14 @@
 
     	    var textBox = $('#area');
     	    var animation;
-    	    var maxSpeed = 5;
+    	    var maxSpeed = 10;
     	    var minSpeed = 1;
-    	    var velocity = 15;
+    	    var velocity = 40;
 	        var resolutionMultiplier = 1;
     	    $scope.textIsChanged = false;
     	    $scope.textSizes = [50, 55, 60, 70, 80, 90, 100, 110, 130];
     	    $scope.showDialog = false;
-    	    $scope.speed = 1;
+    	    $scope.speed = 5;
     	    $scope.currentSize = $scope.textSizes[2];
     	    $scope.textSize = 90;
     	    $scope.leftPadding = 0;
@@ -156,7 +156,7 @@
             }
             
             $scope.displayText = function () {
-                var text = '\n\n';
+                var text = '\n';
                 var sections = $scope.script.Sections;
                 _.each(sections, function (section) {
                     text += '[Section:' + section.Order + ']\n' + section.Text + '\n';

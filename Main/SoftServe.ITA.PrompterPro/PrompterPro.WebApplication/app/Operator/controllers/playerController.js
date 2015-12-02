@@ -30,9 +30,10 @@
     var textBox = $('#area');
 
     var animation;
-    var maxSpeed = 12;
+    var maxSpeed = 10;
     var minSpeed = 1;
     var velocity = 40;
+    var textSizeInput = 90;
 
     $scope.textIsChanged = false;
     $scope.textSizes = [50,55,60,70,80,90,100,110,130];
@@ -88,13 +89,17 @@
 
     $scope.play = function () {
         $scope.isPlayDisabled = true;
+        broadcastHub.server.play();
+    }
+
+    broadcastHub.client.play = function () {
         animation = setInterval(function () {
             if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
                 textBox.scrollTop(textBox.scrollTop() + $scope.speed);
             }
         }, velocity);
-        broadcastHub.server.play();
     }
+
 
     $scope.handPlayBack = function () {
         $scope.pause();
@@ -120,28 +125,42 @@
     $scope.pause = function () {
         $scope.isHandPlayDisabled = false;
         $scope.isPlayDisabled = false;
+        broadcastHub.invoke('pause');
+    }
+
+    broadcastHub.client.pause = function () {
         clearInterval(animation);
-        broadcastHub.server.pause();
     }
 
     $scope.stop = function () {
         $scope.isPlayDisabled = false;
-        $scope.pause();
-        textBox.scrollTop(0);
-        broadcastHub.server.stop();
+        $scope.isHandPlayDisabled = false;
+        broadcastHub.invoke('stop');
     }
+
+    broadcastHub.client.stop = function () {
+        clearInterval(animation);
+        textBox.scrollTop(0);
+    }
+
     $scope.speedUp = function () {
+        broadcastHub.invoke('speedUp');
+    }
+
+    broadcastHub.client.speedUp = function () {
         if ($scope.speed < maxSpeed) {
             $scope.speed++;
         }
-        broadcastHub.server.speedUp();
     }
 
     $scope.speedDown = function () {
+        broadcastHub.invoke('speedDown');
+    }
+
+    broadcastHub.client.speedDown = function () {
         if ($scope.speed > minSpeed) {
             $scope.speed--;
         }
-        broadcastHub.server.speedDown();
     }
 
     $scope.getNextSection = function() {
@@ -160,8 +179,13 @@
         broadcastHub.server.padLeft(percentage);
     }
 
-    $scope.changeTextSize = function (size) {
-        broadcastHub.server.changeTextSize(size);
+    $scope.changeTextSize = function () {
+        broadcastHub.server.changeTextSize($scope.textSizeInput);
+    }
+
+    broadcastHub.client.changeTextSize = function (size) {
+        $scope.textSize = size;
+        $scope.$apply();
     }
     
 }]);

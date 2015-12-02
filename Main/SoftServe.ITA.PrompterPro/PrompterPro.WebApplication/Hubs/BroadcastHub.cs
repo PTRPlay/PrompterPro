@@ -329,32 +329,32 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
 
 		public void Play()
 		{
-		    Clients.OthersInGroup(GetGroupName()).play();
+		    Clients.All.play();
 		}
 
 		public void Pause()
 		{
-		    Clients.OthersInGroup(GetGroupName()).pause();
+		    Clients.All.pause();
 		}
 
 		public void Stop()
 		{
-		    Clients.OthersInGroup(GetGroupName()).stop();
+		    Clients.All.stop();
 		}
 
 		public void ChangeTextSize(int size)
 		{
-		    Clients.OthersInGroup(GetGroupName()).changeTextSize(size);
+		    Clients.All.changeTextSize(size);
 		}
 
 		public void SpeedUp()
 		{
-		    Clients.OthersInGroup(GetGroupName()).speedUp();
+		    Clients.All.speedUp();
 		}
 
 		public void SpeedDown()
 		{
-		    Clients.OthersInGroup(GetGroupName()).speedDown();
+		    Clients.All.speedDown();
 		}
 
 		public void MirrorText(bool? isMirroredX, bool? isMirroredY)
