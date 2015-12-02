@@ -159,6 +159,7 @@
     <CodeAnalysisDictionary Include="..\PrompterProCodeAnalysisDictionary.xml">
       <Link>PrompterProCodeAnalysisDictionary.xml</Link>
     </CodeAnalysisDictionary>
+    <Content Include="app\Admin\controllers\actorsController.js" />
     <Content Include="app\Admin\controllers\admin-controller.js" />
     <Content Include="app\Admin\controllers\datepicker-controller.js" />
     <Content Include="app\Admin\controllers\diagnostics-controller.js" />
@@ -167,6 +168,7 @@
     <Content Include="app\Admin\controllers\modalInstance-controller.js" />
     <Content Include="app\Admin\controllers\users-controller.js" />
     <Content Include="app\Admin\directives\uiSwitch-directive.js" />
+    <Content Include="app\Admin\services\actorsRepository.js" />
     <Content Include="app\Admin\services\dialog-service.js" />
     <Content Include="app\Admin\services\userActivity\userActivity-repository.js" />
     <Content Include="app\Admin\services\userActivity\userActivity-service.js" />
@@ -330,6 +332,7 @@
     <Content Include="Scripts\min\scripts.min.js" />
     <Content Include="Scripts\min\scriptsForTests.js" />
     <Content Include="Scripts\min\unitTests.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\truncate.js" />
     <Content Include="Scripts\underscore.js" />
@@ -373,6 +376,7 @@
     <Compile Include="Models\Mappers\IUserMapper.cs" />
     <Compile Include="Models\TransferUserActivity.cs" />
     <Compile Include="Models\TransferRole.cs" />
+    <Compile Include="WebApi\ActorController.cs" />
     <Compile Include="WebApi\DiagnosticsController.cs" />
     <Compile Include="WebApi\UserActivityActivatorController.cs" />
     <Compile Include="WebApi\UserActivityController.cs" />
@@ -436,6 +440,9 @@
     <Content Include="Views\Admin\Users.cshtml" />
     <Content Include="Views\Admin\UserActivity.cshtml" />
     <Content Include="Views\Tests\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Admin\Actors.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
