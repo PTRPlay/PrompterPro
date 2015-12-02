@@ -13,6 +13,10 @@
                 <a id="userHref" href="#!/Admin/Users">Users</a>
                 <div ng-init="autoClick('userHref'); isUsersTabActive = true"></div>
             </li>
+            <li role="presentation" ng-click="makeActorTab()"
+                ng-class="{'active':isActorTabActive}">
+                <a href="#!/Admin/Actors">Actors</a>
+            </li>
             <li role="presentation" ng-click='makeDiagnosticsTab()'
                 ng-class="{'active':isDiagnosticsTabActive}">
                 <a href="#!/Admin/Diagnostics">Diagnostics</a>

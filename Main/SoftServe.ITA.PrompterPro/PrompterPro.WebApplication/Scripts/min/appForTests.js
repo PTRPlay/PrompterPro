@@ -1004,6 +1004,10 @@ app.config(
             {
                 templateUrl: "/Admin/UserActivity",
                 controller: "userActivityController"
+            }).when('/Admin/Actors',
+            {
+                templateUrl: '/Admin/Actors',
+                controller: 'actorsController'
             });
 
         $locationProvider.html5Mode(false).hashPrefix('!');
