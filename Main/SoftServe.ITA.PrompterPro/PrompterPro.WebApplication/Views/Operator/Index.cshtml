@@ -188,6 +188,46 @@
                         </div>
 
                     </div>
+                    <!-- actors list -->
+                    <div class="list-group"
+                         ng-controller="promptersController" ng-init="fetchAllPrompters()">
+                        <a class="list-group-item active btn"
+                           ng-click="prompterListClick()">
+                            <span class="badge">{{filteredPrompters.length}}</span>
+                            Actors
+                        </a>
+                        <div class="list-group-item"
+                             ng-show="showPrompterList">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                                </span>
+                                <input type="search" class="form-control" placeholder="Find"
+                                       ng-model="searchPrompter.Login">
+                            </div>
+                        </div>
+
+                        <div class="list-group items-list">
+                            <a class="list-group-item"
+                               ng-show="showPrompterList"
+                               ng-repeat="prompter in filteredPrompters = (prompters
+                                                                       | filter: searchPrompter
+                                                                       | orderBy: prompterOrder)"
+                               ng-class="prompterClass(prompter)">
+                                <span class="btn btn-circle pull-right"
+                                      ng-show="scriptService.canCheck(prompter)">
+                                    <span class="glyphicon glyphicon-unchecked"
+                                          ng-hide="prompterChecked(prompter)"
+                                          ng-click="scriptService.check(prompter)"></span>
+                                    <span class="glyphicon glyphicon-check"
+                                          ng-show="prompterChecked(prompter)"
+                                          ng-click="scriptService.check(prompter)"></span>
+                                </span>
+                                <h5>{{prompter.Login}}</h5>
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
 
                 <!-- editor area -->

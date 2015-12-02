@@ -1,14 +1,13 @@
 ﻿app.service("actorsRepository", [
     "$http",
     "$q",
-    "webApi",
-    function ($http, $q, webApi) {
+    function ($http, $q) {
         var self = this;
 
-        self.userActivity = {
-            get: function (page) {
+        self.actors = {
+            get: function (id) {
                 var deferred = $q.defer();
-                $http.get(webApi.userActivity + "?page=" + page)
+                $http.get("api/Actor?id" + id)
                     .success(function (response) {
                         deferred.resolve(response);
                     })
@@ -18,10 +17,9 @@
                 return deferred.promise;
             },
 
-            post: function (page) {
+            getall: function () {
                 var deferred = $q.defer();
-                $http.post(webApi.userActivity,
-                    { page: page })
+                $http.get("api/Actor/")
                     .success(function (response) {
                         deferred.resolve(response);
                     })
@@ -31,9 +29,34 @@
                 return deferred.promise;
             },
 
-            clearAllHistory: function () {
+            post: function (actor) {
                 var deferred = $q.defer();
-                $http.delete(webApi.userActivity)
+                $http.post("api/Actor",
+                    actor)
+                    .success(function (response) {
+                        deferred.resolve(response);
+                    })
+                    .error(function (error) {
+                        deferred.reject(error);
+                    });
+                return deferred.promise;
+            },
+
+            del: function (id) {
+                var deferred = $q.defer();
+                $http.delete("api/Actor?id=" + id)
+                    .success(function (response) {
+                        deferred.resolve(response);
+                    })
+                    .error(function (error) {
+                        deferred.reject(error);
+                    });
+                return deferred.promise;
+            },
+
+            put: function (actor) {
+                var deferred = $q.defer();
+                $http.put("api/Actor?id=" + actor.Id, actor)
                     .success(function (response) {
                         deferred.resolve(response);
                     })
@@ -42,33 +65,7 @@
                     });
                 return deferred.promise;
             }
-        }
 
-        self.userActivityActivator = {
-            get: function () {
-                var deferred = $q.defer();
-                $http.get(webApi.userActivityActivator)
-                    .success(function (response) {
-                        deferred.resolve(response);
-                    })
-                    .error(function (error) {
-                        deferred.reject(error);
-                    });
-                return deferred.promise;
-            },
-
-            post: function (val) {
-                var deferred = $q.defer();
-                $http.post(webApi.userActivityActivator
-                    + "?isUserActivityActivated=" + val)
-                    .success(function (response) {
-                        deferred.resolve(response);
-                    })
-                    .error(function (error) {
-                        deferred.reject(error);
-                    });
-                return deferred.promise;
-            }
         }
 
         return self;

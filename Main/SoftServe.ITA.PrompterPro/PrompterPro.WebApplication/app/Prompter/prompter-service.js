@@ -37,7 +37,7 @@
 		    function setDefaultProps() {
 		        $scope.isMirroredX = undefined;
 		        $scope.isMorroredY = undefined;
-		        $scope.speed = 1;
+		        $scope.speed = 5;
 		        $scope.leftPadding = 0;
 		        $scope.rightPadding = 0;
 		        $scope.textSize = 90;
