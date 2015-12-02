@@ -156,7 +156,7 @@
             }
             
             $scope.displayText = function () {
-                var text = '\n\n';
+                var text = '\n';
                 var sections = $scope.script.Sections;
                 _.each(sections, function (section) {
                     text += '[Section:' + section.Order + ']\n' + section.Text + '\n';
