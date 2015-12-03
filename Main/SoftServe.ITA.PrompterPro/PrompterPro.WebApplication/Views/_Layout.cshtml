@@ -6,7 +6,7 @@
 	<title>@ViewBag.Title</title>
 	<script src="~/Scripts/min/scripts.min.js"></script>
 	<script src="signalr/hubs"></script>
-	@*<script src="~/Scripts/min/app.min.js"></script>*@
+	<script src="~/Scripts/min/app.min.js"></script>
 
     <script src="~/app/app.js"></script>
     <script src="~/app/errorLogger.js"></script>
@@ -82,7 +82,11 @@
     @*actors scripts*@
     <script src="~/app/Operator/services/actorsServices/fetchActors-service.js"></script>
     <script src="~/app/Operator/controllers/actorsController.js"></script>
-    <script src="~/app/Operator/services/prompterServices/actorRepository.js"></script>
+    @*<script src="~/app/Operator/services/prompterServices/actorRepository.js"></script>*@
+    <script src="~/app/Operator/services/prompterServices/actorChecked.js"></script>
+    <script src="~/app/Admin/services/actorsRepository.js"></script>
+    <script src="~/app/Operator/services/actorsServices/actorOrder.js"></script>
+    <script src="~/app/Operator/services/actorsServices/actorService.js"></script>
 
     @RenderSection("Scripts", false)
 

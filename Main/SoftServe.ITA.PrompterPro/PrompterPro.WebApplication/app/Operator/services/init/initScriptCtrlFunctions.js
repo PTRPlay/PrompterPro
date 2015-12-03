@@ -3,6 +3,7 @@
     "scriptService",
     "scriptClass",
     "scriptOrder",
+    "actorOrder",
     "canPlay",
     "operatorDialog",
     "manageSections",
@@ -12,6 +13,7 @@
         scriptService,
         scriptClass,
         scriptOrder,
+        actorOrder,
         canPlay,
         operatorDialog,
         manageSections,
@@ -23,6 +25,7 @@
             $scope.scriptClass = scriptClass($scope);
             $scope.canPlay = canPlay($scope);
             $scope.scriptOrder = scriptOrder;
+            $scope.actorOrder = actorOrder;
             $scope.operatorDialog = operatorDialog($scope);
             $scope.broadcastOperator = broadcastOperator($scope);
 

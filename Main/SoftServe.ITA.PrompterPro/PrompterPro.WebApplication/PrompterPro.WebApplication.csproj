@@ -214,10 +214,13 @@
     <Content Include="app\Operator\directives\focusMe.js" />
     <Content Include="app\Operator\filters\scriptFilter.js" />
     <Content Include="app\Operator\services\actorsServices\fetchActors-service.js" />
+    <Content Include="app\Operator\services\actorsServices\actorOrder.js" />
+    <Content Include="app\Operator\services\actorsServices\actorService.js" />
     <Content Include="app\Operator\services\init\initScriptCtrlFunctions.js" />
     <Content Include="app\Operator\services\init\initScriptCtrlProps.js" />
     <Content Include="app\Operator\services\modals\operatorDialog.js" />
     <Content Include="app\Operator\services\prompterServices\fetchPrompters-service.js" />
+    <Content Include="app\Operator\services\prompterServices\actorChecked.js" />
     <Content Include="app\Operator\services\prompterServices\prompterChecked.js" />
     <Content Include="app\Operator\services\prompterServices\prompterClass.js" />
     <Content Include="app\Operator\services\prompterServices\prompterOrder.js" />
@@ -381,6 +384,7 @@
     <Compile Include="Models\TransferRole.cs" />
     <Compile Include="WebApi\ActorController.cs" />
     <Compile Include="WebApi\DiagnosticsController.cs" />
+    <Compile Include="WebApi\PreferenceController.cs" />
     <Compile Include="WebApi\UserActivityActivatorController.cs" />
     <Compile Include="WebApi\UserActivityController.cs" />
     <Compile Include="WebApi\PresentationController.cs" />
@@ -443,8 +447,6 @@
     <Content Include="Views\Admin\Users.cshtml" />
     <Content Include="Views\Admin\UserActivity.cshtml" />
     <Content Include="Views\Tests\Index.cshtml" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Admin\Actors.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

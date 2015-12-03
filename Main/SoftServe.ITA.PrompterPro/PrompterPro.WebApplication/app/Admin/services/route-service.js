@@ -21,7 +21,7 @@
             .when("/Admin/Actors",
             {
                 templateUrl: "/Admin/Actors",
-                controller: "actorsController"
+                controller: "actorsAdminController"
            })
         ;
 

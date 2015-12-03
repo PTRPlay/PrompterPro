@@ -60,6 +60,8 @@ namespace SoftServe.ITA.PrompterPro.WebApplication
             container.RegisterType<IPrompterStatus, PrompterStatus>();
             container.RegisterType<IPrompterStatus, PrompterStatus>(new ContainerControlledLifetimeManager());
             container.RegisterType<IEvents, Events>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IActorService, ActorService>();
+            container.RegisterType<IPreferenceService, PreferenceService>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
             
