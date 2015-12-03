@@ -58,6 +58,8 @@
     <Compile Include="ILoginService.cs" />
     <Compile Include="Impl\ActorService.cs" />
     <Compile Include="Impl\DiagnosticsService.cs" />
+    <Compile Include="Impl\PreferenceService.cs" />
+    <Compile Include="IPreferenceService.cs" />
     <Compile Include="IUserActivityService.cs" />
     <Compile Include="Impl\LoginService.cs" />
     <Compile Include="Impl\UserActivityService.cs" />

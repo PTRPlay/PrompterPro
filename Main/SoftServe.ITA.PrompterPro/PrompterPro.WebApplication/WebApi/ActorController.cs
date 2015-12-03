@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -27,7 +28,7 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
         // GET: api/Actor/5
         public Reader Get(int id)
         {
-            return actorService.Get(id);
+            return actorService.Get(reader => reader.Id == id);
         }
 
         // POST: api/Actor
@@ -41,13 +42,15 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
         [HttpPut]
         public void Put(int id, [FromBody]Reader value)
         {
-            actorService.Put(id, value);
+            if (value.Id != id)
+                value.Id = id;
+            actorService.Put(value);
         }
 
         // DELETE: api/Actor/5
         public void Delete(int id)
         {
-            actorService.Delete(id);
+            actorService.Delete(reader => reader.Id == id);
         }
     }
 }

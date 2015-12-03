@@ -10,14 +10,42 @@
        <Types>
         <Type Name="IActorService" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Members>
-          <Member Name="#Get(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+          <Member Name="#Delete(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;SoftServe.ITA.PrompterPro.Domain.Models.Reader,System.Boolean&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Get" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2015-12-03 14:47:14Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error">Rename virtual/interface member 'IActorService.Get(int)' so that it no longer conflicts with the reserved language keyword 'Get'. Using a reserved keyword as the name of a virtual/interface member makes it harder for consumers in other languages to override/implement the member.</Issue>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-03 16:24:17Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError">Consider a design where 'IActorService.Delete(Expression&lt;Func&lt;Reader, bool&gt;&gt;)' doesn't nest generic type 'Expression&lt;Func&lt;Reader, bool&gt;&gt;'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Get(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;SoftServe.ITA.PrompterPro.Domain.Models.Reader,System.Boolean&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-03 16:24:17Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError">Consider a design where 'IActorService.Get(Expression&lt;Func&lt;Reader, bool&gt;&gt;)' doesn't nest generic type 'Expression&lt;Func&lt;Reader, bool&gt;&gt;'.</Issue>
+            </Message>
+            <Message Id="Get" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2015-12-03 16:24:17Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Rename virtual/interface member 'IActorService.Get(Expression&lt;Func&lt;Reader, bool&gt;&gt;)' so that it no longer conflicts with the reserved language keyword 'Get'. Using a reserved keyword as the name of a virtual/interface member makes it harder for consumers in other languages to override/implement the member.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetMany(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;SoftServe.ITA.PrompterPro.Domain.Models.Reader,System.Boolean&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-03 16:24:17Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError">Consider a design where 'IActorService.GetMany(Expression&lt;Func&lt;Reader, bool&gt;&gt;)' doesn't nest generic type 'Expression&lt;Func&lt;Reader, bool&gt;&gt;'.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SoftServe.ITA.PrompterPro.Domain.Services.Impl">
+       <Types>
+        <Type Name="PreferenceService" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2015-12-03 16:24:17Z" FixCategory="NonBreaking">
+           <Issue Certainty="75" Level="Warning">'PreferenceService' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
+          </Message>
+         </Messages>
         </Type>
        </Types>
       </Namespace>
@@ -27,6 +55,26 @@
   </Target>
  </Targets>
  <Rules>
+  <Rule TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812">
+   <Name>Avoid uninstantiated internal classes</Name>
+   <Description>An internal class was detected that is apparently never instantiated. This rule does not attempt to detect late-bound creation and will generate false positives if instances of a type are only created in this way (for example, by means of Activator.CreateInstance or by passing the type as an argument to a TypeConverter constructor).</Description>
+   <Resolution Name="Default">{0} is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182265.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006">
+   <Name>Do not nest generic types in member signatures</Name>
+   <Description>Avoid API that require users to instantiate a generic type with another generic type as type argument. The syntax gets too complex.</Description>
+   <Resolution Name="Default">Consider a design where {0} doesn't nest generic type {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182144.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
   <Rule TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716">
    <Name>Identifiers should not match keywords</Name>
    <Description>Identifiers which conflict with reserved language keywords should be avoided. Using a reserved keyword as an identifier makes it harder for consumers in other languages to use your API.</Description>

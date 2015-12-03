@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using SoftServe.ITA.PrompterPro.Domain.Models;
@@ -11,12 +12,14 @@ namespace SoftServe.ITA.PrompterPro.Domain.Services
     {
         IEnumerable<Reader> GetAll();
 
-        Reader Get(int id);
+        IEnumerable<Reader> GetMany(Expression<Func<Reader, bool>> expression);
+
+        Reader Get(Expression<Func<Reader, bool>> expression);
 
         void Post(Reader reader);
 
-        void Put(int id, Reader reader);
+        void Put(Reader reader);
 
-        void Delete(int id);
+        void Delete(Expression<Func<Reader, bool>> expression);
     }
 }

@@ -381,6 +381,7 @@
     <Compile Include="Models\TransferRole.cs" />
     <Compile Include="WebApi\ActorController.cs" />
     <Compile Include="WebApi\DiagnosticsController.cs" />
+    <Compile Include="WebApi\PreferenceController.cs" />
     <Compile Include="WebApi\UserActivityActivatorController.cs" />
     <Compile Include="WebApi\UserActivityController.cs" />
     <Compile Include="WebApi\PresentationController.cs" />
