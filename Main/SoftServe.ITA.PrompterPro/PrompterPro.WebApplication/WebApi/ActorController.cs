@@ -22,7 +22,10 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
         // GET: api/Actor
         public IEnumerable<Reader> Get()
         {
-            return this.actorService.GetAll();
+            var ret = new[] { new Reader{FirstName="Taras" },
+            new Reader{FirstName="Jack" },};
+            return ret;
+            //return this.actorService.GetAll();
         }
 
         // GET: api/Actor/5

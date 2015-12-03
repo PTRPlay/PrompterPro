@@ -211,9 +211,7 @@
                             <a class="list-group-item"
                                ng-show="showActorList"
                                ng-repeat="actor in filteredActors = (actors
-                                                                       | filter: searchActor
-                                                                       | orderBy: actorOrder)"
-                               ng-class="actorClass(actor)">
+                                                                       | filter: searchActor)">
                                 <span class="btn btn-circle pull-right"
                                       ng-show="scriptService.canCheck(actor)">
                                     <span class="glyphicon glyphicon-unchecked"
@@ -223,7 +221,7 @@
                                           ng-show="actorChecked(actor)"
                                           ng-click="scriptService.check(actor)"></span>
                                 </span>
-                                <h5>{{actor.Login}}</h5>
+                                <h5>{{actor.FirstName}}</h5>
                             </a>
                         </div>
                     </div>
