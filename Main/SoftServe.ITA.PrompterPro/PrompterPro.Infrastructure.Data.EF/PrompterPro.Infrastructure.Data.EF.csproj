@@ -65,6 +65,7 @@
     <Compile Include="Mapping\UserMapping.cs" />
     <Compile Include="PrompterDbContext\BaseDbContext.cs" />
     <Compile Include="PrompterDbContext\CreateDbContext.cs" />
+    <Compile Include="PrompterDbContext\Impl\PrompterDbSeed.cs" />
     <Compile Include="PrompterDbContext\IPrompterDbContext.cs" />
     <Compile Include="PrompterDbContext\IPrompterDiagnosticsDbContext.cs" />
     <Compile Include="PrompterDbContext\Impl\PrompterDbContext.cs" />
