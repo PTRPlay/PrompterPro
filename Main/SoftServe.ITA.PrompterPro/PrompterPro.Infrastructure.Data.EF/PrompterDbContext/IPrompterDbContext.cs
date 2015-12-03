@@ -13,6 +13,9 @@ namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext
         IDbSet<Script> Scripts { get; }
         IDbSet<Section> Sections { get; }
         IDbSet<User> Users { get; }
+        IDbSet<Reader> Readers { get; set; }
+        IDbSet<Preference> Preferences { get; set; }
+
         DbEntityEntry Entry(object entity);
         int SaveChanges();
         void Attach<T>(T baseModel) where T : class, IStateModel;

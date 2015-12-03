@@ -12,7 +12,7 @@
          <Members>
           <Member Name="#RegisterBundles(System.Web.Optimization.BundleCollection)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="bundles" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-03 14:47:23Z" FixCategory="DependsOnFix">
+            <Message Id="bundles" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="d:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\App_Start" File="BundleConfig.cs" Line="9">Parameter 'bundles' of 'BundleConfig.RegisterBundles(BundleCollection)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
@@ -23,14 +23,14 @@
          <Members>
           <Member Name="#RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-03 14:47:23Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="d:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication" File="Global.asax.cs" Line="43">In externally visible method 'Global.RegisterGlobalFilters(GlobalFilterCollection)', validate parameter 'filters' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RegisterGlobalHttpFilters(System.Web.Http.Filters.HttpFilterCollection)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-03 14:47:23Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="d:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication" File="Global.asax.cs" Line="37">In externally visible method 'Global.RegisterGlobalHttpFilters(HttpFilterCollection)', validate parameter 'filters' before using it.</Issue>
             </Message>
            </Messages>
@@ -45,14 +45,14 @@
          <Members>
           <Member Name="#ConfigurePrompters(System.Collections.Generic.List`1&lt;SoftServe.ITA.PrompterPro.WebApplication.Hubs.PrompterInfo&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-03 14:47:23Z" FixCategory="Breaking">
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error" Path="d:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\Hubs" File="BroadcastHub.cs" Line="386">Change 'List&lt;PrompterInfo&gt;' in 'BroadcastHub.ConfigurePrompters(List&lt;PrompterInfo&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#StartBroadcast(SoftServe.ITA.PrompterPro.WebApplication.Hubs.BroadcastInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-03 14:47:23Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="d:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\Hubs" File="BroadcastHub.cs" Line="236">In externally visible method 'BroadcastHub.StartBroadcast(BroadcastInfo)', validate parameter 'info' before using it.</Issue>
             </Message>
            </Messages>
@@ -63,10 +63,10 @@
          <Members>
           <Member Name="#PrompterIdList" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2015-12-03 14:47:23Z" FixCategory="Breaking">
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Warning">Change 'BroadcastInfo.PrompterIdList' to be read-only by removing the property setter.</Issue>
             </Message>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-03 14:47:23Z" FixCategory="Breaking">
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error">Change 'List&lt;int&gt;' in 'BroadcastInfo.PrompterIdList' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
@@ -77,10 +77,10 @@
          <Members>
           <Member Name="#PrompterIdList" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2015-12-03 14:47:23Z" FixCategory="Breaking">
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Warning">Change 'GroupInfo.PrompterIdList' to be read-only by removing the property setter.</Issue>
             </Message>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-03 14:47:23Z" FixCategory="Breaking">
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error">Change 'List&lt;int&gt;' in 'GroupInfo.PrompterIdList' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
@@ -91,8 +91,41 @@
          <Members>
           <Member Name="#Configuration(Owin.IAppBuilder)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-03 14:47:23Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="d:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\Hubs" File="OwinStartup.cs" Line="11">The 'this' parameter (or 'Me' in Visual Basic) of 'OwinStartup.Configuration(IAppBuilder)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SoftServe.ITA.PrompterPro.WebApplication.WebApi">
+       <Types>
+        <Type Name="ActorController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Get()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="d:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="24">The 'this' parameter (or 'Me' in Visual Basic) of 'ActorController.Get()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Put(System.Int32,SoftServe.ITA.PrompterPro.Domain.Models.Reader)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="48">In externally visible method 'ActorController.Put(int, Reader)', validate parameter 'value' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PreferenceController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Put(System.Int32,SoftServe.ITA.PrompterPro.Domain.Models.Preference)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-03 17:11:47Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="PreferenceController.cs" Line="43">In externally visible method 'PreferenceController.Put(int, Preference)', validate parameter 'value' before using it.</Issue>
             </Message>
            </Messages>
           </Member>

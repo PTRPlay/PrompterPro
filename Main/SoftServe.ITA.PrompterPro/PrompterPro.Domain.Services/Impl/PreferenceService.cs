@@ -5,70 +5,70 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using SoftServe.ITA.PrompterPro.Domain.Models;
-using SoftServe.ITA.PrompterPro.Infrastructure.Data;
+using SoftServe.ITA.PrompterPro.Domain.Services;
 using SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext;
 
 namespace SoftServe.ITA.PrompterPro.Domain.Services.Impl
 {
-    public class ActorService : IActorService
+    public class PreferenceService : IPreferenceService
     {
         private readonly IPrompterDbContextFactory _dbContextFactory;
 
-        public ActorService(IPrompterDbContextFactory dbContextFactory)
+        public PreferenceService(IPrompterDbContextFactory dbContextFactory)
         {
             _dbContextFactory = dbContextFactory;
         }
 
-        public IEnumerable<Reader> GetAll()
+        public IEnumerable<Preference> GetAll()
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())
             {
-                return context.Readers.ToList();
+                return context.Preferences.ToList();
             }
         }
 
-        public IEnumerable<Reader> GetMany(Expression<Func<Reader,bool>> expression)
+        public IEnumerable<Preference> GetMany(Expression<Func<Preference,bool>> expression)
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())
             {
-                return context.Readers.Where(expression).ToList();
+                return context.Preferences.Where(expression).ToList();
             }
         }
 
-        public Reader Get(Expression<Func<Reader, bool>> expression)
+        public Preference Get(Expression<Func<Preference, bool>> expression)
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())
             {
-                return context.Readers.Where(expression).FirstOrDefault();
+                return context.Preferences.Where(expression).FirstOrDefault();
             }
         }
 
-        public void Post(Reader reader)
+        public void Post(Preference Preference)
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())
             {
-                context.Readers.Add(reader);
+                context.Preferences.Add(Preference);
                 context.SaveChanges();
             }
         }
 
-        public void Put(Reader reader)
+        public void Put(Preference Preference)
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())
             {
-                context.Entry(reader).State = System.Data.Entity.EntityState.Modified;
+                context.Entry(Preference).State = System.Data.Entity.EntityState.Modified;
                 context.SaveChanges();
             }
         }
 
-        public void Delete(Expression<Func<Reader, bool>> expression)
+        public void Delete(Expression<Func<Preference, bool>> expression)
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())
             {
-                IEnumerable<Reader> delList = context.Readers.Where(expression).ToList();
-                foreach(var reader in delList)
+                IEnumerable<Preference> delList = context.Preferences.Where(expression).ToList();
+                foreach(var Preference in delList)
                 {
-                    context.Readers.Remove(reader);
+                    context.Preferences.Remove(Preference);
                 }
                 context.SaveChanges();
             }
