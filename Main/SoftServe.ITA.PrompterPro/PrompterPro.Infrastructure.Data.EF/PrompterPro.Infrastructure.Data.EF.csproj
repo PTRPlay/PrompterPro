@@ -55,6 +55,8 @@
     <Compile Include="Mapping\BaseMapping.cs" />
     <Compile Include="Mapping\DiagnosticMapping.cs" />
     <Compile Include="Mapping\HistoryMapping.cs" />
+    <Compile Include="Mapping\PreferenceMapping.cs" />
+    <Compile Include="Mapping\ReaderMapping.cs" />
     <Compile Include="Mapping\UserActivityMapping.cs" />
     <Compile Include="Mapping\OptionsMapping.cs" />
     <Compile Include="Mapping\RoleMapping.cs" />

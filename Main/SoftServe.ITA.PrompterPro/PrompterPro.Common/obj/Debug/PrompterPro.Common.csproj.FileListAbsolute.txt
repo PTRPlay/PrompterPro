@@ -17,3 +17,10 @@ D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Comm
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\PrompterPro.Common.csprojResolveAssemblyReference.cache
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\SoftServe.ITA.PrompterPro.Common.dll
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\SoftServe.ITA.PrompterPro.Common.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll.CodeAnalysisLog.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll.lastcodeanalysissucceeded
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\PrompterPro.Common.csprojResolveAssemblyReference.cache
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\SoftServe.ITA.PrompterPro.Common.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Common\obj\Debug\SoftServe.ITA.PrompterPro.Common.pdb

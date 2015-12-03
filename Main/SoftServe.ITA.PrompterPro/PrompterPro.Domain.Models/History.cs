@@ -10,10 +10,10 @@ namespace SoftServe.ITA.PrompterPro.Domain.Models
 
         public int ScriptId { get; set; }
         public int PrompterId { get; set; }
+        public int ReaderId { get; set; }
 
         public Script Script { get; set; }
         public User Prompter { get; set; }
-
-
+        public Reader Reader { get; set; }
     }
 }

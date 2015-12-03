@@ -36,3 +36,22 @@ D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\Prompt
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\PrompterPro.Domain.Services.UnitTests.csprojResolveAssemblyReference.cache
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.dll
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\EntityFramework.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\Moq.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\nunit.framework.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\EntityFramework.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\Moq.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\nunit.framework.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\PrompterPro.Domain.Services.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\UnitTests\PrompterPro.Domain.Services.UnitTests\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.UnitTests.pdb

@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="12.0">
  <Targets>
-  <Target Name="D:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.dll">
+  <Target Name="C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.dll">
    <Modules>
     <Module Name="softserve.ita.prompterpro.webapplication.dll">
      <Namespaces>
@@ -12,8 +12,8 @@
          <Members>
           <Member Name="#RegisterBundles(System.Web.Optimization.BundleCollection)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="bundles" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\App_Start" File="BundleConfig.cs" Line="9">Parameter 'bundles' of 'BundleConfig.RegisterBundles(BundleCollection)' is never used. Remove the parameter or use it in the method body.</Issue>
+            <Message Id="bundles" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\App_Start" File="BundleConfig.cs" Line="9">Parameter 'bundles' of 'BundleConfig.RegisterBundles(BundleCollection)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -23,15 +23,15 @@
          <Members>
           <Member Name="#RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication" File="Global.asax.cs" Line="43">In externally visible method 'Global.RegisterGlobalFilters(GlobalFilterCollection)', validate parameter 'filters' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication" File="Global.asax.cs" Line="43">In externally visible method 'Global.RegisterGlobalFilters(GlobalFilterCollection)', validate parameter 'filters' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RegisterGlobalHttpFilters(System.Web.Http.Filters.HttpFilterCollection)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication" File="Global.asax.cs" Line="37">In externally visible method 'Global.RegisterGlobalHttpFilters(HttpFilterCollection)', validate parameter 'filters' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication" File="Global.asax.cs" Line="37">In externally visible method 'Global.RegisterGlobalHttpFilters(HttpFilterCollection)', validate parameter 'filters' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -45,15 +45,15 @@
          <Members>
           <Member Name="#ConfigurePrompters(System.Collections.Generic.List`1&lt;SoftServe.ITA.PrompterPro.WebApplication.Hubs.PrompterInfo&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\Hubs" File="BroadcastHub.cs" Line="386">Change 'List&lt;PrompterInfo&gt;' in 'BroadcastHub.ConfigurePrompters(List&lt;PrompterInfo&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\Hubs" File="BroadcastHub.cs" Line="386">Change 'List&lt;PrompterInfo&gt;' in 'BroadcastHub.ConfigurePrompters(List&lt;PrompterInfo&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#StartBroadcast(SoftServe.ITA.PrompterPro.WebApplication.Hubs.BroadcastInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\Hubs" File="BroadcastHub.cs" Line="236">In externally visible method 'BroadcastHub.StartBroadcast(BroadcastInfo)', validate parameter 'info' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\Hubs" File="BroadcastHub.cs" Line="236">In externally visible method 'BroadcastHub.StartBroadcast(BroadcastInfo)', validate parameter 'info' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -63,10 +63,10 @@
          <Members>
           <Member Name="#PrompterIdList" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="Breaking">
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Warning">Change 'BroadcastInfo.PrompterIdList' to be read-only by removing the property setter.</Issue>
             </Message>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="Breaking">
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error">Change 'List&lt;int&gt;' in 'BroadcastInfo.PrompterIdList' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
@@ -77,10 +77,10 @@
          <Members>
           <Member Name="#PrompterIdList" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="Breaking">
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Warning">Change 'GroupInfo.PrompterIdList' to be read-only by removing the property setter.</Issue>
             </Message>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="Breaking">
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error">Change 'List&lt;int&gt;' in 'GroupInfo.PrompterIdList' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
@@ -91,8 +91,8 @@
          <Members>
           <Member Name="#Configuration(Owin.IAppBuilder)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\Hubs" File="OwinStartup.cs" Line="11">The 'this' parameter (or 'Me' in Visual Basic) of 'OwinStartup.Configuration(IAppBuilder)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\Hubs" File="OwinStartup.cs" Line="11">The 'this' parameter (or 'Me' in Visual Basic) of 'OwinStartup.Configuration(IAppBuilder)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -106,51 +106,51 @@
          <Members>
           <Member Name="#Delete(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="36">The 'this' parameter (or 'Me' in Visual Basic) of 'ActorController.Delete(int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="36">The 'this' parameter (or 'Me' in Visual Basic) of 'ActorController.Delete(int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="id" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="36">Parameter 'id' of 'ActorController.Delete(int)' is never used. Remove the parameter or use it in the method body.</Issue>
+            <Message Id="id" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="36">Parameter 'id' of 'ActorController.Delete(int)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Get()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="14">The 'this' parameter (or 'Me' in Visual Basic) of 'ActorController.Get()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="14">The 'this' parameter (or 'Me' in Visual Basic) of 'ActorController.Get()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Get(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="20">The 'this' parameter (or 'Me' in Visual Basic) of 'ActorController.Get(int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="20">The 'this' parameter (or 'Me' in Visual Basic) of 'ActorController.Get(int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="id" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="20">Parameter 'id' of 'ActorController.Get(int)' is never used. Remove the parameter or use it in the method body.</Issue>
+            <Message Id="id" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="20">Parameter 'id' of 'ActorController.Get(int)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Post(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="26">The 'this' parameter (or 'Me' in Visual Basic) of 'ActorController.Post(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="26">The 'this' parameter (or 'Me' in Visual Basic) of 'ActorController.Post(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="value" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="26">Parameter 'value' of 'ActorController.Post(string)' is never used. Remove the parameter or use it in the method body.</Issue>
+            <Message Id="value" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="26">Parameter 'value' of 'ActorController.Post(string)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Put(System.Int32,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="31">The 'this' parameter (or 'Me' in Visual Basic) of 'ActorController.Put(int, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="31">The 'this' parameter (or 'Me' in Visual Basic) of 'ActorController.Put(int, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="id" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="31">Parameter 'id' of 'ActorController.Put(int, string)' is never used. Remove the parameter or use it in the method body.</Issue>
+            <Message Id="id" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="31">Parameter 'id' of 'ActorController.Put(int, string)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
-            <Message Id="value" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-02 17:08:02Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="d:\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="31">Parameter 'value' of 'ActorController.Put(int, string)' is never used. Remove the parameter or use it in the method body.</Issue>
+            <Message Id="value" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2015-12-03 08:17:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\WebApi" File="ActorController.cs" Line="31">Parameter 'value' of 'ActorController.Put(int, string)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
           </Member>

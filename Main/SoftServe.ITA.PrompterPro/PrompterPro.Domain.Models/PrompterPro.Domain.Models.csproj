@@ -55,6 +55,8 @@
     <Compile Include="Diagnostics.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="History.cs" />
+    <Compile Include="Preference.cs" />
+    <Compile Include="Reader.cs" />
     <Compile Include="UserActivity.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Role.cs" />

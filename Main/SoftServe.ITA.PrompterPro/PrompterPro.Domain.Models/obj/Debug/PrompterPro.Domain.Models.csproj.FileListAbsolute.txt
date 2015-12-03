@@ -29,3 +29,14 @@ D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Doma
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\PrompterPro.Domain.Models.csprojResolveAssemblyReference.cache
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll.CodeAnalysisLog.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll.lastcodeanalysissucceeded
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\EntityFramework.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\EntityFramework.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\PrompterPro.Domain.Models.csprojResolveAssemblyReference.cache
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
