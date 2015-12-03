@@ -18,7 +18,7 @@ namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext.Imp
         public PrompterDbContext()
             : base()
         {
-            Database.SetInitializer<PrompterDbContext>(new DropCreateDatabaseAlways<PrompterDbContext>());
+            Database.SetInitializer<PrompterDbContext>(new DropCreateDatabaseIfModelChanges<PrompterDbContext>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

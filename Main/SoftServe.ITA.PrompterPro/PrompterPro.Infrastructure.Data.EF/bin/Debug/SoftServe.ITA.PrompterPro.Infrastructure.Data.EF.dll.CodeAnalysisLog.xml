@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="12.0">
  <Targets>
-  <Target Name="C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Infrastructure.Data.EF\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.dll">
+  <Target Name="D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Infrastructure.Data.EF\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.dll">
    <Modules>
     <Module Name="softserve.ita.prompterpro.infrastructure.data.ef.dll">
      <Namespaces>
@@ -10,7 +10,7 @@
        <Types>
         <Type Name="PrompterDbContext" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Status="Active" Created="2015-12-03 08:16:48Z" FixCategory="Breaking">
+          <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Status="Active" Created="2015-12-03 14:47:07Z" FixCategory="Breaking">
            <Issue Certainty="95" Level="Error">The type name 'PrompterDbContext' conflicts in whole or in part with the namespace name 'SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext'. Change either name to eliminate the conflict.</Issue>
           </Message>
          </Messages>

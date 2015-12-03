@@ -54,7 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IActorService.cs" />
     <Compile Include="ILoginService.cs" />
+    <Compile Include="Impl\ActorService.cs" />
     <Compile Include="Impl\DiagnosticsService.cs" />
     <Compile Include="IUserActivityService.cs" />
     <Compile Include="Impl\LoginService.cs" />
