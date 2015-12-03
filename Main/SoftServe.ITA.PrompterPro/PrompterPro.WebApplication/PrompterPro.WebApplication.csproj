@@ -218,6 +218,7 @@
     <Content Include="app\Operator\services\init\initScriptCtrlProps.js" />
     <Content Include="app\Operator\services\modals\operatorDialog.js" />
     <Content Include="app\Operator\services\prompterServices\fetchPrompters-service.js" />
+    <Content Include="app\Operator\services\prompterServices\actorChecked.js" />
     <Content Include="app\Operator\services\prompterServices\prompterChecked.js" />
     <Content Include="app\Operator\services\prompterServices\prompterClass.js" />
     <Content Include="app\Operator\services\prompterServices\prompterOrder.js" />
