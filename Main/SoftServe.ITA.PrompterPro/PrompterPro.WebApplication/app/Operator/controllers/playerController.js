@@ -39,6 +39,7 @@
     $scope.textSizes = [50,55,60,70,80,90,100,110,130];
     $scope.showDialog = false;
     $scope.speed = 5;
+    speedHandlPlay = 10;
     $scope.currentSize = $scope.textSizes[6];
     $scope.textSize = 90;
     $scope.isPlayDisabled = false;
@@ -111,7 +112,7 @@
         clearInterval(animation);
         animation = setInterval(function () {
             if (textBox.scrollTop() > 0) {
-                textBox.scrollTop(textBox.scrollTop() - $scope.speed);
+                textBox.scrollTop(textBox.scrollTop() - speedHandlPlay);
             }
         }, velocity);
      }
@@ -126,7 +127,7 @@
         clearInterval(animation);
         animation = setInterval(function () {
             if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
-                textBox.scrollTop(textBox.scrollTop() + $scope.speed);
+                textBox.scrollTop(textBox.scrollTop() + speedHandlPlay);
             }
         }, velocity);
     }

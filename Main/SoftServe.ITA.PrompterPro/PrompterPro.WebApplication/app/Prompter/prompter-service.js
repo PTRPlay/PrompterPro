@@ -28,6 +28,7 @@
     	    $scope.textSizes = [50, 55, 60, 70, 80, 90, 100, 110, 130];
     	    $scope.showDialog = false;
     	    $scope.speed = 5;
+    	    speedHandlPlay = 10;
     	    $scope.currentSize = $scope.textSizes[2];
     	    $scope.textSize = 90;
     	    $scope.leftPadding = 0;
@@ -137,7 +138,7 @@
                 broadcastHub.client.pause();
                 animation = setInterval(function () {
                     if (textBox.scrollTop() > 0) {
-                        textBox.scrollTop(textBox.scrollTop() - $scope.speed);
+                        textBox.scrollTop(textBox.scrollTop() - speedHandlPlay);
                     }
                 }, velocity);
             }
@@ -146,7 +147,7 @@
                 broadcastHub.client.pause();
                 animation = setInterval(function () {
                     if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
-                        textBox.scrollTop(textBox.scrollTop() + $scope.speed);
+                        textBox.scrollTop(textBox.scrollTop() + speedHandlPlay);
                     }
                 }, velocity);
             }

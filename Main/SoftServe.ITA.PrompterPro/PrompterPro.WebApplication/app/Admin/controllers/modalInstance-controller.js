@@ -39,4 +39,19 @@ app.controller('modalAddInstanceController',
     $scope.cancel = function () {
         $modalInstance.dismiss('cancel');
     };
-}]);
+    }]);
+
+app.controller('actorModalAddInstanceController',
+    ['$scope', '$modalInstance', 'newActor',
+    function ($scope, $modalInstance, newActor) {
+
+        $scope.newActor = newActor;
+
+        $scope.ok = function () {
+            $modalInstance.close($scope.newActor);
+        };
+
+        $scope.cancel = function () {
+            $modalInstance.dismiss('cancel');
+        };
+    }]);

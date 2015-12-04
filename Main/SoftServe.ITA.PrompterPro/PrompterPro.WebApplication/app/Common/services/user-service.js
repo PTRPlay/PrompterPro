@@ -27,7 +27,7 @@
                 });
             return deferred.promise;
         },
-        post: function(users) {
+        post: function (users) {
             var deferred = $q.defer();
             $http.post("/api/user/", users)
                 .success(function(response) {
