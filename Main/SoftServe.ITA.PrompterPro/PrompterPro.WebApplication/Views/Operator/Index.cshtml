@@ -189,7 +189,7 @@
 
                     </div>
                     <!-- actors list -->
-                    <div class="list-group" ng-controller ="actorController">
+                    @*<div class="list-group" ng-controller ="actorController">
                         <a class="list-group-item active btn"
                            ng-click="actorListClick()">
                             <span class="badge">{{filteredScripts.length}}</span>
@@ -212,13 +212,13 @@
                                ng-repeat="actor in filteredActors = (actors
                                                                    | filter: searchActor
                                                                    | orderBy: actorOrder)"
-                               @*ng-class="scriptClass(script)"*@
+                               @*ng-class="scriptClass(script)"
                                ng-click="scriptService.select(script)">
                                 <h5>{{script.Title}}</h5>
                                 <h6>{{script.Description}}</h6>
                             </a>
                         </div>
-                    </div>
+                    </div>*@
 
                 </div>
 
