@@ -55,6 +55,8 @@
     <Compile Include="Mapping\BaseMapping.cs" />
     <Compile Include="Mapping\DiagnosticMapping.cs" />
     <Compile Include="Mapping\HistoryMapping.cs" />
+    <Compile Include="Mapping\PreferenceMapping.cs" />
+    <Compile Include="Mapping\ReaderMapping.cs" />
     <Compile Include="Mapping\UserActivityMapping.cs" />
     <Compile Include="Mapping\OptionsMapping.cs" />
     <Compile Include="Mapping\RoleMapping.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="Mapping\UserMapping.cs" />
     <Compile Include="PrompterDbContext\BaseDbContext.cs" />
     <Compile Include="PrompterDbContext\CreateDbContext.cs" />
+    <Compile Include="PrompterDbContext\Impl\PrompterDbSeed.cs" />
     <Compile Include="PrompterDbContext\IPrompterDbContext.cs" />
     <Compile Include="PrompterDbContext\IPrompterDiagnosticsDbContext.cs" />
     <Compile Include="PrompterDbContext\Impl\PrompterDbContext.cs" />

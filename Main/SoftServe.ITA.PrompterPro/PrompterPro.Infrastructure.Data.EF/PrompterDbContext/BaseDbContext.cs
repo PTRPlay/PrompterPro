@@ -10,9 +10,8 @@ namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext
         private const string Prompter = "Prompter";
 
         protected BaseDbContext()
-            : base(ConnectionStringName)
+            : base(Prompter)
         {
-            Database.SetInitializer<BaseDbContext>(null);
             Configuration.LazyLoadingEnabled = false;
         }
 

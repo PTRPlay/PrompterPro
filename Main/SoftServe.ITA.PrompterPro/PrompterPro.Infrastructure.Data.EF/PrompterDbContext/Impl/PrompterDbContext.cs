@@ -12,6 +12,14 @@ namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext.Imp
         public IDbSet<Script> Scripts { get; set; }
         public IDbSet<Section> Sections { get; set; }
         public IDbSet<User> Users { get; set; }
+        public IDbSet<Reader> Readers { get; set; }
+        public IDbSet<Preference> Preferences { get; set; }
+
+        public PrompterDbContext()
+            : base()
+        {
+            Database.SetInitializer<PrompterDbContext>(new PrompterDbSeed());
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -23,6 +31,8 @@ namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext.Imp
                 modelBuilder.Configurations.Add(new ScriptMapping());
                 modelBuilder.Configurations.Add(new SectionMapping());
                 modelBuilder.Configurations.Add(new UserMapping());
+                modelBuilder.Configurations.Add (new ReaderMapping());
+                modelBuilder.Configurations.Add(new PreferenceMapping());
             }
 
             base.OnModelCreating(modelBuilder);

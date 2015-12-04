@@ -252,3 +252,132 @@ C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\
 C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\obj\Debug\PrompterPro.WebApplication.csprojResolveAssemblyReference.cache
 C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\obj\Debug\SoftServe.ITA.PrompterPro.WebApplication.dll
 C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\obj\Debug\SoftServe.ITA.PrompterPro.WebApplication.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.dll.config
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.dll.CodeAnalysisLog.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.dll.lastcodeanalysissucceeded
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Antlr3.Runtime.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\DocumentFormat.OpenXml.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\EntityFramework.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\EntityFramework.SqlServer.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.Security.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Practices.Unity.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Newtonsoft.Json.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Owin.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Common.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Domain.Models.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Domain.Services.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Net.Http.Formatting.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Helpers.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Http.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Http.WebHost.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Mvc.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Optimization.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Razor.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.Razor.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Unity.Mvc5.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Unity.WebApi.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\WebGrease.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Common.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Domain.Models.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Domain.Services.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Antlr3.Runtime.pdb
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\EntityFramework.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\EntityFramework.SqlServer.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.Security.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Practices.Unity.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Newtonsoft.Json.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Optimization.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Razor.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.Razor.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Helpers.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Mvc.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Net.Http.Formatting.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Http.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Http.WebHost.xml
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\obj\Debug\PrompterPro.WebApplication.csprojResolveAssemblyReference.cache
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\obj\Debug\SoftServe.ITA.PrompterPro.WebApplication.dll
+C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\obj\Debug\SoftServe.ITA.PrompterPro.WebApplication.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\obj\Debug\PrompterPro.WebApplication.csprojResolveAssemblyReference.cache
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\obj\Debug\SoftServe.ITA.PrompterPro.WebApplication.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\obj\Debug\SoftServe.ITA.PrompterPro.WebApplication.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.dll.config
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.dll.CodeAnalysisLog.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.WebApplication.dll.lastcodeanalysissucceeded
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Antlr3.Runtime.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\DocumentFormat.OpenXml.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\EntityFramework.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\EntityFramework.SqlServer.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.Security.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Practices.Unity.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Web.Infrastructure.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Newtonsoft.Json.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Owin.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Common.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Domain.Models.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Domain.Services.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Net.Http.Formatting.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Helpers.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Http.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Http.WebHost.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Mvc.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Optimization.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Razor.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.Deployment.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.Razor.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Unity.Mvc5.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Unity.WebApi.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\WebGrease.dll
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Common.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Domain.Models.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Domain.Services.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Antlr3.Runtime.pdb
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\EntityFramework.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\EntityFramework.SqlServer.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Owin.Security.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Practices.Unity.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\Newtonsoft.Json.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Optimization.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Razor.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.Deployment.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Webpages.Razor.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Helpers.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Mvc.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Net.Http.Formatting.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Http.xml
+D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Http.WebHost.xml
+

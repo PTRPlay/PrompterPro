@@ -364,12 +364,12 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
 
 		public void HandPlay()
 		{
-		    Clients.OthersInGroup(GetGroupName()).handPlay();
+		    Clients.All.handPlay();
 		}
 
 		public void HandPlayBack()
 		{
-		    Clients.OthersInGroup(GetGroupName()).handPlayBack();
+		    Clients.All.handPlayBack();
 		}
 
 	    public void PadRight(int percentage)

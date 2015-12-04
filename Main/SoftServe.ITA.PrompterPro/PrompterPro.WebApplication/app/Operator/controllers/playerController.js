@@ -108,24 +108,33 @@
 
 
     $scope.handPlayBack = function () {
-        $scope.pause();
+        $scope.isHandPlayDisabled = false;
+        $scope.isPlayDisabled = false;
+        broadcastHub.server.handPlayBack();
+    }
+
+    broadcastHub.client.handPlayBack = function () {
+        clearInterval(animation);
         animation = setInterval(function () {
             if (textBox.scrollTop() > 0) {
                 textBox.scrollTop(textBox.scrollTop() - $scope.speed);
             }
         }, velocity);
-        broadcastHub.server.handPlayBack();
-    }
+     }
 
     $scope.handPlay = function () {
-        $scope.pause();
+        $scope.isHandPlayDisabled = false;
+        $scope.isPlayDisabled = false;
+        broadcastHub.server.handPlay();
+    }
+
+    broadcastHub.client.handPlay = function () {
+        clearInterval(animation);
         animation = setInterval(function () {
             if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
                 textBox.scrollTop(textBox.scrollTop() + $scope.speed);
             }
         }, velocity);
-
-        broadcastHub.server.handPlay();
     }
 
     $scope.pause = function () {

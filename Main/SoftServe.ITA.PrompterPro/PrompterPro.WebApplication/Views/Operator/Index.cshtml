@@ -189,11 +189,10 @@
 
                     </div>
                     <!-- actors list -->
-                    <div class="list-group"
-                         ng-controller="actorsController" ng-init="fetchAllActors()">
+                    <div class="list-group" ng-controller ="actorController">
                         <a class="list-group-item active btn"
                            ng-click="actorListClick()">
-                            <span class="badge">{{filteredActors.length}}</span>
+                            <span class="badge">{{filteredScripts.length}}</span>
                             Actors
                         </a>
                         <div class="list-group-item"
@@ -202,8 +201,8 @@
                                 <span class="input-group-addon">
                                     <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
                                 </span>
-                                <input type="search" class="form-control" placeholder="Find"
-                                       ng-model="searchActor.Login">
+                                <input type="text" class="form-control" placeholder="Find"
+                                       ng-model="searchActor.LastName">
                             </div>
                         </div>
 
@@ -211,22 +210,16 @@
                             <a class="list-group-item"
                                ng-show="showActorList"
                                ng-repeat="actor in filteredActors = (actors
-                                                                       | filter: searchActor
-                                                                       | orderBy: actorOrder)"
-                               ng-class="actorClass(actor)">
-                                <span class="btn btn-circle pull-right"
-                                      ng-show="scriptService.canCheck(actor)">
-                                    <span class="glyphicon glyphicon-unchecked"
-                                          ng-hide="actorChecked(actor)"
-                                          ng-click="scriptService.check(actor)"></span>
-                                    <span class="glyphicon glyphicon-check"
-                                          ng-show="actorChecked(actor)"
-                                          ng-click="scriptService.check(actor)"></span>
-                                </span>
-                                <h5>{{actor.Login}}</h5>
+                                                                   | filter: searchActor
+                                                                   | orderBy: actorOrder)"
+                               @*ng-class="scriptClass(script)"*@
+                               ng-click="scriptService.select(script)">
+                                <h5>{{script.Title}}</h5>
+                                <h6>{{script.Description}}</h6>
                             </a>
                         </div>
                     </div>
+
                 </div>
 
                 <!-- editor area -->
