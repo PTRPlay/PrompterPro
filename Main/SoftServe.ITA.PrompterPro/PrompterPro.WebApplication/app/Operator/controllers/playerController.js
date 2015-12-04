@@ -66,6 +66,12 @@
         return text;
     }
 
+    $scope.uglyMe = function (screenWidth, screenHeight) {
+        document.getElementById("playerController").setAttribute("style", "width:"+screenWidth+"px");
+        document.getElementById("prompterRow").setAttribute("style", "height:"+screenHeight+"px;background-color:#000");
+        document.getElementById("area").setAttribute("style", "height:100%");
+    }
+
     $scope.mirrorText = function (isMirroredX,isMirroredY) {
         broadcastHub.server.mirrorText(isMirroredX, isMirroredY);
     }
