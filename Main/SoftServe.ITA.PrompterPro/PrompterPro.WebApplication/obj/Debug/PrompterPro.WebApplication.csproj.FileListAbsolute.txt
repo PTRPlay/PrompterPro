@@ -380,4 +380,3 @@ D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebA
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Net.Http.Formatting.xml
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Http.xml
 D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.WebApplication\bin\System.Web.Http.WebHost.xml
-

@@ -11,6 +11,9 @@ namespace SoftServe.ITA.PrompterPro.Domain.Models
         public int Id { get; set; }
 
         public int ReadingSpeed { get; set; }
+        public int FontSize { get; set; }
+        public int ScreenWidth { get; set; }
+        public int ScreenHeight { get; set; }
 
         public int ReaderId { get; set; }
         public int ScriptId { get; set; }

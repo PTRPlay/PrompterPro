@@ -1,47 +1,3 @@
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\EntityFramework.dll
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\EntityFramework.xml
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\PrompterPro.Domain.Models.csprojResolveAssemblyReference.cache
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll.CodeAnalysisLog.xml
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll.lastcodeanalysissucceeded
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\EntityFramework.dll
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\EntityFramework.xml
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\PrompterPro.Domain.Models.csprojResolveAssemblyReference.cache
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll.CodeAnalysisLog.xml
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll.lastcodeanalysissucceeded
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\EntityFramework.dll
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\EntityFramework.xml
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\PrompterPro.Domain.Models.csprojResolveAssemblyReference.cache
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-<<<<<<< HEAD
-C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll.CodeAnalysisLog.xml
-C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll.lastcodeanalysissucceeded
-C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\EntityFramework.dll
-C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
-C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
-C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\EntityFramework.xml
-C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\PrompterPro.Domain.Models.csprojResolveAssemblyReference.cache
-C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-C:\dotNET\prompterpro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-=======
 C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
 C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
 C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll.CodeAnalysisLog.xml
@@ -53,4 +9,3 @@ C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\Prom
 C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\PrompterPro.Domain.Models.csprojResolveAssemblyReference.cache
 C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
 C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Models\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
->>>>>>> 0d215f04f0a715d43488a1f27312b8ae761237e4
