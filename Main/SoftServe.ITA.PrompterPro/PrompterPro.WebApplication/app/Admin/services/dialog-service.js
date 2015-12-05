@@ -89,7 +89,7 @@
                 modalInstance.result.then(function (newActor) {
                     if (modalInstance.result.$$state.value) {
                             $scope.setAddedState(newActor);
-                            $scope.addMangedUserToList(newActor);
+                            $scope.addMangedActorToList(newActor);
                         } else {
                             notify(
                                 notifyType.danger,
@@ -100,7 +100,7 @@
 
             },
 
-            openActorEditDialog: function (size, userForEditing, $scope) {
+            openEditDialog: function (size, userForEditing, $scope) {
                 var object = angular.copy(userForEditing);
                 var modalInstance = $modal.open({
                     templateUrl: 'editUserModal.html',
@@ -123,7 +123,32 @@
                     }
                 });
 
-            }
+            },
+
+            openActorEditDialog: function (size, actorForEditing, $scope) {
+            var object = angular.copy(actorForEditing);
+            var modalInstance = $modal.open({
+                templateUrl: 'editActorModal.html',
+                controller: 'actorModalEditInstanceController',
+                size: size,
+                resolve: {
+                    actorForEditing: function () {
+                        return object;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function(editActor) {
+                if (modalInstance.result.$$state.value) {
+                    var index = $scope.actors.indexOf(actorForEditing);
+                    editActor.Id = actorForEditing.Id;
+                    editActor.LastScriptId = actorForEditing.LastScriptId;
+                    $scope.actors[index] = editActor;
+                    $scope.setUpdatedState(editActor);
+                }
+            });
+
+        }
         }
     }
 ]);

@@ -13,6 +13,10 @@
 
             setModifiedState: function (user) {
                 user.EntityState = entityState.Modified;
+            },
+
+            setUsualState: function (user) {
+                user.EntityState = 2; //
             }
         }
     }

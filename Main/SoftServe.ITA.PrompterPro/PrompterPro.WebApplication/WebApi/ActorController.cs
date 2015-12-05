@@ -69,6 +69,7 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
         // DELETE: api/Actor/5
         public void Delete([FromUri]string id)
         {
+            if (id == "undefined") return;
             string[] input = id.Split(' ');
             List<int> ids = new List<int>();
             foreach (string str in input)

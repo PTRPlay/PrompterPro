@@ -56,6 +56,11 @@ function ($scope, actorRepository, userStateControll, serverService, dialogSevic
 
     $scope.managedActorslist = new Array();
     $scope.deletedActorslist = new Array();
+    $scope.updatedActorslist = new Array();
+
+    $scope.getActorForEditing = function (user) {
+        $scope.actorForEditing = user;
+    };
 
     $scope.removeFromList = function (user) {
         manageListOfActors.removeFromList($scope, user);
@@ -73,6 +78,7 @@ function ($scope, actorRepository, userStateControll, serverService, dialogSevic
 
     $scope.setUpdatedState = function (user) {
         manageUserSate.setModifiedState(user);
+        $scope.updatedActorslist.push(user);
     };
 
     $scope.setDeletedState = function (user) {
@@ -84,10 +90,23 @@ function ($scope, actorRepository, userStateControll, serverService, dialogSevic
         manageUserSate.setAddedState(user);
     }
 
+    $scope.setUsualState = function (user) {
+        manageUserSate.setUsualState(user);
+    };
 
-    $scope.addMangedUserToList = function (user) {
+    $scope.setIsEdited = function (value) {
+        $scope.isEdited = value;
+    };
+
+    $scope.setShowOddAndEven = function (value) {
+        $scope.showOddAndEven = value;
+    };
+
+
+    $scope.addMangedActorToList = function (user) { // actor was user
         manageListOfActors.addToList($scope, user);
     };
+
 
     $scope.deleteActors = function () {
         var deletedlenght = $scope.deletedActorslist.length;
@@ -101,31 +120,45 @@ function ($scope, actorRepository, userStateControll, serverService, dialogSevic
         return deletedlenght;
     }
 
+    $scope.updateActors = function () {
+        var updatedlenght = $scope.updatedActorslist.length;
+        for (var i = 0; i < $scope.updatedActorslist.length; i++) {
+            $scope.setUsualState($scope.updatedActorslist[i]);
+            actorRepository.put($scope.updatedActorslist[i]);
+        }
+        $scope.updatedActorslist.splice(0, updatedlenght);
+        return updatedlenght;
+    }
+
     $scope.saveAllChanges = function () { 
-        var somethingDone = false
+        var somethingDone = false;
+        var thingDone = 0;
         if ($scope.managedActorslist.length > 0) {
             serverService.manageActor($scope, $scope.managedActorslist);
-            notify(
-                 notifyType.success,
-                 $scope.managedActorslist.length + constants.successfulChanges,
-                 icons.success);
+            thingDone += $scope.managedActorslist.length;
             somethingDone = true;
-
         }
         if ($scope.deletedActorslist.length > 0) {
             var deletedlenght = $scope.deleteActors();
-                notify(
-                     notifyType.success,
-                     deletedlenght + constants.successfulChanges,
-                     icons.success);
+                thingDone += deletedlenght;
                 somethingDone = true; 
         }
-        if (somethingDone == false)
+        if ($scope.updatedActorslist.length > 0) {
+            var updatedlenght = $scope.updateActors();
+            thingDone += updatedlenght;
+            somethingDone = true;
+        }
+        if (somethingDone == false) {
             notify(
                     notifyType.danger,
                     constants.cantDeleteAdmin,
                     icons.warning);
-
+        } else {
+            notify(
+                 notifyType.success,
+                 thingDone + constants.successfulChanges,
+                 icons.success);
+        }
     };
 
     $scope.deleteCurrentActor = function (user) {
@@ -134,7 +167,8 @@ function ($scope, actorRepository, userStateControll, serverService, dialogSevic
     };
 
     $scope.openEditDialog = function (size, user) {
-        /* dialogSevice.openEditDialog(size, user, $scope);*/
+        $scope.getActorForEditing(user);
+        dialogSevice.openActorEditDialog(size, user, $scope);
     };
 
 }
