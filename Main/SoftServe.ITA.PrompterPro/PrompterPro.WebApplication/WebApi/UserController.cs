@@ -61,6 +61,16 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
                .Select(user => _userMapper.Map(user))
                .ToList();
         }
+
+        public void Delete([FromUri]string id)
+        {
+            string[] input = id.Split(' ');
+            List<int> ids = new List<int>();
+            foreach (string str in input)
+                if (str != "")
+                    ids.Add(int.Parse(str));
+            _userService.DeleteUsers(ids);
+        }
      
     }
 }

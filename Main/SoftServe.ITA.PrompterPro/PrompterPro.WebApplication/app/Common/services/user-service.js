@@ -37,6 +37,17 @@
                     alert(error);
                 });
             return deferred.promise;
+        },
+        del: function (id) { 
+            var deferred = $q.defer();
+            $http.delete("api/user?id=" + id)
+                .success(function (response) {
+                    deferred.resolve(response);
+                })
+                .error(function (error) {
+                    deferred.reject(error);
+                });
+            return deferred.promise;
         }
     }
 }]);

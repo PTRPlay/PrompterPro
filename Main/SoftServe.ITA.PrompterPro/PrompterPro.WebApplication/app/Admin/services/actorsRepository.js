@@ -40,7 +40,7 @@
             },
 
 
-            del: function (id) { //maybe problem here
+            del: function (id) { 
                 var deferred = $q.defer();
                 $http.delete("api/Actor?id=" + id)
                     .success(function (response) {
