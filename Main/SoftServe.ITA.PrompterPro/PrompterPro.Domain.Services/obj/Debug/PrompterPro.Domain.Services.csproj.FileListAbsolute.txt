@@ -1,66 +1,17 @@
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.dll
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.SqlServer.dll
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.dll
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.pdb
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.xml
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.SqlServer.xml
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\PrompterPro.Domain.Services.csprojResolveAssemblyReference.cache
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
-E:\SoftServe\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll.CodeAnalysisLog.xml
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll.lastcodeanalysissucceeded
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.dll
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.dll
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.pdb
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.xml
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\PrompterPro.Domain.Services.csprojResolveAssemblyReference.cache
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
-C:\Users\tpetrovytc\Desktop\PromterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll.CodeAnalysisLog.xml
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll.lastcodeanalysissucceeded
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.dll
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.SqlServer.dll
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.dll
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.pdb
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.xml
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.SqlServer.xml
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\PrompterPro.Domain.Services.csprojResolveAssemblyReference.cache
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
-D:\study\LV-165 .NET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll.CodeAnalysisLog.xml
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll.lastcodeanalysissucceeded
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.dll
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.dll
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.pdb
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.xml
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\PrompterPro.Domain.Services.csprojResolveAssemblyReference.cache
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
-C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll.CodeAnalysisLog.xml
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll.lastcodeanalysissucceeded
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.dll
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Common.dll
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.dll
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.dll
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Common.pdb
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Models.pdb
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.pdb
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.xml
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\PrompterPro.Domain.Services.csprojResolveAssemblyReference.cache
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll
+C:\dotNET\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\obj\Debug\SoftServe.ITA.PrompterPro.Domain.Services.pdb

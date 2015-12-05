@@ -3,12 +3,13 @@
     background-color:#000;
     color:#ffffff;
     overflow:hidden;
-    resize:none;
+    resize:both;
     font-size: 100px;
     height: 400px;
     width: 740px;
     min-width: 740px;
     border-style: none;
+    max-width:100%;
 }
 .textarea-prompter
 {

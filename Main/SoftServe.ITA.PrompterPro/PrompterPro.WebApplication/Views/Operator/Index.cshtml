@@ -189,11 +189,10 @@
 
                     </div>
                     <!-- actors list -->
-                    <div class="list-group"
-                         ng-controller="actorsController" ng-init="fetchAllActors()">
+                    @*<div class="list-group" ng-controller ="actorController">
                         <a class="list-group-item active btn"
                            ng-click="actorListClick()">
-                            <span class="badge">{{filteredActors.length}}</span>
+                            <span class="badge">{{filteredScripts.length}}</span>
                             Actors
                         </a>
                         <div class="list-group-item"
@@ -202,8 +201,8 @@
                                 <span class="input-group-addon">
                                     <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
                                 </span>
-                                <input type="search" class="form-control" placeholder="Find"
-                                       ng-model="searchActor.Login">
+                                <input type="text" class="form-control" placeholder="Find"
+                                       ng-model="searchActor.LastName">
                             </div>
                         </div>
 
@@ -211,20 +210,16 @@
                             <a class="list-group-item"
                                ng-show="showActorList"
                                ng-repeat="actor in filteredActors = (actors
-                                                                       | filter: searchActor)">
-                                <span class="btn btn-circle pull-right"
-                                      ng-show="scriptService.canCheck(actor)">
-                                    <span class="glyphicon glyphicon-unchecked"
-                                          ng-hide="actorChecked(actor)"
-                                          ng-click="scriptService.check(actor)"></span>
-                                    <span class="glyphicon glyphicon-check"
-                                          ng-show="actorChecked(actor)"
-                                          ng-click="scriptService.check(actor)"></span>
-                                </span>
-                                <h5>{{actor.FirstName}}</h5>
+                                                                   | filter: searchActor
+                                                                   | orderBy: actorOrder)"
+                               @*ng-class="scriptClass(script)"
+                               ng-click="scriptService.select(script)">
+                                <h5>{{script.Title}}</h5>
+                                <h6>{{script.Description}}</h6>
                             </a>
                         </div>
-                    </div>
+                    </div>*@
+
                 </div>
 
                 <!-- editor area -->
@@ -319,224 +314,236 @@
 
         </div>
 
-        <div>
+        <div id="playerController">
 
             <div ng-show="showPlayer">
                 <div ng-controller="playerController">
-                <!--Customize Prompter Settings-->
+                    <!--Customize Prompter Settings-->
 
 
                     <script type="text/ng-template" id="customizePrompter.html">
-                                <div class="modal-header label-primary tableHeader-style">
-                                    <h3 class="modal-title">Customize Prompter Settings</h3>
+                        <div class="modal-header label-primary tableHeader-style">
+                            <h3 class="modal-title">Customize Prompter Settings</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    Check All
                                 </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-xs-2">
-                                            Check All
-                                        </div>
-                                        <div class="col-xs-2">
-                                            <select class="move-left"
-                                                    ng-model="selectedAllResolution"
-                                                    ng-options="opt as opt.label for opt in options"
-                                                    ng-click="checkAllResolution()"></select>
-                                        </div>
-                                        <div class="col-xs-2">
-                                            <input type="checkbox" ng-model="selectedAllX" ng-click="checkAllX()" />
-                                            Mirror X
-                                        </div>
-                                        <div class="col-xs-2">
-                                            <input type="checkbox" ng-model="selectedAllY" ng-click="checkAllY()" />
-                                            Mirror Y
-                                        </div>
-                                    </div>
-                                    <hr />                                    
-                                        <div ng-repeat="item in items">
-                                            <div class="row">
-                                                <div class="col-xs-2">{{ item.Login }}</div>
-                                                <div class="col-xs-2">
-                                                    <select class="move-left"
-                                                            ng-model="item.Resolution"
-                                                            ng-options="opt as opt.label for opt in options"></select>
-                                                </div>
-                                                <div class="col-xs-2">
-                                                    <input type="checkbox" class="move-left" ng-model="item.IsMirroredX">
-                                                    Mirror X
-                                                </div>
-                                                <div class="col-xs-2">
-                                                    <input type="checkbox" class="move-left" ng-model="item.IsMirroredY">
-                                                    Mirror Y
-                                                </div>
-                                            </div>
-                                    </div>
+                                <div class="col-xs-2">
+                                    <select class="move-left"
+                                            ng-model="selectedAllResolution"
+                                            ng-options="opt as opt.label for opt in options"
+                                            ng-click="checkAllResolution()"></select>
                                 </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" ng-click="ok()">OK</button>
+                                <div class="col-xs-2">
+                                    <input type="checkbox" ng-model="selectedAllX" ng-click="checkAllX()" />
+                                    Mirror X
                                 </div>
-                            </script>
-
-                        <form class="modal fade"
-                              name="scriptForm"
-                              modal-model="dialoge"
-                              visible="showDialog">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <p class="modal-title">Text has been modified.Save changes?</p>
+                                <div class="col-xs-2">
+                                    <input type="checkbox" ng-model="selectedAllY" ng-click="checkAllY()" />
+                                    Mirror Y
+                                </div>
+                            </div>
+                            <hr />
+                            <div ng-repeat="item in items">
+                                <div class="row">
+                                    <div class="col-xs-2">{{ item.Login }}</div>
+                                    <div class="col-xs-2">
+                                        <select class="move-left"
+                                                ng-model="item.Resolution"
+                                                ng-options="opt as opt.label for opt in options"></select>
                                     </div>
-                                    <div class="modal-body">
-                                        <button class="btn btn-default" ng-click="dontSaveChanges()">No</button>
-                                        <button class="btn btn-primary" ng-click="saveChanges()">Yes</button>
+                                    <div class="col-xs-2">
+                                        <input type="checkbox" class="move-left" ng-model="item.IsMirroredX">
+                                        Mirror X
                                     </div>
-                                    <div class="modal-footer">
-                                        <input type="checkbox" />Always save changes
+                                    <div class="col-xs-2">
+                                        <input type="checkbox" class="move-left" ng-model="item.IsMirroredY">
+                                        Mirror Y
                                     </div>
                                 </div>
                             </div>
-                        </form>
-
-                <div class="container" style="background-color: black; width: 1120px !important">
-                    <div class="row">
-                        <div class="col-xs-2" style="padding-top: 200px">
-                            <img src="~/Content/Trinagles/left-triangle.png" class="pull-right"/>
                         </div>
-                        <textarea id="area"
-                                  class="col-xs-8 textarea-style"
-                                  ng-checked="mirrorText(isMirroredX,isMirroredY)"
-                                  ng-keypress="textIsChanged = true"
-                                  ng-style="{'paddingRight':rightPadding + '%','paddingLeft':leftPadding + '%','font-size':textSize + 'px'}"
-                                  ng-mouseover="isNavigateButtonShown = true"
-                                  ng-mouseleave="isNavigateButtonShown = false">
-                                                {{displayText()}}
-                                            </textarea>
-                        <div class="col-xs-2 pull-right" style="padding-top: 200px">
-                            <img src="~/Content/Trinagles/right-triangle.png"/>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" ng-click="ok()">OK</button>
+                        </div>
+                    </script>
+
+                    <form class="modal fade"
+                          name="scriptForm"
+                          modal-model="dialoge"
+                          visible="showDialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <p class="modal-title">Text has been modified.Save changes?</p>
+                                </div>
+                                <div class="modal-body">
+                                    <button class="btn btn-default" ng-click="dontSaveChanges()">No</button>
+                                    <button class="btn btn-primary" ng-click="saveChanges()">Yes</button>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="checkbox" />Always save changes
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="container text-center" id="container" style="background-color: black; width: 100%; min-width:1140px; !important">
+                        <div id="prompterRow" class="row" style="height:inherit">
+                            <div class="col-xs-2" style="padding-top: 200px;width:15%">
+                                <img src="~/Content/Trinagles/left-triangle.png" class="pull-right" />
+                            </div>
+                            <textarea id="area"
+                                      class="col-xs-8 textarea-style center-block"
+                                      ng-checked="mirrorText(isMirroredX,isMirroredY)"
+                                      ng-keypress="textIsChanged = true"
+                                      ng-style="{'paddingRight':rightPadding + '%','paddingLeft':leftPadding + '%','font-size':textSize + 'px'}"
+                                      ng-mouseover="isNavigateButtonShown = true"
+                                      ng-mouseleave="isNavigateButtonShown = false"
+                                      style="width:70%; min-height:400px">
+                                {{displayText()}}
+                            </textarea>
+                            <div class="col-xs-2" style="padding-top: 200px;width:15%">
+                                <img src="~/Content/Trinagles/right-triangle.png" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container" style="width:1120px;min-height:12px;height:inherit !important">
+                        <div class="row-fluid"
+                             ng-init="leftPadding=0,rightPadding=0,textSize=90">
+                            <div class="col-xs-6">
+                                <input type="range"
+                                       min="0"
+                                       max="25"
+                                       ng-model="leftPadding"
+                                       data-toggle="tooltip"
+                                       data-placement="top"
+                                       tooltip="padding:{{leftPadding}}%" />
+                                {{padLeft(leftPadding)}}
+                            </div>
+                            <div class="col-xs-6">
+                                <input type="range"
+                                       min="0"
+                                       max="25"
+                                       ng-model="rightPadding"
+                                       style="transform: rotate(180deg)"
+                                       data-toggle="tooltip"
+                                       data-placement="top"
+                                       tooltip="padding:{{rightPadding}}%" />
+                                {{padRight(rightPadding)}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container" style="width: 1120px; min-height:141px; height:inherit !important">
+                        <div class="row">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        Options
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-2 pull-left">
+                                                    <input type="range"
+                                                           min="70"
+                                                           max="109"
+                                                           ng-model="textSizeInput"
+                                                           ng-change="changeTextSize()"
+                                                           data-toggle="tooltip"
+                                                           data-placement="top"
+                                                           tooltip="size:{{textSize}}" />
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <button class="btn btn-default glyphicon glyphicon-play move-left"
+                                                            ng-click="play()"
+                                                            ng-disabled="isPlayDisabled"></button>
+
+                                                    <button class="btn btn-default glyphicon glyphicon-pause move-left"
+                                                            ng-click="pause()"></button>
+
+                                                    <button class="btn btn-default glyphicon glyphicon-stop move-left"
+                                                            ng-click="stop()"></button>
+
+                                                    <button class="btn btn-default move-left glyphicon glyphicon-backward move-left"
+                                                            ng-mousedown="handPlayBack()"
+                                                            ng-mouseup="pause()"
+                                                            ng-disabled="isHandPlayDisabled"></button>
+
+                                                    <button class="btn btn-default move-left glyphicon glyphicon-forward move-left"
+                                                            ng-mousedown="handPlay()"
+                                                            ng-mouseup="pause()"
+                                                            ng-disabled="isHandPlayDisabled"></button>
+
+                                                    <button class="btn btn-default move-left"
+                                                            ng-click="speedUp()"
+                                                            data-toggle="tooltip"
+                                                            data-placement="top"
+                                                            tooltip="speed={{speed}}">
+                                                        Speed Up
+                                                    </button>
+
+                                                    <button class="btn btn-default move-left"
+                                                            ng-click="speedDown()"
+                                                            data-toggle="tooltip"
+                                                            data-placement="top"
+                                                            tooltip="speed={{speed}}">
+                                                        Speed Down
+                                                    </button>
+                                                </div>
+                                                <div class="col-xs-1">
+                                                    <div class="slideTwo" data-toggle="tooltip"
+                                                         data-placement="top"
+                                                         tooltip="MirroredX:{{isMirroredX?'On':'Off'}}">
+                                                        <input type="checkbox"
+                                                               id="mirrorx"
+                                                               name="check"
+                                                               ng-model="isMirroredX" />
+                                                        <label for="mirrorx"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-1">
+                                                    <div class="slideTwo"
+                                                         data-toggle="tooltip"
+                                                         data-placement="top"
+                                                         tooltip="MirroredY:{{isMirroredY?'On':'Off'}}">
+                                                        <input type="checkbox"
+                                                               id="mirrory"
+                                                               name="check"
+                                                               ng-model="isMirroredY" />
+                                                        <label for="mirrory"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2">
+                                                    <button class="btn btn-default glyphicon glyphicon-off pull-right"
+                                                            ng-click="closePlayer()"
+                                                            data-toggle="tooltip"
+                                                            data-placement="top"
+                                                            tooltip="Finish Broadcasting"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-default"
+                                            ng-click="uglyMe(1140, 400)"
+                                            ng-disabled="isPlayDisabled">
+                                        1140x400
+                                    </button>
+
+                                    <button class="btn btn-default"
+                                            ng-click="uglyMe(1200,600)"
+                                            ng-disabled="isPlayDisabled">
+                                        1200x600
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                        <div class="container" style="width:1120px !important">
-                            <div class="row-fluid"
-                                 ng-init="leftPadding=0,rightPadding=0,textSize=90">
-                                <div class="col-xs-6">
-                                    <input type="range"
-                                           min="0"
-                                           max="25"
-                                           ng-model="leftPadding"
-                                           data-toggle="tooltip"
-                                           data-placement="top"
-                                           tooltip="padding:{{leftPadding}}%" />
-                                    {{padLeft(leftPadding)}}
-                                </div>
-                                <div class="col-xs-6">
-                                    <input type="range"
-                                           min="0"
-                                           max="25"
-                                           ng-model="rightPadding"
-                                           style="transform: rotate(180deg)"
-                                           data-toggle="tooltip"
-                                           data-placement="top"
-                                           tooltip="padding:{{rightPadding}}%"  />
-                                    {{padRight(rightPadding)}}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="container" style="width: 1120px !important">
-                            <div class="row">
-                                    <div class="panel panel-info">
-                                        <div class="panel-heading">
-                                            <div class="panel-title">
-                                                Options
-                                                <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="col-xs-2 pull-left">
-                                                            <input type="range"
-                                                                   min="70"
-                                                                   max="109"
-                                                                   ng-model="textSizeInput"
-                                                                   ng-change="changeTextSize()"
-                                                                   data-toggle="tooltip"
-                                                                   data-placement="top"
-                                                                   tooltip="size:{{textSize}}" />                                                            
-                                                        </div>
-                                                        <div class="col-xs-6">
-                                                            <button class="btn btn-default glyphicon glyphicon-play move-left"
-                                                                    ng-click="play()"
-                                                                    ng-disabled="isPlayDisabled"></button>
-
-                                                            <button class="btn btn-default glyphicon glyphicon-pause move-left"
-                                                                    ng-click="pause()"></button>
-
-                                                            <button class="btn btn-default glyphicon glyphicon-stop move-left"
-                                                                    ng-click="stop()"></button>
-
-                                                            <button class="btn btn-default move-left glyphicon glyphicon-backward move-left"
-                                                                    ng-mousedown="handPlayBack()"
-                                                                    ng-mouseup="pause()"
-                                                                    ng-disabled="isHandPlayDisabled"></button>
-
-                                                            <button class="btn btn-default move-left glyphicon glyphicon-forward move-left"
-                                                                    ng-mousedown="handPlay()"
-                                                                    ng-mouseup="pause()"
-                                                                    ng-disabled="isHandPlayDisabled"></button>
-
-                                                            <button class="btn btn-default move-left"
-                                                                    ng-click="speedUp()"
-                                                                    data-toggle="tooltip"
-                                                                    data-placement="top"
-                                                                    tooltip="speed={{speed}}">
-                                                                Speed Up
-                                                            </button>
-
-                                                            <button class="btn btn-default move-left"
-                                                                    ng-click="speedDown()"
-                                                                    data-toggle="tooltip"
-                                                                    data-placement="top"
-                                                                    tooltip="speed={{speed}}">
-                                                                Speed Down
-                                                            </button>
-                                                        </div>
-                                                        <div class="col-xs-1">
-                                                            <div class="slideTwo" data-toggle="tooltip"
-                                                                 data-placement="top"
-                                                                 tooltip="MirroredX:{{isMirroredX?'On':'Off'}}">
-                                                                <input type="checkbox" 
-                                                                       id="mirrorx" 
-                                                                       name="check" 
-                                                                       ng-model="isMirroredX" />
-                                                                <label for="mirrorx"></label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xs-1">
-                                                            <div class="slideTwo" 
-                                                                 data-toggle="tooltip"
-                                                                 data-placement="top"
-                                                                 tooltip="MirroredY:{{isMirroredY?'On':'Off'}}">
-                                                                <input type="checkbox" 
-                                                                       id="mirrory" 
-                                                                       name="check" 
-                                                                       ng-model="isMirroredY" />
-                                                                <label for="mirrory"></label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xs-2">
-                                                            <button class="btn btn-default glyphicon glyphicon-off pull-right"
-                                                                    ng-click="closePlayer()" 
-                                                                    data-toggle="tooltip"
-                                                                    data-placement="top"
-                                                                    tooltip="Finish Broadcasting"></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                  </div>
             </div>
+        </div>
         </div>
     </div>
 
