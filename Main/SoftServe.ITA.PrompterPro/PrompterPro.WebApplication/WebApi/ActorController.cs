@@ -67,9 +67,14 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
         }
 
         // DELETE: api/Actor/5
-        public void Delete(int id)
+        public void Delete([FromUri]string id)
         {
-            actorService.Delete(reader => reader.Id == id);
+            string[] input = id.Split(' ');
+            List<int> ids = new List<int>();
+            foreach (string str in input)
+                if (str != "")
+                  ids.Add(int.Parse(str));
+            actorService.Delete(ids);
         }
     }
 }

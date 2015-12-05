@@ -100,7 +100,7 @@
 
             },
 
-            openEditDialog: function (size, userForEditing, $scope) {
+            openActorEditDialog: function (size, userForEditing, $scope) {
                 var object = angular.copy(userForEditing);
                 var modalInstance = $modal.open({
                     templateUrl: 'editUserModal.html',

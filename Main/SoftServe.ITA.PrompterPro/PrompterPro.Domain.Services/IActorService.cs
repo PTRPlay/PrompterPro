@@ -20,6 +20,6 @@ namespace SoftServe.ITA.PrompterPro.Domain.Services
 
         void Put(Reader reader);
 
-        void Delete(Expression<Func<Reader, bool>> expression);
+        void Delete(IEnumerable<int> ids);
     }
 }

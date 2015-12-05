@@ -31,12 +31,12 @@
                     });
             },
             manageActor: function ($scope, actorsList) {
-                actorRepository.post(actorsList)
-                    .then(function (actors) {
-                        $scope.actors = actors;
-                        $scope.managedUserslist.length = 0;
-                    });
-            }
+                        actorRepository.post(actorsList)
+                            .then(function (actors) {
+                                $scope.actors = actors;
+                                $scope.managedActorslist.length = 0;
+                            });
+                }
         };
     }
 ]);

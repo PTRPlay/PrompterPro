@@ -6,7 +6,7 @@
             },
 
             setDeletedState: function (user) {
-                user.EntityState = entityState.Modified;
+                user.EntityState = entityState.Modified; // deleting,maybe change here
                 if (user.Disabled !== undefined)
                     user.Disabled = true;
             },
