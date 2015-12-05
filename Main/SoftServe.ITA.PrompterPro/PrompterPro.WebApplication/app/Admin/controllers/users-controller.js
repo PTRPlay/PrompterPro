@@ -121,6 +121,9 @@
 
         $scope.fetchUsers = function () {
             serverService.readAllUsers($scope);
+            for (user in $scope.users) {
+                user.inAction = false;
+            }
         };
 
         $scope.controlUserColor = userStateControll($scope);

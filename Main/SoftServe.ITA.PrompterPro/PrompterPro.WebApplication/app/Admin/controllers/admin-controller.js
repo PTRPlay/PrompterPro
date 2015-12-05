@@ -68,6 +68,10 @@ function ($scope, actorRepository, userStateControll, serverService, dialogSevic
 
     $scope.getAllActors = function () {
         serverService.readAllActors($scope);
+        for (actor in $scope.actors)
+        {
+            actor.inAction = false;
+        }
     };
 
     $scope.controlUserColor = userStateControll($scope);

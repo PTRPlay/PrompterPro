@@ -36,12 +36,12 @@
                 <span class="btn-group-sm">
                     <button class="btn btn-default glyphicon glyphicon-pencil"
                             ng-click="openEditDialog(sm,actor)"
-                            ng-show="showEditDelete"></button>
+                            ng-show="showEditDelete && !actor.inAction"></button>
                     <button class="btn btn-default glyphicon glyphicon-trash"
                             ng-click="isDeleted = true;
                                       showEditDelete = false;
                                       showOkRemove = true"
-                            ng-show="showEditDelete"></button>
+                            ng-show="showEditDelete && !actor.inAction"></button>
 
                     <button class="btn btn-success glyphicon glyphicon-ok-circle"
                             ng-click="showOkRemove = false;
