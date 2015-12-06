@@ -390,7 +390,15 @@
                         </div>
                     </form>
 
-                    <div class="container text-center" id="container" style="background-color: black; width: 100%; min-width:1140px; !important">
+                    <div class="container text-center" id="container" style="background-color: black; width: 100%; height:400px;  !important">
+                        <div id="div_img" style="z-index:1;
+                                             right:-30px;
+                                             top:100%;
+                                             position:relative;
+                                             float:right;
+                                             cursor:se-resize;">
+                            <span class="glyphicon glyphicon-move" ng-mousedown="hook(event)" tooltip="Resize prompter screen"></span>
+                        </div>
                         <div id="prompterRow" class="row" style="height:inherit">
                             <div class="col-xs-2" style="padding-top: 200px;width:15%">
                                 <img src="~/Content/Trinagles/left-triangle.png" class="pull-right" />
@@ -402,10 +410,10 @@
                                       ng-style="{'paddingRight':rightPadding + '%','paddingLeft':leftPadding + '%','font-size':textSize + 'px'}"
                                       ng-mouseover="isNavigateButtonShown = true"
                                       ng-mouseleave="isNavigateButtonShown = false"
-                                      style="width:70%; min-height:400px">
+                                      style="width:70%; min-height:400px; height:100%">
                                 {{displayText()}}
                             </textarea>
-                            <div class="col-xs-2" style="padding-top: 200px;width:15%">
+                            <div class="col-xs-2" style="padding-top: 170px;width:15%;z-index:2;position:relative">
                                 <img src="~/Content/Trinagles/right-triangle.png" />
                             </div>
                         </div>
@@ -526,17 +534,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="btn btn-default"
-                                            ng-click="uglyMe(1140, 400)"
-                                            ng-disabled="isPlayDisabled">
-                                        1140x400
-                                    </button>
-
-                                    <button class="btn btn-default"
-                                            ng-click="uglyMe(1200,600)"
-                                            ng-disabled="isPlayDisabled">
-                                        1200x600
-                                    </button>
                                 </div>
                             </div>
                         </div>

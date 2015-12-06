@@ -34,6 +34,7 @@
     var minSpeed = 1;
     var velocity = 40;
     var textSizeInput = 90;
+    var cur = null;
 
     $scope.textIsChanged = false;
     $scope.textSizes = [50,55,60,70,80,90,100,110,130];
@@ -66,10 +67,40 @@
         return text;
     }
 
-    $scope.uglyMe = function (screenWidth, screenHeight) {
-        document.getElementById("playerController").setAttribute("style", "width:"+screenWidth+"px");
-        document.getElementById("prompterRow").setAttribute("style", "height:"+screenHeight+"px;background-color:#000");
-        document.getElementById("area").setAttribute("style", "height:100%");
+    $scope.hook = function (e) {
+        e = e || window.event;
+        var el = (e.srcElement || e.target).parentNode.parentNode;
+        cur = { 'el': el, 'x': e.clientX - el.offsetWidth, 'y': e.clientY - el.offsetHeight }
+    }
+
+    $scope.unhook = function (e) {
+        if (cur)
+            cur = null;
+    }
+
+    $scope.move = function (e) {
+        if (!cur)
+            return;
+        e = e || window.event;
+        with (cur) {
+            var nx = e.clientX - x;
+            var ny = e.clientY - y;
+
+            if (nx < 1140) nx = 1140;
+            if (ny < 400) ny = 400;
+
+            el.style.width = nx + 'px';
+            el.style.height = ny + 'px';
+            document.getElementById("prompterRow").setAttribute("style", "height:" + ny + "px;");
+            broadcastHub.server.changeScreenResolution(nx, ny);
+        }
+        (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
+    }
+
+    document.onmouseup = $scope.unhook;
+    document.onmousemove = $scope.move;
+    document.ondragstart = function () {
+        return false;
     }
 
     $scope.mirrorText = function (isMirroredX,isMirroredY) {
