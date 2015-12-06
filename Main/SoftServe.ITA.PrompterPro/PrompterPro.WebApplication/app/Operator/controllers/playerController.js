@@ -35,6 +35,7 @@
     var velocity = 40;
     var textSizeInput = 90;
     var cur = null;
+    var textSizeStep = 5;
 
     $scope.textIsChanged = false;
     $scope.textSizes = [50,55,60,70,80,90,100,110,130];
@@ -44,6 +45,8 @@
     $scope.textSize = 90;
     $scope.isPlayDisabled = false;
     $scope.isNavigateButtonShown = false;
+    var mintextSize = 70;
+    var maxtextSize = 110;
 
     $scope.leftPadding = 0;
     $scope.rightPadding = 0;
@@ -233,5 +236,27 @@
         $scope.textSize = size;
         $scope.$apply();
     }
-    
+
+    $scope.textSizeUp = function () {
+        broadcastHub.invoke('textSizeUp');
+    }
+
+    broadcastHub.client.textSizeUp = function () {
+        if ($scope.textSize < maxtextSize) {
+            $scope.textSize += textSizeStep;
+            $scope.$apply();
+        }
+    }
+
+    $scope.textSizeDown = function () {
+        broadcastHub.invoke('textSizeDown');
+    }
+
+    broadcastHub.client.textSizeDown = function () {
+        if ($scope.textSize > mintextSize) {
+            $scope.textSize -= textSizeStep;
+            $scope.$apply();
+        }
+    }
+
 }]);
