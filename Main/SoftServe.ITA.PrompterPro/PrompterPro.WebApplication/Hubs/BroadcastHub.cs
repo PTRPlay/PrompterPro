@@ -382,6 +382,11 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
 	        Clients.OthersInGroup(GetGroupName()).padLeft(percentage);
 	    }
 
+        public void ChangeScreenResolution(int width, int height)
+        {
+            Clients.All.changeScreenResolution(width, height);
+        }
+
         public void ConfigurePrompters(List<PrompterInfo> promptersConfig)
         {
             if (promptersConfig == null)
