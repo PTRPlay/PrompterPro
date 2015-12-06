@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="12.0">
  <Targets>
-  <Target Name="D:\study\LV-165 .NET\prompter\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll">
+  <Target Name="C:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\bin\Debug\SoftServe.ITA.PrompterPro.Domain.Services.dll">
    <Modules>
     <Module Name="softserve.ita.prompterpro.domain.services.dll">
      <Namespaces>
@@ -10,19 +10,26 @@
        <Types>
         <Type Name="IActorService" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Members>
+          <Member Name="#Delete(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;SoftServe.ITA.PrompterPro.Domain.Models.Reader,System.Boolean&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-05 13:32:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError">Consider a design where 'IActorService.Delete(Expression&lt;Func&lt;Reader, bool&gt;&gt;)' doesn't nest generic type 'Expression&lt;Func&lt;Reader, bool&gt;&gt;'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
           <Member Name="#Get(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;SoftServe.ITA.PrompterPro.Domain.Models.Reader,System.Boolean&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-05 13:12:46Z" FixCategory="Breaking">
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-05 13:32:13Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalError">Consider a design where 'IActorService.Get(Expression&lt;Func&lt;Reader, bool&gt;&gt;)' doesn't nest generic type 'Expression&lt;Func&lt;Reader, bool&gt;&gt;'.</Issue>
             </Message>
-            <Message Id="Get" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2015-12-05 13:12:46Z" FixCategory="Breaking">
+            <Message Id="Get" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2015-12-05 13:32:13Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Rename virtual/interface member 'IActorService.Get(Expression&lt;Func&lt;Reader, bool&gt;&gt;)' so that it no longer conflicts with the reserved language keyword 'Get'. Using a reserved keyword as the name of a virtual/interface member makes it harder for consumers in other languages to override/implement the member.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetMany(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;SoftServe.ITA.PrompterPro.Domain.Models.Reader,System.Boolean&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-05 13:12:46Z" FixCategory="Breaking">
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-05 13:32:13Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalError">Consider a design where 'IActorService.GetMany(Expression&lt;Func&lt;Reader, bool&gt;&gt;)' doesn't nest generic type 'Expression&lt;Func&lt;Reader, bool&gt;&gt;'.</Issue>
             </Message>
            </Messages>
@@ -33,24 +40,24 @@
          <Members>
           <Member Name="#Delete(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;SoftServe.ITA.PrompterPro.Domain.Models.Preference,System.Boolean&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-05 13:12:46Z" FixCategory="Breaking">
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-05 13:32:13Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalError">Consider a design where 'IPreferenceService.Delete(Expression&lt;Func&lt;Preference, bool&gt;&gt;)' doesn't nest generic type 'Expression&lt;Func&lt;Preference, bool&gt;&gt;'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Get(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;SoftServe.ITA.PrompterPro.Domain.Models.Preference,System.Boolean&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-05 13:12:46Z" FixCategory="Breaking">
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-05 13:32:13Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalError">Consider a design where 'IPreferenceService.Get(Expression&lt;Func&lt;Preference, bool&gt;&gt;)' doesn't nest generic type 'Expression&lt;Func&lt;Preference, bool&gt;&gt;'.</Issue>
             </Message>
-            <Message Id="Get" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2015-12-05 13:12:46Z" FixCategory="Breaking">
+            <Message Id="Get" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2015-12-05 13:32:13Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Rename virtual/interface member 'IPreferenceService.Get(Expression&lt;Func&lt;Preference, bool&gt;&gt;)' so that it no longer conflicts with the reserved language keyword 'Get'. Using a reserved keyword as the name of a virtual/interface member makes it harder for consumers in other languages to override/implement the member.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetMany(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;SoftServe.ITA.PrompterPro.Domain.Models.Preference,System.Boolean&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-05 13:12:46Z" FixCategory="Breaking">
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2015-12-05 13:32:13Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalError">Consider a design where 'IPreferenceService.GetMany(Expression&lt;Func&lt;Preference, bool&gt;&gt;)' doesn't nest generic type 'Expression&lt;Func&lt;Preference, bool&gt;&gt;'.</Issue>
             </Message>
            </Messages>
@@ -61,41 +68,19 @@
       </Namespace>
       <Namespace Name="SoftServe.ITA.PrompterPro.Domain.Services.Impl">
        <Types>
-        <Type Name="ActorService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Members>
-          <Member Name="#Delete(System.Collections.Generic.IEnumerable`1&lt;System.Int32&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
-           <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-05 13:12:46Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="d:\study\LV-165 .NET\prompter\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\Impl" File="ActorService.cs" Line="68">In externally visible method 'ActorService.Delete(IEnumerable&lt;int&gt;)', validate parameter 'ids' before using it.</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
         <Type Name="PreferenceService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Members>
           <Member Name="#Post(SoftServe.ITA.PrompterPro.Domain.Models.Preference)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2015-12-05 13:12:46Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error" Path="d:\study\LV-165 .NET\prompter\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\Impl" File="PreferenceService.cs" Line="47">In member 'PreferenceService.Post(Preference)', change parameter name 'Preference' to 'preference' in order to match the identifier as it has been declared in 'IPreferenceService.Post(Preference)'.</Issue>
+            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2015-12-05 13:32:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\Impl" File="PreferenceService.cs" Line="47">In member 'PreferenceService.Post(Preference)', change parameter name 'Preference' to 'preference' in order to match the identifier as it has been declared in 'IPreferenceService.Post(Preference)'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Put(SoftServe.ITA.PrompterPro.Domain.Models.Preference)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2015-12-05 13:12:46Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error" Path="d:\study\LV-165 .NET\prompter\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\Impl" File="PreferenceService.cs" Line="56">In member 'PreferenceService.Put(Preference)', change parameter name 'Preference' to 'preference' in order to match the identifier as it has been declared in 'IPreferenceService.Put(Preference)'.</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
-        <Type Name="UserService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Members>
-          <Member Name="#DeleteUsers(System.Collections.Generic.IEnumerable`1&lt;System.Int32&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
-           <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-12-05 13:12:46Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="d:\study\LV-165 .NET\prompter\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\Impl" File="UserService.cs" Line="79">In externally visible method 'UserService.DeleteUsers(IEnumerable&lt;int&gt;)', validate parameter 'ids' before using it.</Issue>
+            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2015-12-05 13:32:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Oksana\Documents\GitHub\PrompterPro\Main\SoftServe.ITA.PrompterPro\PrompterPro.Domain.Services\Impl" File="PreferenceService.cs" Line="56">In member 'PreferenceService.Put(Preference)', change parameter name 'Preference' to 'preference' in order to match the identifier as it has been declared in 'IPreferenceService.Put(Preference)'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -138,16 +123,6 @@
    <Email>[none]</Email>
    <MessageLevel Certainty="95">Error</MessageLevel>
    <File Name="namingrules.dll" Version="12.0.0.0" />
-  </Rule>
-  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
-   <Name>Validate arguments of public methods</Name>
-   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
-   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
-   <Owner>RuleOwner</Owner>
-   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
-   <Email />
-   <MessageLevel Certainty="75">Warning</MessageLevel>
-   <File Name="dataflowrules.dll" Version="12.0.0.0" />
   </Rule>
  </Rules>
  <Localized>
