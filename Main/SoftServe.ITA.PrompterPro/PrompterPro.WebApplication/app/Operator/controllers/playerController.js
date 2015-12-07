@@ -3,8 +3,8 @@
     "broadcastHub",
     "broadcastOperator",
     "$modal",
-
-    function ($scope, broadcastHub, broadcastOperator, $modal) {
+    "preferenceService",
+    function ($scope, broadcastHub, broadcastOperator, $modal, preferenceService) {
     
     $scope.open = function (size) {
 
@@ -21,8 +21,10 @@
 
         modalInstance.result.then(function () {
             $scope.broadcastOperator.configurePrompters();
+            $scope.preferenceService.importSettings($scope);
         }, function () {
-	        $scope.broadcastOperator.configurePrompters();
+            $scope.broadcastOperator.configurePrompters();
+            $scope.preferenceService.importSettings($scope);
         });
     };
 
@@ -45,6 +47,8 @@
     $scope.textSize = 90;
     $scope.isPlayDisabled = false;
     $scope.isNavigateButtonShown = false;
+    $scope.screenWidth = 1140;
+    $scope.screenHeight = 400;
 
     $scope.leftPadding = 0;
     $scope.rightPadding = 0;
@@ -68,6 +72,14 @@
         return text;
     }
 
+    $scope.importSettings = function () {
+        preferenceService.importSettings($scope);
+    }
+
+    $scope.exportSettings = function () {
+        preferenceService.exportSettings($scope, $scope.screenWidth, $scope.screenHeight);
+    }
+
     $scope.hook = function (e) {
         e = e || window.event;
         var el = (e.srcElement || e.target).parentNode.parentNode;
@@ -77,6 +89,10 @@
     $scope.unhook = function (e) {
         if (cur)
             cur = null;
+    }
+
+    $scope.changeResolusion = function (width,height) {
+        broadcastHub.server.changeScreenResolution(width, height);
     }
 
     $scope.move = function (e) {
@@ -94,6 +110,8 @@
             el.style.height = ny + 'px';
             document.getElementById("prompterRow").setAttribute("style", "height:" + ny + "px;");
             broadcastHub.server.changeScreenResolution(nx, ny);
+            $scope.screenWidth = nx;
+            $scope.screenHeight = ny;
         }
         (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
     }

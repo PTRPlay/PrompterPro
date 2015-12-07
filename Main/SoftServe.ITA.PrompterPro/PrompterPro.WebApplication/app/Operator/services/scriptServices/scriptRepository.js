@@ -15,6 +15,18 @@
             return deferred.promise;
         };
 
+        obj.getid = function (id) {
+            var deferred = $q.defer();
+            $http.get("api/script?id=" + id)
+                .success(function (response) {
+                    deferred.resolve(response);
+                })
+                .error(function (error) {
+                    deferred.reject(error);
+                });
+            return deferred.promise;
+        };
+
         obj.post = function(scripts) {
             var deferred = $q.defer();
             $http.post(webApi.script, scripts)

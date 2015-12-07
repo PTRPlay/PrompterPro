@@ -1,11 +1,18 @@
 ﻿app.factory('serverService',
     [
-    'userRepository', 'actorRepository', function (userRepository, actorRepository) {
+    'userRepository', 'actorRepository', 'preferenceRepository', function (userRepository, actorRepository, preferenceRepository) {
         return {
             readAllActors: function($scope) {
                 actorRepository
                     .getall()
-                    .then(function(actors) {
+                    .then(function (actors) {
+                       /* for (var i = 0; i < actors.length;i++) {
+                            if (actors[i].LastScriptId === undefined || actors[i].LastScriptId == null) {
+                                actors[i].LastScript = "None";
+                            }
+                            else
+                                actors[i].LastScript = scriptRepository.getid(actors[i].LastScriptId).Title;
+                        }*/
                         $scope.actors = actors;
                     });
             },
@@ -36,7 +43,15 @@
                                 $scope.actors = actors;
                                 $scope.managedActorslist.length = 0;
                             });
-                }
+            },
+            getPreference : function (prefservice,actorId, scriptId)
+            {
+                preferenceRepository.get(actorId, scriptId)
+                             .then(function (preference) {
+                                 //prefservice.setCurrentPreference(preference);
+                                 return preference;
+                             });
+            }
         };
     }
 ]);

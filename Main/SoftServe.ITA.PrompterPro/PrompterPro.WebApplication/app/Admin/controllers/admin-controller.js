@@ -43,7 +43,7 @@
 
 app.controller('actorsAdminController', [
     '$scope', 'actorRepository', 'userStateControll', 'serverService', 'dialogSevice',
-    'manageUserSate', 'manageListOfActors', 'notify', 'notifyType', 'constants', 'icons',
+    'manageUserSate', 'manageListOfActors', 'notify', 'notifyType', 'constants', 'icons', 
 function ($scope, actorRepository, userStateControll, serverService, dialogSevice,
     manageUserSate, manageListOfActors, notify, notifyType, constants, icons) {
 
@@ -67,9 +67,10 @@ function ($scope, actorRepository, userStateControll, serverService, dialogSevic
     }
 
     $scope.getAllActors = function () {
-        serverService.readAllActors($scope);
+        serverService.readAllActors($scope);       
         for (actor in $scope.actors)
         {
+        //    actor.LastScript = scriptRepository.getid(actor.LastScriptId).Title;
             actor.inAction = false;
         }
     };

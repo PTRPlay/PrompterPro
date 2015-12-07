@@ -1,11 +1,11 @@
-﻿app.service("actorRepository", [
+﻿app.service("preferenceRepository", [
     "$http",
     "$q",
     function ($http, $q) {
         return {
-            get: function (id) {
+            get: function (actorId, scriptId) {
                 var deferred = $q.defer();
-                $http.get("api/Actor?id=" + id)
+                $http.get("api/preference?id=" + actorId + "+" + scriptId)
                     .success(function (response) {
                         deferred.resolve(response);
                     })
@@ -17,7 +17,7 @@
 
             getall: function () {
                 var deferred = $q.defer();
-                $http.get("api/Actor/")
+                $http.get("api/preference/")
                     .success(function (response) {
                         deferred.resolve(response);
                     })
@@ -27,9 +27,9 @@
                 return deferred.promise;
             },
 
-            post: function (actors) {
+            post: function (preference) {
                 var deferred = $q.defer();
-                $http.post("api/actor/",actors)
+                $http.post("api/preference/", preference)
                     .success(function (response) {
                         deferred.resolve(response);
                     })
@@ -40,9 +40,9 @@
             },
 
 
-            del: function (id) { 
+            del: function (id) {
                 var deferred = $q.defer();
-                $http.delete("api/Actor?id=" + id)
+                $http.delete("api/preference?id=" + id)
                     .success(function (response) {
                         deferred.resolve(response);
                     })
@@ -52,9 +52,9 @@
                 return deferred.promise;
             },
 
-            put: function (actor) {
+            put: function (preference) {
                 var deferred = $q.defer();
-                $http.put("api/Actor?id=" + actor.Id, actor)
+                $http.put("api/preference?id=" + preference.Id, preference) // maybe should add id
                     .success(function (response) {
                         deferred.resolve(response);
                     })

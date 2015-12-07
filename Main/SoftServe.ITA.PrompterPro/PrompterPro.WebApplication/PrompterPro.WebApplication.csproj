@@ -160,7 +160,6 @@
     <CodeAnalysisDictionary Include="..\PrompterProCodeAnalysisDictionary.xml">
       <Link>PrompterProCodeAnalysisDictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <Content Include="app\Admin\controllers\actorsAdminController.js" />
     <Content Include="app\Admin\controllers\admin-controller.js" />
     <Content Include="app\Admin\controllers\datepicker-controller.js" />
     <Content Include="app\Admin\controllers\diagnostics-controller.js" />
@@ -220,6 +219,8 @@
     <Content Include="app\Operator\services\init\initScriptCtrlFunctions.js" />
     <Content Include="app\Operator\services\init\initScriptCtrlProps.js" />
     <Content Include="app\Operator\services\modals\operatorDialog.js" />
+    <Content Include="app\Operator\services\preferenceRepository.js" />
+    <Content Include="app\Operator\services\preferenceService.js" />
     <Content Include="app\Operator\services\prompterServices\fetchPrompters-service.js" />
     <Content Include="app\Operator\services\prompterServices\actorChecked.js" />
     <Content Include="app\Operator\services\prompterServices\prompterChecked.js" />
