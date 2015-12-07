@@ -189,10 +189,10 @@
 
                     </div>
                     <!-- actors list -->
-                    @*<div class="list-group" ng-controller ="actorController">
+                    <div class="list-group" ng-controller ="actorController">
                         <a class="list-group-item active btn"
                            ng-click="actorListClick()">
-                            <span class="badge">{{filteredScripts.length}}</span>
+                            <span class="badge">{{filteredActors.length}}</span>
                             Actors
                         </a>
                         <div class="list-group-item"
@@ -202,7 +202,7 @@
                                     <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
                                 </span>
                                 <input type="text" class="form-control" placeholder="Find"
-                                       ng-model="searchActor.LastName">
+                                       ng-model="searchActor.FirstName">
                             </div>
                         </div>
 
@@ -212,13 +212,12 @@
                                ng-repeat="actor in filteredActors = (actors
                                                                    | filter: searchActor
                                                                    | orderBy: actorOrder)"
-                               @*ng-class="scriptClass(script)"
-                               ng-click="scriptService.select(script)">
-                                <h5>{{script.Title}}</h5>
-                                <h6>{{script.Description}}</h6>
+                               ng-class="scriptClass(actor)"
+                               ng-click="scriptService.select(actor)">
+                                <h5>{{actor.FirstName}}</h5>
                             </a>
                         </div>
-                    </div>*@
+                    </div>
 
                 </div>
 

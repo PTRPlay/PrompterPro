@@ -1,21 +1,13 @@
 ﻿app.controller("actorController", [
 	"$scope",
-    "initScriptCtrlProps",
-    "initScriptCtrlFunctions",
 	"actorRepository",
     "broadcastHub",
 
-	function ($scope,
-        initScriptCtrlProps,
-        initScriptCtrlFunctions,
-		actorRepository,
-        broadcastHub) {
-	    initScriptCtrlProps($scope);
-	    initScriptCtrlFunctions($scope);
+	function ($scope, actorRepository, broadcastHub) {
 
-		actorRepository.getall().then(function(scripts) {
-			$scope.scripts = scripts;
-			$scope.selectedScript = null;
+		actorRepository.getall().then(function(actors) {
+			$scope.actors = actors;
+			$scope.selectedActor = null;
 		});
 	}
 ]);
