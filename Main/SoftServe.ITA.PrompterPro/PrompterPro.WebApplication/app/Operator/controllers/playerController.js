@@ -3,8 +3,8 @@
     "broadcastHub",
     "broadcastOperator",
     "$modal",
-    "preferenceService",
-    function ($scope, broadcastHub, broadcastOperator, $modal, preferenceService) {
+
+    function ($scope, broadcastHub, broadcastOperator, $modal) {
     
     $scope.open = function (size) {
 
@@ -21,10 +21,8 @@
 
         modalInstance.result.then(function () {
             $scope.broadcastOperator.configurePrompters();
-            $scope.preferenceService.importSettings($scope);
         }, function () {
-            $scope.broadcastOperator.configurePrompters();
-            $scope.preferenceService.importSettings($scope);
+	        $scope.broadcastOperator.configurePrompters();
         });
     };
 
@@ -37,18 +35,18 @@
     var velocity = 40;
     var textSizeInput = 90;
     var cur = null;
+    var textSizeStep = 5;
 
     $scope.textIsChanged = false;
     $scope.textSizes = [50,55,60,70,80,90,100,110,130];
     $scope.showDialog = false;
     $scope.speed = 5;
-    speedHandlPlay = 10;
     $scope.currentSize = $scope.textSizes[6];
     $scope.textSize = 90;
     $scope.isPlayDisabled = false;
     $scope.isNavigateButtonShown = false;
-    $scope.screenWidth = 1140;
-    $scope.screenHeight = 400;
+    var mintextSize = 70;
+    var maxtextSize = 110;
 
     $scope.leftPadding = 0;
     $scope.rightPadding = 0;
@@ -72,14 +70,6 @@
         return text;
     }
 
-    $scope.importSettings = function () {
-        preferenceService.importSettings($scope);
-    }
-
-    $scope.exportSettings = function () {
-        preferenceService.exportSettings($scope, $scope.screenWidth, $scope.screenHeight);
-    }
-
     $scope.hook = function (e) {
         e = e || window.event;
         var el = (e.srcElement || e.target).parentNode.parentNode;
@@ -89,10 +79,6 @@
     $scope.unhook = function (e) {
         if (cur)
             cur = null;
-    }
-
-    $scope.changeResolusion = function (width,height) {
-        broadcastHub.server.changeScreenResolution(width, height);
     }
 
     $scope.move = function (e) {
@@ -110,8 +96,6 @@
             el.style.height = ny + 'px';
             document.getElementById("prompterRow").setAttribute("style", "height:" + ny + "px;");
             broadcastHub.server.changeScreenResolution(nx, ny);
-            $scope.screenWidth = nx;
-            $scope.screenHeight = ny;
         }
         (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
     }
@@ -167,7 +151,7 @@
         clearInterval(animation);
         animation = setInterval(function () {
             if (textBox.scrollTop() > 0) {
-                textBox.scrollTop(textBox.scrollTop() - speedHandlPlay);
+                textBox.scrollTop(textBox.scrollTop() - $scope.speed);
             }
         }, velocity);
      }
@@ -182,7 +166,7 @@
         clearInterval(animation);
         animation = setInterval(function () {
             if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
-                textBox.scrollTop(textBox.scrollTop() + speedHandlPlay);
+                textBox.scrollTop(textBox.scrollTop() + $scope.speed);
             }
         }, velocity);
     }
@@ -252,5 +236,27 @@
         $scope.textSize = size;
         $scope.$apply();
     }
-    
+
+    $scope.textSizeUp = function () {
+        broadcastHub.invoke('textSizeUp');
+    }
+
+    broadcastHub.client.textSizeUp = function () {
+        if ($scope.textSize < maxtextSize) {
+            $scope.textSize += textSizeStep;
+            $scope.$apply();
+        }
+    }
+
+    $scope.textSizeDown = function () {
+        broadcastHub.invoke('textSizeDown');
+    }
+
+    broadcastHub.client.textSizeDown = function () {
+        if ($scope.textSize > mintextSize) {
+            $scope.textSize -= textSizeStep;
+            $scope.$apply();
+        }
+    }
+
 }]);

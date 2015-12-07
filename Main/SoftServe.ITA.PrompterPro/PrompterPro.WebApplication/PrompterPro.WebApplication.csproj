@@ -213,7 +213,6 @@
     <Content Include="app\Operator\directives\dndLists.js" />
     <Content Include="app\Operator\directives\focusMe.js" />
     <Content Include="app\Operator\filters\scriptFilter.js" />
-    <Content Include="app\Operator\services\actorsServices\fetchActors-service.js" />
     <Content Include="app\Operator\services\actorsServices\actorOrder.js" />
     <Content Include="app\Operator\services\actorsServices\actorService.js" />
     <Content Include="app\Operator\services\init\initScriptCtrlFunctions.js" />

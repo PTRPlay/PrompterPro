@@ -33,6 +33,9 @@
     	    $scope.textSize = 90;
     	    $scope.leftPadding = 0;
     	    $scope.rightPadding = 0;
+    	    var mintextSize = 70;
+    	    var maxtextSize = 110;
+    	    var textSizeStep = 5;
 
 		    $scope.hub = broadcastHub;
 		    function setDefaultProps() {
@@ -105,7 +108,21 @@
 		    broadcastHub.client.changeTextSize = function (size) {
 		        $scope.textSize = size;
 		        $scope.$apply();
-            }
+		    }
+
+		    broadcastHub.client.textSizeUp = function () {
+		        if ($scope.textSize < maxtextSize) {
+		            $scope.textSize += textSizeStep;
+		            $scope.$apply();
+		        }
+		    }
+
+		    broadcastHub.client.textSizeDown = function () {
+		        if ($scope.textSize > mintextSize) {
+		            $scope.textSize -= textSizeStep;
+		            $scope.$apply();
+		        }
+		    }
 
             broadcastHub.client.speedUp = function() {
                 if ($scope.speed < maxSpeed) {
