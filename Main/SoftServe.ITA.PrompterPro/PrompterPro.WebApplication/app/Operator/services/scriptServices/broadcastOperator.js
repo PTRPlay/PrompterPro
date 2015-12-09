@@ -42,6 +42,12 @@
                 $scope.sortedScripts = _.sortBy($scope.scripts, 'Title');
                 $scope.index = _.indexOf($scope.sortedScripts, $scope.selectedScript);
 
+                //for adding text into operator screen :)
+                var sections = $scope.sortedScripts[$scope.index].Sections;
+                _.each(sections, function (section) {
+                    $('#area').append("<p id=Section" + section.Order + ">" + "[Section" + section.Order + "]\n" + section.Text + "</p>");
+                });
+                //why here ? because i can ;)
 
                 connectingProgress = 0;
                 prompters = $scope.checked;

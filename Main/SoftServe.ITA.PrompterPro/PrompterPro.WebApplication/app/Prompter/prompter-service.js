@@ -49,6 +49,12 @@
 		    broadcastHub.client.fetchScript = function (scriptId, operatorId) {
                 prompterRepository.get(scriptId, function(script) {
                     $scope.script = script;
+                    ///
+                    var sections = $scope.script.Sections;
+                    _.each(sections, function (section) {
+                        $('#area').append("<p id=Section" + section.Order + ">" + "[Section" + section.Order + "]\n" + section.Text + "</p>");
+                    });
+                    ///
                     broadcastHub.server.fetchSuccess(operatorId);
                     notify(
 						notifyType.success,
@@ -172,14 +178,14 @@
                 document.getElementById("area").value = "";
             }
             
-            $scope.displayText = function () {
-                var text = '\n';
-                var sections = $scope.script.Sections;
-                _.each(sections, function (section) {
-                    text += '[Section:' + section.Order + ']\n' + section.Text + '\n';
-                });
-                return text;
-            }
+            //$scope.displayText = function () {
+            //    var text = '\n';
+            //    var sections = $scope.script.Sections;
+            //    _.each(sections, function (section) {
+            //        text += '[Section:' + section.Order + ']\n' + section.Text + '\n';
+            //    });
+            //    return text;
+            //}
 
             
             broadcastHub.client.changeScreenResolution = function (screenWidth, screenHeight) {
@@ -213,6 +219,25 @@
                     resolutionMultiplier = 2;
                     broadcastHub.client.changeTextSize($scope.currentSize * resolutionMultiplier);
                 }
+            }
+
+            broadcastHub.client.getPrevSection = function (length) {
+                for (var i = length - 1; i >= 0; i--) {
+                    if ($("#Section" + i).position().top < 0) {
+                        $('#area').scrollTop($("#Section" + i).position().top + $('#area').scrollTop());
+                        break;
+                    }
+                }
+                $scope.$apply();
+            }
+
+            broadcastHub.client.getNextSection = function () {
+                var i = 0;
+                while ($("#Section" + i).position().top <= 1) {
+                    i++;
+                }
+                $('#area').scrollTop($("#Section" + i).position().top + $('#area').scrollTop());
+                $scope.$apply();
             }
 
 	        var obj = {};

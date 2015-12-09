@@ -402,7 +402,7 @@
                             <div class="col-xs-2" style="padding-top: 200px;width:15%">
                                 <img src="~/Content/Trinagles/left-triangle.png" class="pull-right" />
                             </div>
-                            <textarea id="area"
+                            <div id="area"
                                       class="col-xs-8 textarea-style center-block"
                                       ng-checked="mirrorText(isMirroredX,isMirroredY)"
                                       ng-keypress="textIsChanged = true"
@@ -410,8 +410,7 @@
                                       ng-mouseover="isNavigateButtonShown = true"
                                       ng-mouseleave="isNavigateButtonShown = false"
                                       style="width:70%; min-height:400px; height:100%">
-                                {{displayText()}}
-                            </textarea>
+                            </div>
                             <div class="col-xs-2" style="padding-top: 170px;width:15%;z-index:2;position:relative">
                                 <img src="~/Content/Trinagles/right-triangle.png" />
                             </div>
@@ -464,6 +463,12 @@
 
                                                     <button class="btn btn-default glyphicon glyphicon-stop move-left"
                                                             ng-click="stop()"></button>
+
+                                                    <button class="btn btn-default glyphicon glyphicon-arrow-right move-left"
+                                                            ng-click="getNextSection()"></button>
+
+                                                    <button class="btn btn-default glyphicon glyphicon-arrow-left move-left"
+                                                            ng-click="getPrevSection()"></button>
 
                                                     <button class="btn btn-default move-left glyphicon glyphicon-backward move-left"
                                                             ng-mousedown="handPlayBack()"
