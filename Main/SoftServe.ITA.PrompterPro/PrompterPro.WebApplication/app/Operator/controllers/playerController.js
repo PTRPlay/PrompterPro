@@ -212,14 +212,6 @@
         }
     }
 
-    $scope.getNextSection = function() {
-        //TODO: Add code
-    }
-
-    $scope.getPrevSection = function() {
-        //TODO: Add code
-    }
-
     $scope.padRight = function(percentage) {
         broadcastHub.server.padRight(percentage);
     }
