@@ -1,6 +1,6 @@
 ﻿app.factory('preferenceService', [
-    'preferenceRepository', 'sectionServices', 'serverService',
-    function (preferenceRepository, sectionServices, serverService) {
+    'preferenceRepository', 'sectionServices', 'serverService', 'actorService', 
+function (preferenceRepository, sectionServices, serverService, actorService) {
         var currentScript;
         var currentActor;
         var currentSection;
@@ -20,16 +20,28 @@
                 currentPreference = preference;
             },
 
-            importSettings: function ($scope) {
-                  currentActor = 2; // set actor
-                currentPreference = serverService.getPreference(this,currentActor, currentScript.ScriptId);
-                    
-                    $scope.speed = currentPreference.ReadingSpeed;
-                    $scope.textSize = currentPreference.FontSize;
-                    $scope.changeResolusion(currentPreference.ScreenWidth, currentPreference.ScreenHeight);
+            importSettings: function ($scope) { // server callback problem
+                var actor = window.currActor;
+                var script = currentScript;
+ //               currentPreference = preferenceRepository(this,currentActor, currentScript.ScriptId);
+            /*    var preference;
+                 preference = preferenceRepository.get(actor.Id, script.ScriptId);*/
+                serverService.getPreference(actor.Id, script.ScriptId);
+                if (window.preference !== undefined && preference != null) {
+                    $scope.speed = preference.ReadingSpeed;
+                    $scope.textSize = preference.FontSize;
+                    $scope.changeResolusion(preference.ScreenWidth, preference.ScreenHeight);
+                    //      return preference;
+
+                    //      $scope.speed = currentPreference.ReadingSpeed;
+                    //      $scope.textSize = currentPreference.FontSize;
+                    //      $scope.changeResolusion(currentPreference.ScreenWidth, currentPreference.ScreenHeight);
+                }
             },
 
             exportSettings: function ($scope, width, height) {
+                var actor = window.currActor;
+                var script = currentScript;
                 var preference = {
                     ReaderId : 0,
                     ScriptId: 0,
@@ -39,14 +51,13 @@
                     ScreenWidth: 0,
                     ScreenHeight : 0
                 }
-                preference.Id = 1;
-                preference.ReaderId = 2; // get reader
-                preference.ScriptId = currentScript.ScriptId;
-                preference.LastSectionId = sectionServices.getCurrentSectionId();
+                preference.ReaderId = actor.Id; 
+                preference.ScriptId = script.ScriptId;
+               // preference.LastSectionId = sectionServices.getCurrentSectionId();
                 preference.ReadingSpeed = $scope.speed;
                 preference.FontSize = $scope.textSize;
-                preference.ScreenWidth = width; // -"px"
-                preference.ScreenHeight = height; // -"px"
+                preference.ScreenWidth = width; 
+                preference.ScreenHeight = height;
                 preferenceRepository.put(preference);
             }
            

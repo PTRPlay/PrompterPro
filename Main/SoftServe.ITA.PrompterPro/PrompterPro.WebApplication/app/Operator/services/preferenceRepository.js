@@ -5,15 +5,27 @@
         return {
             get: function (actorId, scriptId) {
                 var deferred = $q.defer();
-                $http.get("api/preference?id=" + actorId + "+" + scriptId)
-                    .success(function (response) {
-                        deferred.resolve(response);
-                    })
+               $http.get("api/preference?id=" + actorId + "+" + scriptId)
+                   .success(function (response) {
+                       deferred.resolve(response);
+                   })
                     .error(function (error) {
                         deferred.reject(error);
                     });
-                return deferred.promise;
+               return deferred.promise;
             },
+          /*  function (actorId, scriptId) {
+                var result = null;
+                $http({
+                    method: 'GET',
+                    url: "api/preference?id=" + actorId + "+" + scriptId
+                }).then(function successCallback(response) {
+                    result = response;
+                }, function errorCallback(response) {
+                    result = response;
+                });
+                return result;
+            },*/
 
             getall: function () {
                 var deferred = $q.defer();
@@ -53,15 +65,17 @@
             },
 
             put: function (preference) {
-                var deferred = $q.defer();
-                $http.put("api/preference?id=" + preference.Id, preference) // maybe should add id
+               // var deferred = $q.defer();
+                $http.put("api/preference/", preference) // maybe should add id
                     .success(function (response) {
-                        deferred.resolve(response);
+                        // deferred.resolve(response);
+                        return response;
                     })
                     .error(function (error) {
-                        deferred.reject(error);
+                        //  deferred.reject(error);
+                        return response;
                     });
-                return deferred.promise;
+             //   return deferred.promise;
             }
 
         }

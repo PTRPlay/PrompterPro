@@ -19,7 +19,8 @@
 		notify,
 		notifyType,
 		icons,
-		prompterStatus, preferenceService) {
+		prompterStatus,
+        preferenceService) {
 
 		return function($scope) {
 			var obj = {};
@@ -175,6 +176,7 @@
 				}
 			};
 
+
 			obj.remove = function(script) {
 				if (script === $scope.selectedScript) {
 					$scope.selectedScript = null;
@@ -199,6 +201,10 @@
 			    $scope.selectedScript = script;
 			    preferenceService.setCurrentScript(script);
 			};
+
+			obj.getSelected = function () {
+			    return $scope.selectedScript;
+			}
 
 			obj.save = function() {
 

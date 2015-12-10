@@ -44,12 +44,12 @@
                                 $scope.managedActorslist.length = 0;
                             });
             },
-            getPreference : function (prefservice,actorId, scriptId)
+            getPreference : function (actorId, scriptId)
             {
                 preferenceRepository.get(actorId, scriptId)
-                             .then(function (preference) {
-                                 //prefservice.setCurrentPreference(preference);
-                                 return preference;
+                             .then(function (data) {
+                                 window.preference = data;
+                                 return data;
                              });
             }
         };

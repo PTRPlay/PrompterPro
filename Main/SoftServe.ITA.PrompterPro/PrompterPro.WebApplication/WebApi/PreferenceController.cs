@@ -46,7 +46,7 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
         }
 
         // PUT: api/Preference/5
-        public void Put(int id, [FromBody]object value)
+        public void Put([FromBody]object value) //int id,
         {
             JObject JPreference = JObject.FromObject(value,new Newtonsoft.Json.JsonSerializer());
             Preference preference = new Preference();
