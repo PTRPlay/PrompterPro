@@ -62,14 +62,14 @@
         $scope.textSize = 90;
         $scope.stop();
     }
-    $scope.displayText = function () {
-        var text = '\n';
-        var sections = $scope.$parent.selectedScript.Sections;
-        _.each(sections, function (section) {
-            text+='[Section:' + section.Order + ']\n' + section.Text + '\n';
-        });
-        return text;
-    }
+    //$scope.displayText = function () {
+    //    var text = '\n';
+    //    var sections = $scope.$parent.selectedScript.Sections;
+    //    _.each(sections, function (section) {
+    //        text+='[Section:' + section.Order + ']\n' + section.Text + '\n';
+    //    });
+    //    return text;
+    //}
 
     $scope.hook = function (e) {
         e = e || window.event;
