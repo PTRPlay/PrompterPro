@@ -287,4 +287,8 @@
         return i;
     }
 
+    $scope.scrollToCurrent = function (current) {
+        $('$area').scrollTop($('#Section' + i).position());
+    }
+
 }]);
