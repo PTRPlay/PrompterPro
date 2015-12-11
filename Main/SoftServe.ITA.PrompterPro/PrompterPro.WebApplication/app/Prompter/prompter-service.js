@@ -241,6 +241,10 @@
                 $scope.$apply();
             }
 
+            broadcastHub.scrollToCurrent = function (current) {
+                $('$area').scrollTop($('#Section' + i).position());
+            }
+
 	        var obj = {};
 	        return obj;
         };

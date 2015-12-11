@@ -407,6 +407,11 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
             Clients.OthersInGroup(GetGroupName()).getPrevSection(length);
         }
 
+        public void ScrollToCurrent()
+        {
+            Clients.OthersInGroup(GetGroupName()).ScrollToCurrent();
+        }
+
         public void ConfigurePrompters(List<PrompterInfo> promptersConfig)
         {
             if (promptersConfig == null)

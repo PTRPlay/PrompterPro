@@ -280,4 +280,15 @@
         broadcastHub.server.getPrevSection(length);
     }
 
+    $scope.getCurrentSection = function () {
+        while ($("#Section" + i).position().top <= 1) {
+            i++;
+        }
+        return i;
+    }
+
+    $scope.scrollToCurrent = function (current) {
+        $('$area').scrollTop($('#Section' + i).position());
+    }
+
 }]);
