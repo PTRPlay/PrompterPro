@@ -34,9 +34,12 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
             if (id == "undefined") return null;
             string[] input = id.Split(' ');
             int actorId = int.Parse(input[0]);
-            int scriptId = int.Parse(input[1]); // check for validacy
-            Preference result =  preferenceService.Get(preference => preference.ReaderId == actorId && preference.ScriptId == scriptId);
-            return result;
+            int scriptId = int.Parse(input[1]);
+            Preference result = preferenceService.Get(preference => preference.ReaderId == actorId && preference.ScriptId == scriptId);
+            if (result == null)
+                return new Preference { FontSize = 90, ReaderId = actorId, ScriptId = scriptId, ReadingSpeed = 5, ScreenHeight = 400, ScreenWidth = 1140 };
+            else
+                return result;
         }
 
         // POST: api/Preference
@@ -48,7 +51,7 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
         // PUT: api/Preference/5
         public void Put([FromBody]object value) //int id,
         {
-            JObject JPreference = JObject.FromObject(value,new Newtonsoft.Json.JsonSerializer());
+            JObject JPreference = JObject.FromObject(value, new Newtonsoft.Json.JsonSerializer());
             Preference preference = new Preference();
             foreach (JProperty app in JPreference.Properties())
             {
@@ -65,7 +68,7 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
                 if (app.Name == "ReaderId")
                     preference.ReaderId = (int)app.Value;
                 if (app.Name == "LastSectionId")
-                    preference.LastSectionId = (int)app.Value; 
+                    preference.LastSectionId = (int)app.Value;
             }
             Reader currentActor = actorService.Get(actor => actor.Id == preference.ReaderId);
             currentActor.LastScriptId = preference.ScriptId;

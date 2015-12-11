@@ -46,7 +46,14 @@ namespace SoftServe.ITA.PrompterPro.Domain.Services.Impl
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())
             {
-                return context.Preferences.Where(expression).FirstOrDefault();
+                try
+                {
+                    return context.Preferences.Where(expression).FirstOrDefault();
+                }
+                catch
+                {
+                    return null;
+                }
             }
         }
 

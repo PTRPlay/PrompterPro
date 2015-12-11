@@ -23,7 +23,7 @@
 		}
 
 		$scope.getActor = function () {
-		    return window.currActor.LastName + window.currActor.FirstName;
+		    return "Actor : " + window.currActor.LastName + " " + window.currActor.FirstName;
 		}
 
 		$scope.showImportExport = function () {
