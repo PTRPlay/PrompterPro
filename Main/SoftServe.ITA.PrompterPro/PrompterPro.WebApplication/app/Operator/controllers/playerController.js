@@ -91,13 +91,12 @@
         with (cur) {
             var nx = e.clientX - x;
             var ny = e.clientY - y;
-
             if (nx < 1140) nx = 1140;
             if (ny < 400) ny = 400;
 
             el.style.width = nx + 'px';
             el.style.height = ny + 'px';
-            document.getElementById("prompterRow").setAttribute("style", "height:" + ny + "px;");
+            document.getElementById("container").setAttribute("style", "height:" + ny + "px;"+ "display:table;");
             broadcastHub.server.changeScreenResolution(nx, ny);
             $scope.screenWidth = nx;
             $scope.screenHeight = ny;

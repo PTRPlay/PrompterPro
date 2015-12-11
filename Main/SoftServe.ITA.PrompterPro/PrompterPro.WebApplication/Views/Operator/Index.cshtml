@@ -390,16 +390,16 @@
                         </div>
                     </form>
 
-                    <div class="container" id="container" style="background-color: black; min-width:1140px;width: 100%; height:400px;  !important">
-                        <div id="div_img" style="z-index:1;
+                    <div class="container" id="container" style="background-color: black; min-width:1140px;width: 100%; height:400px; display:table !important">
+                        <div id="prompterRow" class="row" style="height:inherit; background:#000">
+                            <div id="div_img" style="z-index:1;
                                              right:-30px;
                                              top:100%;
                                              position:relative;
                                              float:right;
                                              cursor:se-resize;">
-                            <span class="glyphicon glyphicon-move" ng-mousedown="hook(event)" tooltip="Resize prompter screen"></span>
-                        </div>
-                        <div id="prompterRow" class="row" style="height:inherit">
+                                <span class="glyphicon glyphicon-move" ng-mousedown="hook(event)" tooltip="Resize prompter screen"></span>
+                            </div>
                             <div class="col-xs-2" style="padding-top: 200px;width:15%">
                                 <img src="~/Content/Trinagles/left-triangle.png" class="pull-right" />
                             </div>
