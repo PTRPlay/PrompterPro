@@ -536,6 +536,9 @@
                                                 </div>
                                                 <div ng-controller="actorController" ng-show="showImportExport()">
                                                     <div class="col-xs-2">
+                                                        <label>{{getActor()}}</label>
+                                                    </div>
+                                                    <div class="col-xs-2">
                                                         <button class="btn btn-default pull-right"
                                                                 ng-click="importSettings()">
                                                             Import settings

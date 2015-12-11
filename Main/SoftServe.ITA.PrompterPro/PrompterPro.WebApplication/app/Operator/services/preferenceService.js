@@ -14,8 +14,8 @@ function ($http) {
                .success(function (data) {
                    $scope.speed = data.ReadingSpeed;
                    $scope.textSize = data.FontSize;
-                   $scope.changeResolusion(data.ScreenWidth, data.ScreenHeight);
-                   $scope.scrollToCurrent(data.LastSectionId);
+                   $scope.changeScreenResolusion(data.ScreenWidth, data.ScreenHeight);
+                   $scope.scrollToCurrent(data.LastSectionId - 1);
                })
                 .error(function (data) {
                     console.log('error');

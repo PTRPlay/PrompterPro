@@ -48,6 +48,8 @@
     $scope.isNavigateButtonShown = false;
     var mintextSize = 70;
     var maxtextSize = 110;
+    $scope.screenWidth = 1140;
+    $scope.screenHeight = 400;
 
     $scope.leftPadding = 0;
     $scope.rightPadding = 0;
@@ -97,6 +99,8 @@
             el.style.height = ny + 'px';
             document.getElementById("prompterRow").setAttribute("style", "height:" + ny + "px;");
             broadcastHub.server.changeScreenResolution(nx, ny);
+            $scope.screenWidth = nx;
+            $scope.screenHeight = ny;
         }
         (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
     }
@@ -109,8 +113,8 @@
         preferenceService.exportSettings($scope, $scope.screenWidth, $scope.screenHeight);
     }
 
-    $scope.changeResolusion = function (width, height) {
-        broadcastHub.server.changeScreenResolution(width, height);
+    $scope.changeScreenResolusion = function (nx, ny) {
+        broadcastHub.server.changeScreenResolution(nx, ny); 
     }
 
     document.onmouseup = $scope.unhook;

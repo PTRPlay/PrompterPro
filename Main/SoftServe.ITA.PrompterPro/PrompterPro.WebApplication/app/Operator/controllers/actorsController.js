@@ -22,6 +22,10 @@
 		    
 		}
 
+		$scope.getActor = function () {
+		    return window.currActor.LastName + window.currActor.FirstName;
+		}
+
 		$scope.showImportExport = function () {
 		    if (window.currActor === undefined)
 		        return false;
