@@ -31,7 +31,14 @@ namespace SoftServe.ITA.PrompterPro.Domain.Services.Impl
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())
             {
-                return context.Preferences.Where(expression).ToList();
+                try
+                {
+                    return context.Preferences.Where(expression).ToList();
+                }
+                catch
+                {
+                    return null;
+                }
             }
         }
 
@@ -43,21 +50,29 @@ namespace SoftServe.ITA.PrompterPro.Domain.Services.Impl
             }
         }
 
-        public void Post(Preference Preference)
+        public void Post(Preference preference)
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())
             {
-                context.Preferences.Add(Preference);
+                context.Preferences.Add(preference);
                 context.SaveChanges();
             }
         }
 
-        public void Put(Preference Preference)
+        public void Put(Preference preference)
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())
             {
-                context.Entry(Preference).State = System.Data.Entity.EntityState.Modified;
-                context.SaveChanges();
+                preference.Id = 0;
+                Preference pref = this.Get(temp => preference.ReaderId == temp.ReaderId && preference.ScriptId == temp.ScriptId);
+                if (pref == null)
+                    this.Post(preference);
+                else
+                {
+                    preference.Id = pref.Id;
+                    context.Entry(preference).State = System.Data.Entity.EntityState.Modified;
+                    context.SaveChanges();
+                }
             }
         }
 

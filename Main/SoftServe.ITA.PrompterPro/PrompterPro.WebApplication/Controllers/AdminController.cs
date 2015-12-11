@@ -27,5 +27,10 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Controllers
         {
             return View();
         }
+
+        public ActionResult Actors()
+        {
+            return View();
+        }
     }
 }

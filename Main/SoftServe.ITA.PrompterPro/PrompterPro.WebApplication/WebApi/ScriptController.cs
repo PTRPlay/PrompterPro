@@ -12,7 +12,7 @@ using SoftServe.ITA.PrompterPro.WebApplication.WebHelper.UserActivityActionFilte
 
 namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
 {
-    [Authorize(Roles = "Operator, Prompter")]
+    [Authorize(Roles = "Admin, Operator, Prompter")]
     [WebApiLogActionFilter]
     public class ScriptController : ApiController
     {

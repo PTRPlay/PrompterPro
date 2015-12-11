@@ -9,6 +9,7 @@
 	"notifyType",
 	"icons",
 	"prompterStatus",
+    "preferenceService",
 	function(
 		fileUpload,
 		webApi,
@@ -18,12 +19,14 @@
 		notify,
 		notifyType,
 		icons,
-		prompterStatus) {
+		prompterStatus,
+        preferenceService) {
 
 		return function($scope) {
 			var obj = {};
 
-			// private members:
+		    // private members:
+
 
 			var getFileExtension = function(fileName) {
 				if (!_.isString(fileName)) {
@@ -173,6 +176,7 @@
 				}
 			};
 
+
 			obj.remove = function(script) {
 				if (script === $scope.selectedScript) {
 					$scope.selectedScript = null;
@@ -194,8 +198,13 @@
 			};
 
 			obj.select = function(script) {
-				$scope.selectedScript = script;
+			    $scope.selectedScript = script;
+			    preferenceService.setCurrentScript(script);
 			};
+
+			obj.getSelected = function () {
+			    return $scope.selectedScript;
+			}
 
 			obj.save = function() {
 

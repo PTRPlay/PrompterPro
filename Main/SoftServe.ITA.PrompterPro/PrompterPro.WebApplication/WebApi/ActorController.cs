@@ -5,8 +5,12 @@ using System.Linq.Expressions;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Script.Serialization;
 using SoftServe.ITA.PrompterPro.Domain.Models;
 using SoftServe.ITA.PrompterPro.Domain.Services;
+using Newtonsoft.Json;
+using System.Runtime.Serialization.Json;
+using Newtonsoft.Json.Linq;
 
 namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
 {
@@ -22,10 +26,7 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
         // GET: api/Actor
         public IEnumerable<Reader> Get()
         {
-            var ret = new[] { new Reader{FirstName="Taras" },
-            new Reader{FirstName="Jack" },};
-            return ret;
-            //return this.actorService.GetAll();
+            return this.actorService.GetAll();
         }
 
         // GET: api/Actor/5
@@ -36,9 +37,24 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
 
         // POST: api/Actor
         [HttpPost]
-        public void Post([FromBody]Reader value)
+        public IEnumerable<Reader> Post([FromBody]object value)
         {
-            actorService.Post(value);
+            JArray objects = JArray.FromObject(value, new JsonSerializer());
+            Reader reader = new Reader();
+            foreach(JObject read in objects.Children<JObject>())
+            {
+                foreach (JProperty app in read.Properties())
+                {
+                    if (app.Name == "LastName")
+                        reader.LastName = (string)app.Value;
+                    else if (app.Name == "FirstName")
+                        reader.FirstName = (string)app.Value;
+                    else if (app.Name == "MiddleName")
+                        reader.MiddleName = (string)app.Value;                   
+                }
+                actorService.Post(reader);
+            }
+            return Get();
         }
 
         // PUT: api/Actor/5
@@ -51,9 +67,15 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
         }
 
         // DELETE: api/Actor/5
-        public void Delete(int id)
+        public void Delete([FromUri]string id)
         {
-            actorService.Delete(reader => reader.Id == id);
+            if (id == "undefined") return;
+            string[] input = id.Split(' ');
+            List<int> ids = new List<int>();
+            foreach (string str in input)
+                if (str != "")
+                  ids.Add(int.Parse(str));
+            actorService.Delete(ids);
         }
     }
 }

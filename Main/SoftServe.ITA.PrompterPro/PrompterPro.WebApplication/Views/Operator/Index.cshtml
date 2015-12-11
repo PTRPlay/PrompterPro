@@ -208,13 +208,14 @@
 
                         <div class="list-group items-list">
                             <a class="list-group-item"
+                               id="actorselect{{actor.Id}}"
                                ng-show="showActorList"
                                ng-repeat="actor in filteredActors = (actors
                                                                    | filter: searchActor
                                                                    | orderBy: actorOrder)"
-                               ng-class="scriptClass(actor)"
-                               ng-click="scriptService.select(actor)">
-                                <h5>{{actor.FirstName}}</h5>
+                               ng-class="actorClass(actor)"
+                               ng-click="selectActor(actor)">
+                                <h5>{{actor.LastName + " " + actor.FirstName + " " + actor.MiddleName}}</h5>
                             </a>
                         </div>
                     </div>
@@ -533,7 +534,21 @@
                                                         <label for="mirrory"></label>
                                                     </div>
                                                 </div>
-                                                <div class="col-xs-2">
+                                                <div ng-controller="actorController" ng-show="showImportExport()">
+                                                    <div class="col-xs-2">
+                                                        <button class="btn btn-default pull-right"
+                                                                ng-click="importSettings()">
+                                                            Import settings
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-xs-2">
+                                                        <button class="btn btn-default pull-right"
+                                                                ng-click="exportSettings()">
+                                                            Export settings
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-1">
                                                     <button class="btn btn-default glyphicon glyphicon-off pull-right"
                                                             ng-click="closePlayer()"
                                                             data-toggle="tooltip"

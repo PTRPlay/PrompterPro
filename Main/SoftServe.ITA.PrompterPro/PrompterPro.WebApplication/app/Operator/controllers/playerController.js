@@ -3,8 +3,9 @@
     "broadcastHub",
     "broadcastOperator",
     "$modal",
+    "preferenceService",
 
-    function ($scope, broadcastHub, broadcastOperator, $modal) {
+    function ($scope, broadcastHub, broadcastOperator, $modal, preferenceService) {
     
     $scope.open = function (size) {
 
@@ -98,6 +99,14 @@
             broadcastHub.server.changeScreenResolution(nx, ny);
         }
         (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
+    }
+
+    $scope.importSettings = function () {
+        preferenceService.importSettings($scope);
+    }
+
+    $scope.exportSettings = function () {
+        preferenceService.exportSettings($scope, $scope.screenWidth, $scope.screenHeight);
     }
 
     document.onmouseup = $scope.unhook;

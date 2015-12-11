@@ -9,23 +9,28 @@
 	"notifyType",
 	"icons",
 	"prompterStatus",
-	function(
+	function (
 		fileUpload,
 		webApi,
-		scriptRepository,
 		entityState,
 		constants,
 		notify,
 		notifyType,
 		icons,
 		prompterStatus) {
-
 		return function($scope) {
-			var obj = {};
+		    var obj = {};
 
-			obj.select = function(script) {
-				$scope.selectedScript = script;
+		    obj.actor;
+
+			obj.select = function() {
+			   // preferenceService.setCurrentActor(this.actor);
 			};
+
+			obj.getSelected = function () {
+			    return actor;
+			}
+
 			return obj;
 		};
 	}

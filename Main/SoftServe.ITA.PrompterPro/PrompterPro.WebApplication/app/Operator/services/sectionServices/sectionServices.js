@@ -3,6 +3,7 @@
     function (constants) {
         var self = this;
 
+
         self.displaySectionIntro = function(section) {
             var intro = section.Text;
             var introLength = constants.sectionsIntroLength;

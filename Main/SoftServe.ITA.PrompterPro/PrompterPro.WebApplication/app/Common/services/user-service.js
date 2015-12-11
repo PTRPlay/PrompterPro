@@ -27,7 +27,7 @@
                 });
             return deferred.promise;
         },
-        post: function(users) {
+        post: function (users) {
             var deferred = $q.defer();
             $http.post("/api/user/", users)
                 .success(function(response) {
@@ -35,6 +35,17 @@
                 })
                 .error(function(error) {
                     alert(error);
+                });
+            return deferred.promise;
+        },
+        del: function (id) { 
+            var deferred = $q.defer();
+            $http.delete("api/user?id=" + id)
+                .success(function (response) {
+                    deferred.resolve(response);
+                })
+                .error(function (error) {
+                    deferred.reject(error);
                 });
             return deferred.promise;
         }

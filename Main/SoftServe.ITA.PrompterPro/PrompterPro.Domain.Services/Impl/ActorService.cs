@@ -61,14 +61,13 @@ namespace SoftServe.ITA.PrompterPro.Domain.Services.Impl
             }
         }
 
-        public void Delete(Expression<Func<Reader, bool>> expression)
+        public void Delete(IEnumerable<int> ids)
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())
             {
-                IEnumerable<Reader> delList = context.Readers.Where(expression).ToList();
-                foreach(var reader in delList)
+                foreach(var id in ids)
                 {
-                    context.Readers.Remove(reader);
+                    context.Readers.Remove(context.Readers.Where(read => read.Id == id).FirstOrDefault());
                 }
                 context.SaveChanges();
             }
