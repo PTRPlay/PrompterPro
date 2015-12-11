@@ -19,10 +19,8 @@ function ($http) {
                })
                 .error(function (data) {
                     console.log('error');
-                    var pref = data;
                 });
         },
-
 
         exportSettings: function ($scope, width, height) {
             var actor = window.currActor;
@@ -30,7 +28,7 @@ function ($http) {
             var preference = {
                 ReaderId: 0,
                 ScriptId: 0,
-                LastSectionId: 0, 
+                LastSectionId: 0,
                 ReadingSpeed: 0,
                 FontSize: 0,
                 ScreenWidth: 0,

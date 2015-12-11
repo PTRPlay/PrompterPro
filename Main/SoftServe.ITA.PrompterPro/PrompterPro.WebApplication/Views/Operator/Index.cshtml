@@ -534,29 +534,31 @@
                                                         <label for="mirrory"></label>
                                                     </div>
                                                 </div>
-                                                <div ng-controller="actorController" ng-show="showImportExport()">
-                                                    <div class="col-xs-2">
-                                                        <label>{{getActor()}}</label>
-                                                    </div>
-                                                    <div class="col-xs-2">
-                                                        <button class="btn btn-default pull-right"
-                                                                ng-click="importSettings()">
-                                                            Import settings
-                                                        </button>
-                                                    </div>
-                                                    <div class="col-xs-2">
-                                                        <button class="btn btn-default pull-right"
-                                                                ng-click="exportSettings()">
-                                                            Export settings
-                                                        </button>
-                                                    </div>
-                                                </div>
                                                 <div class="col-xs-1">
                                                     <button class="btn btn-default glyphicon glyphicon-off pull-right"
                                                             ng-click="closePlayer()"
                                                             data-toggle="tooltip"
                                                             data-placement="top"
                                                             tooltip="Finish Broadcasting"></button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div ng-controller="actorController" ng-show="showImportExport()">
+                                                    <div class="col-xs-3">
+                                                        <label>{{getActor()}}</label>
+                                                    </div>
+                                                    <div class="col-xs-1">
+                                                        <button class="btn btn-default pull-right"
+                                                                ng-click="importSettings()">
+                                                            Import settings
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-xs-1">
+                                                        <button class="btn btn-default pull-right"
+                                                                ng-click="exportSettings()">
+                                                            Export settings
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
