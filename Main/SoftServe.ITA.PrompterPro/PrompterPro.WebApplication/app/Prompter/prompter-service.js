@@ -190,8 +190,8 @@
 
             
             broadcastHub.client.changeScreenResolution = function (screenWidth, screenHeight) {
-                document.getElementById("container").setAttribute("style", "width:" + screenWidth + "px");
-                document.getElementById("container").setAttribute("style", "height:" + screenHeight + "px");
+                document.getElementById("prompterRow").setAttribute("style", "height:" + screenHeight + "px; " + "width:" + screenWidth + "px");
+                //document.getElementById("prompterRow").setAttribute("style", "width:" + screenWidth + "px");
             }
 
             broadcastHub.client.padLeft = function(percentage) {
