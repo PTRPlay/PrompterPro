@@ -114,6 +114,8 @@
     }
 
     $scope.changeScreenResolusion = function (nx, ny) {
+        document.getElementById("container").setAttribute("style", "width:" + nx + "px;");
+        document.getElementById("prompterRow").setAttribute("style", "height:" + ny + "px;");
         broadcastHub.server.changeScreenResolution(nx, ny); 
     }
 
