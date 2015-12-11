@@ -215,7 +215,6 @@
     <Content Include="app\Operator\filters\scriptFilter.js" />
     <Content Include="app\Operator\services\actorsServices\actorClass.js" />
     <Content Include="app\Operator\services\actorsServices\actorOrder.js" />
-    <Content Include="app\Operator\services\actorsServices\actorService.js" />
     <Content Include="app\Operator\services\init\initScriptCtrlFunctions.js" />
     <Content Include="app\Operator\services\init\initScriptCtrlProps.js" />
     <Content Include="app\Operator\services\modals\operatorDialog.js" />

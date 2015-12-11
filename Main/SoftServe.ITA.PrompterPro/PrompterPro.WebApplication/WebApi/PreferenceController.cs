@@ -64,10 +64,9 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
                     preference.ScriptId = (int)app.Value;
                 if (app.Name == "ReaderId")
                     preference.ReaderId = (int)app.Value;
-             //   if (app.Name == "LastSectionId")
-              //      preference.LastSectionId = (int)app.Value; 
+                if (app.Name == "LastSectionId")
+                    preference.LastSectionId = (int)app.Value; 
             }
-            preference.LastSectionId = 1;
             Reader currentActor = actorService.Get(actor => actor.Id == preference.ReaderId);
             currentActor.LastScriptId = preference.ScriptId;
             actorService.Put(currentActor);

@@ -407,9 +407,9 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
             Clients.OthersInGroup(GetGroupName()).getPrevSection(length);
         }
 
-        public void ScrollToCurrent()
+        public void ScrollToCurrent(int current)
         {
-            Clients.OthersInGroup(GetGroupName()).ScrollToCurrent();
+            Clients.OthersInGroup(GetGroupName()).ScrollToCurrent(current);
         }
 
         public void ConfigurePrompters(List<PrompterInfo> promptersConfig)

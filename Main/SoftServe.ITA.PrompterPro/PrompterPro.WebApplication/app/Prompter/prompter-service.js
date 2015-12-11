@@ -241,8 +241,9 @@
                 $scope.$apply();
             }
 
-            broadcastHub.scrollToCurrent = function (current) {
-                $('$area').scrollTop($('#Section' + i).position());
+            broadcastHub.client.scrollToCurrent = function (current) {
+                $('#area').scrollTop($('#Section' + current).position().top);
+                $scope.$apply();
             }
 
 	        var obj = {};

@@ -109,6 +109,10 @@
         preferenceService.exportSettings($scope, $scope.screenWidth, $scope.screenHeight);
     }
 
+    $scope.changeResolusion = function (width, height) {
+        broadcastHub.server.changeScreenResolution(width, height);
+    }
+
     document.onmouseup = $scope.unhook;
     document.onmousemove = $scope.move;
     document.ondragstart = function () {
@@ -281,6 +285,7 @@
     }
 
     $scope.getCurrentSection = function () {
+        var i = 0;
         while ($("#Section" + i).position().top <= 1) {
             i++;
         }
@@ -288,7 +293,8 @@
     }
 
     $scope.scrollToCurrent = function (current) {
-        $('$area').scrollTop($('#Section' + i).position());
+        $('#area').scrollTop($('#Section' + current).position().top);
+        broadcastHub.server.scrollToCurrent(current);
     }
 
 }]);
