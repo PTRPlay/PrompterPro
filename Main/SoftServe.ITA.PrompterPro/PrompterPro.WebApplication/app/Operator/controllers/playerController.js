@@ -221,14 +221,6 @@
         }
     }
 
-    $scope.getNextSection = function() {
-        //TODO: Add code
-    }
-
-    $scope.getPrevSection = function() {
-        //TODO: Add code
-    }
-
     $scope.padRight = function(percentage) {
         broadcastHub.server.padRight(percentage);
     }
@@ -266,6 +258,26 @@
             $scope.textSize -= textSizeStep;
             $scope.$apply();
         }
+    }
+
+    $scope.getNextSection = function () {
+        var i = 0;
+        while ($("#Section" + i).position().top <= 1) {
+            i++;
+        }
+        $('#area').scrollTop($("#Section" + i).position().top + $('#area').scrollTop());
+        broadcastHub.server.getNextSection();
+    }
+
+    $scope.getPrevSection = function () {
+        var length = $scope.$parent.selectedScript.Sections.length;
+        for (var i = length - 1; i >= 0; i--) {
+            if ($("#Section" + i).position().top < 0) {
+                $('#area').scrollTop($("#Section" + i).position().top + $('#area').scrollTop());
+                break;
+            }
+        }
+        broadcastHub.server.getPrevSection(length);
     }
 
 }]);

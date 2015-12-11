@@ -397,6 +397,16 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
             Clients.All.changeScreenResolution(width, height);
         }
 
+        public void GetNextSection()
+        {
+            Clients.OthersInGroup(GetGroupName()).getNextSection();
+        }
+
+        public void GetPrevSection(int length)
+        {
+            Clients.OthersInGroup(GetGroupName()).getPrevSection(length);
+        }
+
         public void ConfigurePrompters(List<PrompterInfo> promptersConfig)
         {
             if (promptersConfig == null)
