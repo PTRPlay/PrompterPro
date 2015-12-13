@@ -11,15 +11,21 @@
 		});
 
 		$scope.selectActor = function (actor) {
-		    if ($scope.selectedActor != null) {
-		        document.getElementById("actorselect" + $scope.selectedActor.Id).style.color = "black";
-		        document.getElementById("actorselect" + $scope.selectedActor.Id).style.backgroundColor = "white";
+		    if ($scope.selectedActor == actor) {
+		        $scope.selectedActor = null;
+		        window.currActor = null;
+		        document.getElementById("actorselect" + actor.Id).style.color = "black";
+		        document.getElementById("actorselect" + actor.Id).style.backgroundColor = "white";
+		    } else {
+		        if ($scope.selectedActor != null) {
+		            document.getElementById("actorselect" + $scope.selectedActor.Id).style.color = "black";
+		            document.getElementById("actorselect" + $scope.selectedActor.Id).style.backgroundColor = "white";
+		        }
+		        $scope.selectedActor = actor;
+		        window.currActor = actor;
+		        document.getElementById("actorselect" + actor.Id).style.color = "#3c763d";
+		        document.getElementById("actorselect" + actor.Id).style.backgroundColor = "#dff0d8";
 		    }
-		    $scope.selectedActor = actor;
-		    window.currActor = actor;
-		    document.getElementById("actorselect" + actor.Id).style.color = "#3c763d";
-		    document.getElementById("actorselect" + actor.Id).style.backgroundColor = "#dff0d8";
-		    
 		}
 
 		$scope.getActor = function () {
@@ -27,7 +33,7 @@
 		}
 
 		$scope.showImportExport = function () {
-		    if (window.currActor === undefined)
+		    if (window.currActor === undefined || window.currActor == null)
 		        return false;
 		    else return true;
 		}

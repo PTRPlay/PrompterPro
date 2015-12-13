@@ -1,6 +1,6 @@
 ﻿app.factory('preferenceService', [
-    '$http',
-function ($http) {
+    '$http', 'notify',
+function ($http, notify) {
     var currentScript;
     return {
         setCurrentScript: function (script) {
@@ -16,9 +16,17 @@ function ($http) {
                    $scope.textSize = data.FontSize;
                    $scope.changeScreenResolusion(data.ScreenWidth, data.ScreenHeight);
                    $scope.scrollToCurrent(data.LastSectionId - 1);
+                   notify(
+                     notifyType.success,
+                     'Import done!',
+                     icons.success);
                })
                 .error(function (data) {
                     console.log('error');
+                    notify(
+                        notifyType.danger,
+                        'Can not import settings!',
+                        icons.warning);
                 });
         },
 
@@ -43,9 +51,17 @@ function ($http) {
             preference.ScreenHeight = height;
             $http.put("api/preference/", preference)
                 .success(function (response) {
+                    notify(
+                     notifyType.success,
+                     'Export done!',
+                     icons.success);
                     return response;
                 })
                 .error(function (error) {
+                    notify(
+                        notifyType.danger,
+                        'Can not export settings!',
+                        icons.warning);
                     return response;
                 });
         }
