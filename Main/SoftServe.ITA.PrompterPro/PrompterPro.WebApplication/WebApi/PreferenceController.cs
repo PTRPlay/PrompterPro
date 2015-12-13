@@ -36,10 +36,7 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
             int actorId = int.Parse(input[0]);
             int scriptId = int.Parse(input[1]);
             Preference result = preferenceService.Get(preference => preference.ReaderId == actorId && preference.ScriptId == scriptId);
-            if (result == null)
-                return new Preference { FontSize = 90, ReaderId = actorId, ScriptId = scriptId, ReadingSpeed = 5, ScreenHeight = 400, ScreenWidth = 1140 };
-            else
-                return result;
+            return result;
         }
 
         // POST: api/Preference

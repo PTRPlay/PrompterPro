@@ -12,21 +12,18 @@ function ($http, notify) {
             var script = currentScript;
             $http.get("api/preference?id=" + actor.Id + "+" + script.ScriptId)
                .success(function (data) {
-                   $scope.speed = data.ReadingSpeed;
-                   $scope.textSize = data.FontSize;
-                   $scope.changeScreenResolusion(data.ScreenWidth, data.ScreenHeight);
-                   $scope.scrollToCurrent(data.LastSectionId - 1);
-                   notify(
-                     notifyType.success,
-                     'Import done!',
-                     icons.success);
+                   if (data == null) {
+                       $scope.notifyFail('No settings for this script!');
+                   } else {
+                       $scope.speed = data.ReadingSpeed;
+                       $scope.textSize = data.FontSize;
+                       $scope.changeScreenResolusion(data.ScreenWidth, data.ScreenHeight);
+                       $scope.scrollToCurrent(data.LastSectionId - 1);
+                       $scope.notifySuccess('Import done!');
+                   }
                })
                 .error(function (data) {
-                    console.log('error');
-                    notify(
-                        notifyType.danger,
-                        'Can not import settings!',
-                        icons.warning);
+                    $scope.notifyFail('Can not import settings!');
                 });
         },
 
@@ -51,17 +48,11 @@ function ($http, notify) {
             preference.ScreenHeight = height;
             $http.put("api/preference/", preference)
                 .success(function (response) {
-                    notify(
-                     notifyType.success,
-                     'Export done!',
-                     icons.success);
+                    $scope.notifySuccess('Export done!');
                     return response;
                 })
                 .error(function (error) {
-                    notify(
-                        notifyType.danger,
-                        'Can not export settings!',
-                        icons.warning);
+                    $scope.notifyFail('Can not export settings!');
                     return response;
                 });
         }
