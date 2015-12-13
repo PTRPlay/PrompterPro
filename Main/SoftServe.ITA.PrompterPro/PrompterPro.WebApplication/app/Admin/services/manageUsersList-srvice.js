@@ -10,3 +10,15 @@
         };
     }
 ]);
+app.factory('manageListOfActors', [
+    function () {
+        return {
+            addToList: function ($scope, actor) {
+                $scope.managedActorslist.push(actor);
+            },
+            removeFromList: function ($scope, actor) {
+                $scope.actors.splice($scope.actors.indexOf(actor), 1);
+            }
+        };
+    }
+]);

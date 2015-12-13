@@ -28,10 +28,14 @@
     	    $scope.textSizes = [50, 55, 60, 70, 80, 90, 100, 110, 130];
     	    $scope.showDialog = false;
     	    $scope.speed = 5;
+    	    speedHandlPlay = 10;
     	    $scope.currentSize = $scope.textSizes[2];
     	    $scope.textSize = 90;
     	    $scope.leftPadding = 0;
     	    $scope.rightPadding = 0;
+    	    var mintextSize = 70;
+    	    var maxtextSize = 110;
+    	    var textSizeStep = 5;
 
 		    $scope.hub = broadcastHub;
 		    function setDefaultProps() {
@@ -46,6 +50,12 @@
 		    broadcastHub.client.fetchScript = function (scriptId, operatorId) {
                 prompterRepository.get(scriptId, function(script) {
                     $scope.script = script;
+                    ///
+                    var sections = $scope.script.Sections;
+                    _.each(sections, function (section) {
+                        $('#area').append("<p id=Section" + section.Order + ">" + "[Section" + section.Order + "]\n" + section.Text + "</p>");
+                    });
+                    ///
                     broadcastHub.server.fetchSuccess(operatorId);
                     notify(
 						notifyType.success,
@@ -104,7 +114,21 @@
 		    broadcastHub.client.changeTextSize = function (size) {
 		        $scope.textSize = size;
 		        $scope.$apply();
-            }
+		    }
+
+		    broadcastHub.client.textSizeUp = function () {
+		        if ($scope.textSize < maxtextSize) {
+		            $scope.textSize += textSizeStep;
+		            $scope.$apply();
+		        }
+		    }
+
+		    broadcastHub.client.textSizeDown = function () {
+		        if ($scope.textSize > mintextSize) {
+		            $scope.textSize -= textSizeStep;
+		            $scope.$apply();
+		        }
+		    }
 
             broadcastHub.client.speedUp = function() {
                 if ($scope.speed < maxSpeed) {
@@ -137,7 +161,7 @@
                 broadcastHub.client.pause();
                 animation = setInterval(function () {
                     if (textBox.scrollTop() > 0) {
-                        textBox.scrollTop(textBox.scrollTop() - $scope.speed);
+                        textBox.scrollTop(textBox.scrollTop() - speedHandlPlay);
                     }
                 }, velocity);
             }
@@ -146,7 +170,7 @@
                 broadcastHub.client.pause();
                 animation = setInterval(function () {
                     if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
-                        textBox.scrollTop(textBox.scrollTop() + $scope.speed);
+                        textBox.scrollTop(textBox.scrollTop() + speedHandlPlay);
                     }
                 }, velocity);
             }
@@ -155,19 +179,19 @@
                 document.getElementById("area").value = "";
             }
             
-            $scope.displayText = function () {
-                var text = '\n';
-                var sections = $scope.script.Sections;
-                _.each(sections, function (section) {
-                    text += '[Section:' + section.Order + ']\n' + section.Text + '\n';
-                });
-                return text;
-            }
+            //$scope.displayText = function () {
+            //    var text = '\n';
+            //    var sections = $scope.script.Sections;
+            //    _.each(sections, function (section) {
+            //        text += '[Section:' + section.Order + ']\n' + section.Text + '\n';
+            //    });
+            //    return text;
+            //}
 
             
             broadcastHub.client.changeScreenResolution = function (screenWidth, screenHeight) {
-                document.getElementById("container").setAttribute("style", "width:" + screenWidth + "px");
-                document.getElementById("prompterRow").setAttribute("style", "height:" + screenHeight + "px");
+                document.getElementById("prompterRow").setAttribute("style", "height:" + screenHeight + "px; " + "width:" + screenWidth + "px");
+                //document.getElementById("prompterRow").setAttribute("style", "width:" + screenWidth + "px");
             }
 
             broadcastHub.client.padLeft = function(percentage) {
@@ -196,6 +220,30 @@
                     resolutionMultiplier = 2;
                     broadcastHub.client.changeTextSize($scope.currentSize * resolutionMultiplier);
                 }
+            }
+
+            broadcastHub.client.getPrevSection = function (length) {
+                for (var i = length - 1; i >= 0; i--) {
+                    if ($("#Section" + i).position().top < 0) {
+                        $('#area').scrollTop($("#Section" + i).position().top + $('#area').scrollTop());
+                        break;
+                    }
+                }
+                $scope.$apply();
+            }
+
+            broadcastHub.client.getNextSection = function () {
+                var i = 0;
+                while ($("#Section" + i).position().top <= 1) {
+                    i++;
+                }
+                $('#area').scrollTop($("#Section" + i).position().top + $('#area').scrollTop());
+                $scope.$apply();
+            }
+
+            broadcastHub.client.scrollToCurrent = function (current) {
+                $('#area').scrollTop($('#Section' + current).position().top);
+                $scope.$apply();
             }
 
 	        var obj = {};

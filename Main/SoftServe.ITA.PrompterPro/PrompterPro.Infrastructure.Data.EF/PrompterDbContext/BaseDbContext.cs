@@ -7,7 +7,7 @@ namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext
     public abstract class BaseDbContext : DbContext
     {
         private const string ConnectionStringName = "name=DbConnectionString";
-        private const string Prompter = "Prompter";
+        private const string Prompter = "name=Prompter";
 
         protected BaseDbContext()
             : base(Prompter)

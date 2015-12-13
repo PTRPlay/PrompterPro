@@ -20,6 +20,8 @@
 
                 };
 
+
+
                 var modalInstance = $modal.open({
                     templateUrl: 'addUserModal.html',
                     controller: 'modalAddInstanceController',
@@ -60,6 +62,44 @@
                 });
 
             },
+
+            openActorAddDialog: function (size, $scope) {
+                $scope.newActor = {
+                    EntitySate: null,
+                    LastName: null,
+                    FirstName: null,
+                    MiddleName: null,
+                    LastScript: null,
+                    LastScriptId: null
+                };
+
+
+                // change 
+                var modalInstance = $modal.open({
+                    templateUrl: 'addActorModal.html',
+                    controller: 'actorModalAddInstanceController',
+                    size: size,
+                    resolve: {
+                        newActor: function () {
+                            return $scope.newActor;
+                        }
+                    }
+                });
+
+                modalInstance.result.then(function (newActor) {
+                    if (modalInstance.result.$$state.value) {
+                            $scope.setAddedState(newActor);
+                            $scope.addMangedActorToList(newActor);
+                        } else {
+                            notify(
+                                notifyType.danger,
+                                icons.warning);
+                        }
+                    
+                });
+
+            },
+
             openEditDialog: function (size, userForEditing, $scope) {
                 var object = angular.copy(userForEditing);
                 var modalInstance = $modal.open({
@@ -83,7 +123,32 @@
                     }
                 });
 
-            }
+            },
+
+            openActorEditDialog: function (size, actorForEditing, $scope) {
+            var object = angular.copy(actorForEditing);
+            var modalInstance = $modal.open({
+                templateUrl: 'editActorModal.html',
+                controller: 'actorModalEditInstanceController',
+                size: size,
+                resolve: {
+                    actorForEditing: function () {
+                        return object;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function(editActor) {
+                if (modalInstance.result.$$state.value) {
+                    var index = $scope.actors.indexOf(actorForEditing);
+                    editActor.Id = actorForEditing.Id;
+                    editActor.LastScriptId = actorForEditing.LastScriptId;
+                    $scope.actors[index] = editActor;
+                    $scope.setUpdatedState(editActor);
+                }
+            });
+
+        }
         }
     }
 ]);

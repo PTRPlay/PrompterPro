@@ -10,5 +10,6 @@ namespace SoftServe.ITA.PrompterPro.Domain.Services
         void SaveUsers(IList<User> users);
         IList<User> FetchAllPrompters();
         void ChangePrompterStatus(int id, string status);
+        void DeleteUsers(IEnumerable<int> ids);
     }
 }

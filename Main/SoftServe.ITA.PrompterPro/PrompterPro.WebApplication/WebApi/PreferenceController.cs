@@ -7,16 +7,19 @@ using System.Net.Http;
 using System.Web.Http;
 using SoftServe.ITA.PrompterPro.Domain.Models;
 using SoftServe.ITA.PrompterPro.Domain.Services;
+using Newtonsoft.Json.Linq;
 
 namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
 {
     public class PreferenceController : ApiController
     {
         private IPreferenceService preferenceService;
+        private IActorService actorService;
 
-        public PreferenceController(IPreferenceService service)
+        public PreferenceController(IPreferenceService service, IActorService actService)
         {
             this.preferenceService = service;
+            this.actorService = actService;
         }
 
         // GET: api/Preference
@@ -26,9 +29,14 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
         }
 
         // GET: api/Preference/5
-        public Preference Get(int id)
+        public Preference Get(string id)
         {
-            return preferenceService.Get(preference => preference.Id == id);
+            if (id == "undefined") return null;
+            string[] input = id.Split(' ');
+            int actorId = int.Parse(input[0]);
+            int scriptId = int.Parse(input[1]);
+            Preference result = preferenceService.Get(preference => preference.ReaderId == actorId && preference.ScriptId == scriptId);
+            return result;
         }
 
         // POST: api/Preference
@@ -38,11 +46,31 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.WebApi
         }
 
         // PUT: api/Preference/5
-        public void Put(int id, [FromBody]Preference value)
+        public void Put([FromBody]object value) //int id,
         {
-            if (value.Id != id)
-                value.Id = id;
-            preferenceService.Put(value);
+            JObject JPreference = JObject.FromObject(value, new Newtonsoft.Json.JsonSerializer());
+            Preference preference = new Preference();
+            foreach (JProperty app in JPreference.Properties())
+            {
+                if (app.Name == "ReadingSpeed")
+                    preference.ReadingSpeed = (int)app.Value;
+                if (app.Name == "FontSize")
+                    preference.FontSize = (int)app.Value;
+                if (app.Name == "ScreenWidth")
+                    preference.ScreenWidth = (int)app.Value;
+                if (app.Name == "ScreenHeight")
+                    preference.ScreenHeight = (int)app.Value;
+                if (app.Name == "ScriptId")
+                    preference.ScriptId = (int)app.Value;
+                if (app.Name == "ReaderId")
+                    preference.ReaderId = (int)app.Value;
+                if (app.Name == "LastSectionId")
+                    preference.LastSectionId = (int)app.Value;
+            }
+            Reader currentActor = actorService.Get(actor => actor.Id == preference.ReaderId);
+            currentActor.LastScriptId = preference.ScriptId;
+            actorService.Put(currentActor);
+            preferenceService.Put(preference);
         }
 
         // DELETE: api/Preference/5

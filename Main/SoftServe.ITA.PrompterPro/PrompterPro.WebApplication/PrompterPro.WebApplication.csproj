@@ -95,6 +95,7 @@
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -159,7 +160,6 @@
     <CodeAnalysisDictionary Include="..\PrompterProCodeAnalysisDictionary.xml">
       <Link>PrompterProCodeAnalysisDictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <Content Include="app\Admin\controllers\actorsController.js" />
     <Content Include="app\Admin\controllers\admin-controller.js" />
     <Content Include="app\Admin\controllers\datepicker-controller.js" />
     <Content Include="app\Admin\controllers\diagnostics-controller.js" />
@@ -213,12 +213,12 @@
     <Content Include="app\Operator\directives\dndLists.js" />
     <Content Include="app\Operator\directives\focusMe.js" />
     <Content Include="app\Operator\filters\scriptFilter.js" />
-    <Content Include="app\Operator\services\actorsServices\fetchActors-service.js" />
+    <Content Include="app\Operator\services\actorsServices\actorClass.js" />
     <Content Include="app\Operator\services\actorsServices\actorOrder.js" />
-    <Content Include="app\Operator\services\actorsServices\actorService.js" />
     <Content Include="app\Operator\services\init\initScriptCtrlFunctions.js" />
     <Content Include="app\Operator\services\init\initScriptCtrlProps.js" />
     <Content Include="app\Operator\services\modals\operatorDialog.js" />
+    <Content Include="app\Operator\services\preferenceService.js" />
     <Content Include="app\Operator\services\prompterServices\fetchPrompters-service.js" />
     <Content Include="app\Operator\services\prompterServices\actorChecked.js" />
     <Content Include="app\Operator\services\prompterServices\prompterChecked.js" />

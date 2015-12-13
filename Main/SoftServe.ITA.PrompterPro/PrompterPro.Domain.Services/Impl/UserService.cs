@@ -71,7 +71,20 @@ namespace SoftServe.ITA.PrompterPro.Domain.Services.Impl
                 }
             }
         }
+
+        public void DeleteUsers(IEnumerable<int> ids)
+        {
+            using (IPrompterDbContext context = _dbContextFactory.Create())
+            {
+                foreach (var id in ids)
+                {
+                    context.Users.Remove(context.Users.Where(user => user.UserId == id).FirstOrDefault());
+                }
+                context.SaveChanges();
+            }
+        }
                    
+
         public IList<User> FetchAllPrompters()
         {
             using (IPrompterDbContext context = _dbContextFactory.Create())

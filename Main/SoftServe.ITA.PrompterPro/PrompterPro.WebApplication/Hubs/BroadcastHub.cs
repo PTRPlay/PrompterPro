@@ -357,6 +357,16 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
 		    Clients.All.speedDown();
 		}
 
+        public void textSizeUp()
+        {
+            Clients.All.textSizeUp();
+        }
+
+        public void textSizeDown()
+        {
+            Clients.All.textSizeDown();
+        }
+
 		public void MirrorText(bool? isMirroredX, bool? isMirroredY)
 		{
 		    Clients.OthersInGroup(GetGroupName()).mirrorText(isMirroredX, isMirroredY);
@@ -385,6 +395,21 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
         public void ChangeScreenResolution(int width, int height)
         {
             Clients.All.changeScreenResolution(width, height);
+        }
+
+        public void GetNextSection()
+        {
+            Clients.OthersInGroup(GetGroupName()).getNextSection();
+        }
+
+        public void GetPrevSection(int length)
+        {
+            Clients.OthersInGroup(GetGroupName()).getPrevSection(length);
+        }
+
+        public void ScrollToCurrent(int current)
+        {
+            Clients.OthersInGroup(GetGroupName()).ScrollToCurrent(current);
         }
 
         public void ConfigurePrompters(List<PrompterInfo> promptersConfig)

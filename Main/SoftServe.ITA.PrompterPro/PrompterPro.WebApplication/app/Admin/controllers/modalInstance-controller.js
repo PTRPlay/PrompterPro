@@ -11,7 +11,22 @@
     $scope.cancel = function () {
         $modalInstance.close($scope.copy);
     };
-}]);
+    }]);
+
+app.controller('actorModalEditInstanceController',
+    ['$scope', '$modalInstance', 'actorForEditing',
+    function ($scope, $modalInstance, actorForEditing) {
+
+        $scope.actorForEditing = actorForEditing;
+
+        $scope.ok = function () {
+            $modalInstance.close($scope.actorForEditing);
+        };
+
+        $scope.cancel = function () {
+            $modalInstance.close($scope.copy);
+        };
+    }]);
 //app.controller('modalAddInstanceController',
 //    ['$scope', '$modalInstance','newUser',
 //        function ($scope, $modalInstance, newUser) {
@@ -39,4 +54,19 @@ app.controller('modalAddInstanceController',
     $scope.cancel = function () {
         $modalInstance.dismiss('cancel');
     };
-}]);
+    }]);
+
+app.controller('actorModalAddInstanceController',
+    ['$scope', '$modalInstance', 'newActor',
+    function ($scope, $modalInstance, newActor) {
+
+        $scope.newActor = newActor;
+
+        $scope.ok = function () {
+            $modalInstance.close($scope.newActor);
+        };
+
+        $scope.cancel = function () {
+            $modalInstance.dismiss('cancel');
+        };
+    }]);

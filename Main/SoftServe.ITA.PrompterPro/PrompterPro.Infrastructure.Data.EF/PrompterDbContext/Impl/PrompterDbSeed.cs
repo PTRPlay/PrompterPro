@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext.Impl
 {
-    class PrompterDbSeed : DropCreateDatabaseAlways<PrompterDbContext>
+    class PrompterDbSeed : DropCreateDatabaseIfModelChanges<PrompterDbContext>
     {
         protected override void Seed(PrompterDbContext context)
         {

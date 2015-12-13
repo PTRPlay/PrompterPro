@@ -1,7 +1,147 @@
 ﻿@model dynamic
 
-<div class="row" ng-app="actorsAdminController">
-    <br />
-    <h2>Actors</h2>
+<div class="panel panel-default" align="right" ng-app="actorsAdminController" ng-init="getAllActors()">
+    <table class="table table-striped" role="grid">
+        <tr class="label-primary tableHeader-style">
+            <th>Actor id</th>
+            <th ng-click="predicate = 'LastName'; reverse=!reverse">Last Name</th>
+            <th ng-click="predicate1 = 'PrompterStatus'; reverse=!reverse">First Name</th>
+            <th ng-click="predicate2 = 'Role.Name'; reverse=!reverse">Middle Name</th>
+          <!--  <th ng-click="predicate3 = 'Disabled'; reverse=!reverse">Last Script Title</th>-->
+            <th align="right">
+                <div class="btn-group-sm pull-right">
+                    <button class="btn btn-default " ng-click="saveAllChanges()">
+                        <span class="glyphicon glyphicon-floppy-disk"> </span>
+                        Save
+                    </button>
+                    <button class="btn btn-primary " ng-click="openAddDialog(lg)">
+                        <span class="glyphicon glyphicon-plus-sign"> </span>
+                        Add
+                    </button>
+                </div>
+            </th>
+        </tr>
+        <tr class="table-striped tableData-style " ng-repeat="actor in actors  | orderBy:predicate:reverse
+                                                                              | orderBy:predicate1:reverse
+                                                                              | orderBy:predicate2:reverse
+                                                                              | orderBy:predicate3:reverse "
+            ng-class="controlUserColor(actor)">
+
+            <td>{{actor.Id}}</td>
+            <td>{{actor.LastName}}</td>
+            <td>{{actor.FirstName}}</td>
+            <td>{{actor.MiddleName}}</td>
+         <!--   <td>{{actor.LastScript}}</td>-->
+            <td align="right">
+                <span class="btn-group-sm">
+                    <button class="btn btn-default glyphicon glyphicon-pencil"
+                            ng-click="openEditDialog(sm,actor)"
+                            ng-show="showEditDelete && !actor.inAction"></button>
+                    <button class="btn btn-default glyphicon glyphicon-trash"
+                            ng-click="isDeleted = true;
+                                      showEditDelete = false;
+                                      showOkRemove = true"
+                            ng-show="showEditDelete && !actor.inAction"></button>
+
+                    <button class="btn btn-success glyphicon glyphicon-ok-circle"
+                            ng-click="showOkRemove = false;
+                                      showEditDelete=true;
+                                      deleteCurrentActor(actor)"
+                            ng-show="showOkRemove"></button>
+                    <button class="btn btn-danger glyphicon glyphicon-remove-circle"
+                            ng-click="showEditDelete = true;
+                                      showOkRemove = false"
+                            ng-show="showOkRemove"></button>
+                </span>
+            </td>
+        </tr>
+    </table>
 </div>
 
+
+<script type="text/ng-template" id="addActorModal.html">
+<div class=" modal-header label-primary tableheader-style" align="center">
+    Add new actor
+</div>
+<div class="modal-body" ng-form="addForm">
+    <div class="form-group">
+        <label>Last name:</label>
+        <input name="password" type="text" class="form-control"
+               ng-model="newActor.LastName" required ng-minlength="3" />
+        <span class="field-validation-error" ng-show="addForm.password.$error.required">Required!</span>
+        <span class="field-validation-error" ng-show="addForm.password.$error.minlength">To Short!</span>
+
+    </div>
+    <div class="form-group">
+        <label>First name:</label>
+        <input name="password" type="text" class="form-control"
+               ng-model="newActor.FirstName" required ng-minlength="3" />
+        <span class="field-validation-error" ng-show="addForm.password.$error.required">Required!</span>
+        <span class="field-validation-error" ng-show="addForm.password.$error.minlength">To Short!</span>
+
+    </div>
+    <div class=" form-group">
+        <label>Middle name:</label>
+        <input name="login" type="text" class="form-control"
+               ng-model="newActor.MiddleName" required ng-minlength="3" />
+        <span class="field-validation-error" ng-show="addForm.login.$error.required">Required!</span>
+        <span class="field-validation-error" ng-show="addForm.login.$error.minlength">To Short!</span>
+
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+        <button class="btn btn-primary" ng-click="ok()" ng-disabled="addForm.$invalid">
+            Save
+        </button>
+    </div>
+</div>
+</script>
+
+<script type="text/ng-template" id="editActorModal.html">
+
+    <div ng-controller="actorsAdminController">
+        <div class="modal-header label-primary tableHeader-style" align="center">
+            Edit actor
+        </div>
+    </div>
+    <div class="modal-body" ng-form="editForm">
+        <div class="form-group">
+            <label>Last name:</label>
+            <input name="last" type="text" class="form-control"
+                   ng-model="actorForEditing.LastName" required ng-minlength="3" />
+            <span class="field-validation-error" ng-show="editForm.last.$error.required">Required!</span>
+            <span class="field-validation-error" ng-show="editForm.last.$error.minlength">To Short!</span>
+        </div>
+        <div class="form-group">
+            <label>First name:</label>
+            <input name="first" type="text" class="form-control"
+                   ng-model="actorForEditing.FirstName" required ng-minlength="3" />
+            <span class="field-validation-error" ng-show="editForm.first.$error.required">Required!</span>
+            <span class="field-validation-error" ng-show="editForm.first.$error.minlength">To Short!</span>
+        </div>
+        <div class="form-group">
+            <label>Middle name:</label>
+            <input name="middle" type="text" class="form-control"
+                   ng-model="actorForEditing.MiddleName" required ng-minlength="3" />
+            <span class="field-validation-error" ng-show="editForm.middle.$error.required">Required!</span>
+            <span class="field-validation-error" ng-show="editForm.middle.$error.minlength">To Short!</span>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-default" ng-click="cancel();
+                                                      setIsEdited(false);
+                                                      setShowOddAndEven(true)">
+                Cancel
+            </button>
+            <button class="btn btn-primary" ng-click="ok(); setShowOddAndEven(false);
+                                                      setIsEdited(true)"
+                    ng-disabled="editForm.$invalid">
+                Save
+            </button>
+
+        </div>
+    </div>
+
+
+</script>

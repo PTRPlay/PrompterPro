@@ -1,7 +1,14 @@
 ﻿app.factory('serverService',
     [
-    'userRepository', function (userRepository) {
+    'userRepository', 'actorRepository', function (userRepository, actorRepository) {
         return {
+            readAllActors: function($scope) {
+                actorRepository
+                    .getall()
+                    .then(function (actors) {
+                        $scope.actors = actors;
+                    });
+            },
             readAllUsers: function($scope) {
                 userRepository
                     .get()
@@ -22,6 +29,13 @@
                         $scope.users = users;
                         $scope.managedUserslist.length = 0;
                     });
+            },
+            manageActor: function ($scope, actorsList) {
+                        actorRepository.post(actorsList)
+                            .then(function (actors) {
+                                $scope.actors = actors;
+                                $scope.managedActorslist.length = 0;
+                            });
             }
         };
     }
