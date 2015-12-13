@@ -86,7 +86,7 @@
             var nx = e.clientX - x;
             var ny = e.clientY - y;
 
-            if (nx < 1140) nx = 1140;
+            if (nx < 1120) nx = 1120;
             if (ny < 400) ny = 400;
 
             el.style.width = nx + 'px';
