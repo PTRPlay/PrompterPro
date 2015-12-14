@@ -103,8 +103,29 @@
                         </div>
                     </div>
                 </form>
+                <style>
+                    .scroll {
+                        position: fixed;
+                        overflow-y: scroll;
+                        top: 100px;
+                        left: 50px;
+                        right: 0;
+                        bottom: 0;
+                    }
 
-                <div class="side-bar">
+                        .scroll::-webkit-scrollbar {
+                            width: 8px;
+                        }
+
+                        .scroll::-webkit-scrollbar-track {
+                            border-radius: 10px;
+                        }
+
+                        .scroll::-webkit-scrollbar-thumb {
+                            border-radius: 10px;
+                        }
+                </style>
+                <div class="side-bar scroll">
                     <!-- script list -->
                     <div class="list-group">
                         <a class="list-group-item active btn"
@@ -189,7 +210,7 @@
 
                     </div>
                     <!-- actors list -->
-                    <div class="list-group" ng-controller ="actorController">
+                    <div class="list-group" ng-controller="actorController">
                         <a class="list-group-item active btn"
                            ng-click="actorListClick()">
                             <span class="badge">{{filteredActors.length}}</span>
@@ -404,13 +425,13 @@
                                 <img src="~/Content/Trinagles/left-triangle.png" class="pull-right" />
                             </div>
                             <div id="area"
-                                      class="col-xs-8 textarea-style"
-                                      ng-checked="mirrorText(isMirroredX,isMirroredY)"
-                                      ng-keypress="textIsChanged = true"
-                                      ng-style="{'paddingRight':rightPadding + '%','paddingLeft':leftPadding + '%','font-size':textSize + 'px'}"
-                                      ng-mouseover="isNavigateButtonShown = true"
-                                      ng-mouseleave="isNavigateButtonShown = false"
-                                      style="width:70%; min-height:400px; height:100%">
+                                 class="col-xs-8 textarea-style"
+                                 ng-checked="mirrorText(isMirroredX,isMirroredY)"
+                                 ng-keypress="textIsChanged = true"
+                                 ng-style="{'paddingRight':rightPadding + '%','paddingLeft':leftPadding + '%','font-size':textSize + 'px'}"
+                                 ng-mouseover="isNavigateButtonShown = true"
+                                 ng-mouseleave="isNavigateButtonShown = false"
+                                 style="width:70%; min-height:400px; height:100%">
                             </div>
                             <div class="col-xs-2" style="padding-top: 170px;width:15%;z-index:2;position:relative">
                                 <img src="~/Content/Trinagles/right-triangle.png" />
@@ -453,8 +474,8 @@
                                         Options
                                         <div class="panel-body">
                                             <div class="row">
-                                                <div class="col-xs-8 pull-left">
-  
+                                                <div class="col-xs-9 pull-left">
+
                                                     <button class="btn btn-default glyphicon glyphicon-play move-left"
                                                             ng-click="play()"
                                                             ng-disabled="isPlayDisabled"></button>
@@ -465,11 +486,11 @@
                                                     <button class="btn btn-default glyphicon glyphicon-stop move-left"
                                                             ng-click="stop()"></button>
 
-                                                    <button class="btn btn-default glyphicon glyphicon-arrow-right move-left"
-                                                            ng-click="getNextSection()"></button>
-
                                                     <button class="btn btn-default glyphicon glyphicon-arrow-left move-left"
                                                             ng-click="getPrevSection()"></button>
+
+                                                    <button class="btn btn-default glyphicon glyphicon-arrow-right move-left"
+                                                            ng-click="getNextSection()"></button>
 
                                                     <button class="btn btn-default move-left glyphicon glyphicon-backward move-left"
                                                             ng-mousedown="handPlayBack()"
@@ -501,15 +522,13 @@
                                                             ng-click="textSizeDown()"
                                                             data-toggle="tooltip"
                                                             data-placement="top"
-                                                            tooltip="text size={{textSize}}">
-                                                    </button>
+                                                            tooltip="text size={{textSize}}"></button>
 
                                                     <button class="btn btn-default move-left glyphicon glyphicon-zoom-in"
                                                             ng-click="textSizeUp()"
                                                             data-toggle="tooltip"
                                                             data-placement="top"
-                                                            tooltip="text size={{textSize}}">
-                                                    </button>
+                                                            tooltip="text size={{textSize}}"></button>
                                                 </div>
                                                 <div class="col-xs-1">
                                                     <div class="slideTwo" data-toggle="tooltip"
@@ -542,23 +561,20 @@
                                                             tooltip="Finish Broadcasting"></button>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div ng-controller="actorController" ng-show="showImportExport()">
-                                                    <div class="col-xs-3">
-                                                        <label>{{getActor()}}</label>
-                                                    </div>
-                                                    <div class="col-xs-1">
-                                                        <button class="btn btn-default pull-right"
-                                                                ng-click="importSettings()">
-                                                            Import settings
-                                                        </button>
-                                                    </div>
-                                                    <div class="col-xs-1">
-                                                        <button class="btn btn-default pull-right"
-                                                                ng-click="exportSettings()">
-                                                            Export settings
-                                                        </button>
-                                                    </div>
+                                            <div class="row" ng-controller="actorController" ng-show="showImportExport()" style="margin-left:0px; margin-top: 15px;">
+                                                <div class="col-xs-3">
+                                                    <h4>{{getActor()}}</h4>
+                                                </div>
+                                                <div class="col-xs-5">
+                                                    <button class="btn btn-default"
+                                                            ng-click="importSettings()">
+                                                        Import settings
+                                                    </button>
+
+                                                    <button class="btn btn-default"
+                                                            ng-click="exportSettings()">
+                                                        Export settings
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -570,8 +586,5 @@
                 </div>
             </div>
         </div>
-        </div>
     </div>
-
-
-
+</div>
