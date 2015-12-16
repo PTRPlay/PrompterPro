@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext.Impl
 {
-    class PrompterDbSeed : DropCreateDatabaseIfModelChanges<PrompterDbContext>
+    class PrompterDbSeed : DropCreateDatabaseAlways<PrompterDbContext>
     {
         protected override void Seed(PrompterDbContext context)
         {
@@ -250,8 +250,8 @@ namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext.Imp
         {
             return new List<Preference>
             {
-                new Preference { ReadingSpeed = 8, FontSize=14, ScreenHeight=900, ScreenWidth=1200,
-                    ReaderId = 1, ScriptId = 1, LastSectionId = 3 }
+                new Preference { ReadingSpeed = 8, FontSize=70, ScreenHeight=422, ScreenWidth=1140,
+                    ReaderId = 1, ScriptId = 1, LastSectionId = 8 }
             };
         }
     }
