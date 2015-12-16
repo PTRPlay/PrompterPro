@@ -57,6 +57,16 @@
         $scope.isMirroredX = undefined;
         $scope.isMirroredY = undefined;
         $scope.speed = 5;
+
+        $scope.currentSize = $scope.textSizes[6];
+        $scope.textSize = 90;
+        $scope.isPlayDisabled = false;
+        $scope.isNavigateButtonShown = false;
+        var mintextSize = 70;
+        var maxtextSize = 110;
+        $scope.screenWidth = 1140;
+        $scope.screenHeight = 400;
+
         $scope.leftPadding = 0;
         $scope.rightPadding = 0;
         $scope.textSize = 90;
@@ -152,8 +162,14 @@
             }
         }, velocity);
     }
-
-
+        broadcastHub.client.handPlayBack = function () {
+            clearInterval(animation);
+            animation = setInterval(function () {
+                if (textBox.scrollTop() > 0) {
+                    textBox.scrollTop(textBox.scrollTop() - $scope.speed);
+                }
+            }, velocity);
+        }
     $scope.handPlayBack = function () {
         $scope.isHandPlayDisabled = false;
         $scope.isPlayDisabled = false;
@@ -183,6 +199,14 @@
             }
         }, velocity);
     }
+        broadcastHub.client.handPlay = function () {
+            clearInterval(animation);
+            animation = setInterval(function () {
+                if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
+                    textBox.scrollTop(textBox.scrollTop() + $scope.speed);
+                }
+            }, velocity);
+        }
 
     $scope.pause = function () {
         $scope.isHandPlayDisabled = false;
