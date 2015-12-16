@@ -116,6 +116,10 @@
 		        $scope.$apply();
 		    }
 
+		    broadcastHub.client.changeSpeed = function (speed) {
+		        $scope.speed = speed;
+		    }
+
 		    broadcastHub.client.textSizeUp = function () {
 		        if ($scope.textSize < maxtextSize) {
 		            $scope.textSize += textSizeStep;

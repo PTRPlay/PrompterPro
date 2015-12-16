@@ -15,8 +15,10 @@ function ($http, notify) {
                    if (data == null) {
                        $scope.notifyFail('No settings for this script!');
                    } else {
-                       $scope.speed = data.ReadingSpeed;
-                       $scope.textSize = data.FontSize;
+                       $scope.stop();
+                       $scope.changeSpeed(data.ReadingSpeed);
+                       $scope.textSizeInput = data.FontSize;
+                       $scope.changeTextSize();
                        $scope.changeScreenResolusion(data.ScreenWidth, data.ScreenHeight);
                        $scope.scrollToCurrent(data.LastSectionId - 1);
                        $scope.notifySuccess('Import done!');

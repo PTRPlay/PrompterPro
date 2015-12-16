@@ -131,9 +131,13 @@
         }
 
         $scope.changeScreenResolusion = function (nx, ny) {
+            broadcastHub.server.changeScreenResolution(nx, ny);
+        }
+
+        broadcastHub.client.changeScreenResolution = function (nx, ny) {
             document.getElementById("container").setAttribute("style", "width:" + nx + "px;");
             document.getElementById("container").setAttribute("style", "height:" + ny + "px;" + "display:table;");
-            broadcastHub.server.changeScreenResolution(nx, ny);
+
         }
 
         document.onmouseup = $scope.unhook;
@@ -265,6 +269,14 @@
             $scope.$apply();
         }
 
+        $scope.changeSpeed = function (speed) {
+            broadcastHub.server.changeSpeed(speed);
+        }
+
+        broadcastHub.client.changeSpeed = function (speed) {
+            $scope.speed = speed;
+        }
+
         $scope.textSizeUp = function () {
             broadcastHub.invoke('textSizeUp');
         }
@@ -316,8 +328,11 @@
         }
 
         $scope.scrollToCurrent = function (current) {
-            $('#area').scrollTop($('#Section' + current).position().top);
             broadcastHub.server.scrollToCurrent(current);
         }
+
+        broadcastHub.client.scrollToCurrent = function (current) {
+            $('#area').scrollTop($('#Section' + current).position().top);
+          }
 
     }]);
