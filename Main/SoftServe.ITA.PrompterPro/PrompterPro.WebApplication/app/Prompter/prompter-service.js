@@ -28,7 +28,7 @@
     	    $scope.textSizes = [50, 55, 60, 70, 80, 90, 100, 110, 130];
     	    $scope.showDialog = false;
     	    $scope.speed = 5;
-    	    speedHandlPlay = maxSpeed*2;
+    	    speedHandlPlay = 10;
     	    $scope.currentSize = $scope.textSizes[2];
     	    $scope.textSize = 90;
     	    $scope.leftPadding = 0;
