@@ -1,6 +1,6 @@
 ﻿app.factory('preferenceService', [
-    '$http',
-function ($http) {
+    '$http', 'notify',
+function ($http, notify) {
     var currentScript;
     return {
         setCurrentScript: function (script) {
@@ -12,17 +12,20 @@ function ($http) {
             var script = currentScript;
             $http.get("api/preference?id=" + actor.Id + "+" + script.ScriptId)
                .success(function (data) {
-                   $scope.speed = data.ReadingSpeed;
-                   $scope.textSize = data.FontSize;
-                   $scope.changeResolusion(data.ScreenWidth, data.ScreenHeight);
-                   $scope.scrollToCurrent(data.LastSectionId);
+                   if (data == null) {
+                       $scope.notifyFail('No settings for this script!');
+                   } else {
+                       $scope.speed = data.ReadingSpeed;
+                       $scope.textSize = data.FontSize;
+                       $scope.changeScreenResolusion(data.ScreenWidth, data.ScreenHeight);
+                       $scope.scrollToCurrent(data.LastSectionId - 1);
+                       $scope.notifySuccess('Import done!');
+                   }
                })
                 .error(function (data) {
-                    console.log('error');
-                    var pref = data;
+                    $scope.notifyFail('Can not import settings!');
                 });
         },
-
 
         exportSettings: function ($scope, width, height) {
             var actor = window.currActor;
@@ -30,7 +33,7 @@ function ($http) {
             var preference = {
                 ReaderId: 0,
                 ScriptId: 0,
-                LastSectionId: 0, 
+                LastSectionId: 0,
                 ReadingSpeed: 0,
                 FontSize: 0,
                 ScreenWidth: 0,
@@ -45,9 +48,11 @@ function ($http) {
             preference.ScreenHeight = height;
             $http.put("api/preference/", preference)
                 .success(function (response) {
+                    $scope.notifySuccess('Export done!');
                     return response;
                 })
                 .error(function (error) {
+                    $scope.notifyFail('Can not export settings!');
                     return response;
                 });
         }

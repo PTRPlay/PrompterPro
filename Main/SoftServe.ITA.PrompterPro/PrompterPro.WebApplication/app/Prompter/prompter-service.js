@@ -28,7 +28,7 @@
     	    $scope.textSizes = [50, 55, 60, 70, 80, 90, 100, 110, 130];
     	    $scope.showDialog = false;
     	    $scope.speed = 5;
-    	    speedHandlPlay = 10;
+    	    speedHandlPlay = maxSpeed*2;
     	    $scope.currentSize = $scope.textSizes[2];
     	    $scope.textSize = 90;
     	    $scope.leftPadding = 0;
@@ -194,8 +194,8 @@
 
             
             broadcastHub.client.changeScreenResolution = function (screenWidth, screenHeight) {
-                document.getElementById("container").setAttribute("style", "width:" + screenWidth + "px");
-                document.getElementById("container").setAttribute("style", "height:" + screenHeight + "px");
+                document.getElementById("prompterRow").setAttribute("style", "height:" + screenHeight + "px; " + "width:" + screenWidth + "px");
+                //document.getElementById("prompterRow").setAttribute("style", "width:" + screenWidth + "px");
             }
 
             broadcastHub.client.padLeft = function(percentage) {
