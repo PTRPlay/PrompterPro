@@ -317,7 +317,7 @@
         <div id="playerController">
 
             <div ng-show="showPlayer">
-                <div ng-controller="playerController">
+                <div ng-controller="playerController" style="min-width:1140px">
                     <!--Customize Prompter Settings-->
 
 
@@ -390,8 +390,8 @@
                         </div>
                     </form>
 
-                    <div class="container" id="container" style="background-color: black; min-width:1140px;width: 100%; height:400px; display:table !important">
-                        <div id="prompterRow" class="row" style="height:inherit; background:#000">
+                    <div class="container" id="container" style="background-color: black; min-width:1140px; width:1140px; height:400px; display:table !important">
+                        <div id="prompterRow" class="row" style="background:#000;height:inherit; min-width:1140px">
                             <div id="div_img" style="z-index:1;
                                              right:-30px;
                                              top:100%;
@@ -404,13 +404,13 @@
                                 <img src="~/Content/Trinagles/left-triangle.png" class="pull-right" />
                             </div>
                             <div id="area"
-                                      class="col-xs-8 textarea-style"
-                                      ng-checked="mirrorText(isMirroredX,isMirroredY)"
-                                      ng-keypress="textIsChanged = true"
-                                      ng-style="{'paddingRight':rightPadding + '%','paddingLeft':leftPadding + '%','font-size':textSize + 'px'}"
-                                      ng-mouseover="isNavigateButtonShown = true"
-                                      ng-mouseleave="isNavigateButtonShown = false"
-                                      style="width:70%; min-height:400px; height:100%">
+                                 class="col-xs-8 textarea-style"
+                                 ng-checked="mirrorText(isMirroredX,isMirroredY)"
+                                 ng-keypress="textIsChanged = true"
+                                 ng-style="{'paddingRight':rightPadding + '%','paddingLeft':leftPadding + '%','font-size':textSize + 'px'}"
+                                 ng-mouseover="isNavigateButtonShown = true"
+                                 ng-mouseleave="isNavigateButtonShown = false"
+                                 style="width:70%; min-height:400px; height:100%">
                             </div>
                             <div class="col-xs-2" style="padding-top: 170px;width:15%;z-index:2;position:relative">
                                 <img src="~/Content/Trinagles/right-triangle.png" />
@@ -454,7 +454,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-xs-8 pull-left">
-  
+
                                                     <button class="btn btn-default glyphicon glyphicon-play move-left"
                                                             ng-click="play()"
                                                             ng-disabled="isPlayDisabled"></button>
@@ -501,15 +501,13 @@
                                                             ng-click="textSizeDown()"
                                                             data-toggle="tooltip"
                                                             data-placement="top"
-                                                            tooltip="text size={{textSize}}">
-                                                    </button>
+                                                            tooltip="text size={{textSize}}"></button>
 
                                                     <button class="btn btn-default move-left glyphicon glyphicon-zoom-in"
                                                             ng-click="textSizeUp()"
                                                             data-toggle="tooltip"
                                                             data-placement="top"
-                                                            tooltip="text size={{textSize}}">
-                                                    </button>
+                                                            tooltip="text size={{textSize}}"></button>
                                                 </div>
                                                 <div class="col-xs-1">
                                                     <div class="slideTwo" data-toggle="tooltip"
