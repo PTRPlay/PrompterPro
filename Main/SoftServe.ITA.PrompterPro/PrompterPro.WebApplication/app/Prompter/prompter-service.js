@@ -53,6 +53,9 @@
                     ///
                     var sections = $scope.script.Sections;
                     var area = $('#area')
+                    if (area.length == 0) {
+                        area.empty();
+                    }
                     _.each(sections, function (section) {
                         $('#area').append("<p id=Section" + section.Order + ">" + "[Section" + section.Order + "]\n" + section.Text + "</p>");
                     });

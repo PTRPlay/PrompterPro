@@ -45,8 +45,8 @@
                 //for adding text into operator screen :)
                 var sections = $scope.sortedScripts[$scope.index].Sections;
                 var area = $('#area')
-                if ($('#area')) {
-                    area.empty()
+                if (area.length == 0) {
+                    area.empty();
                 }
                 _.each(sections, function (section) {
                     area.append("<p id=Section" + section.Order + ">" + "[Section" + section.Order + "]\n" + section.Text + "</p>");

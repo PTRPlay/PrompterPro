@@ -490,9 +490,6 @@
                                                     <button class="btn btn-default glyphicon glyphicon-arrow-right move-left"
                                                             ng-click="getNextSection()"></button>
 
-                                                    <input type="number" id="InputNumber" ng-model="index"/>
-
-                                                    <button class="btn btn-default" id="MoveButton" ng-click="scrollToSelected(index)">MOVE</button>
                                                     <button class="btn btn-default glyphicon glyphicon-arrow-left move-left"
                                                             ng-click="getPrevSection()"></button>
 
@@ -533,6 +530,10 @@
                                                             data-toggle="tooltip"
                                                             data-placement="top"
                                                             tooltip="text size={{textSize}}"></button>
+                                                    <br />
+                                                    <input type="number" id="InputNumber" ng-model="index" />
+
+                                                    <button class="btn btn-default glyphicon" id="InputButton" ng-click="scrollToSelected(index)">GO</button>
                                                 </div>
                                                 <div class="col-xs-1">
                                                     <div class="slideTwo" data-toggle="tooltip"
