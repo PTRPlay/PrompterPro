@@ -58,6 +58,7 @@
         $scope.rightPadding = 0;
         $scope.isMirroredX = undefined;
         $scope.isMirroredY = undefined;
+        $scope.element = document.getElementById("prompterRow");
  
         function setDefaultProps() {
             $scope.isMirroredX = undefined;
@@ -97,7 +98,6 @@
                 var ny = e.clientY - y;
                 if (nx < 1140) nx = 1140;
                 if (ny < 400) ny = 400;
-
                 el.style.width = nx + 'px';
                 el.style.height = ny + 'px';
                 document.getElementById("container").setAttribute("style", "height:" + ny + "px;" + "display:table;");
@@ -135,9 +135,9 @@
         }
 
         broadcastHub.client.changeScreenResolution = function (nx, ny) {
-            document.getElementById("container").setAttribute("style", "width:" + nx + "px;");
+            $scope.element.style.width = nx + 'px';
+            $scope.element.style.height = ny + 'px';
             document.getElementById("container").setAttribute("style", "height:" + ny + "px;" + "display:table;");
-
         }
 
         document.onmouseup = $scope.unhook;
