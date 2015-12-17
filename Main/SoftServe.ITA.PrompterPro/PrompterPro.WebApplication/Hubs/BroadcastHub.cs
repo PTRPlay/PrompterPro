@@ -347,6 +347,11 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
 		    Clients.All.changeTextSize(size);
 		}
 
+        public void ChangeSpeed(int speed)
+        {
+            Clients.All.changeSpeed(speed);
+        }
+
 		public void SpeedUp()
 		{
 		    Clients.All.speedUp();
@@ -414,7 +419,7 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
 
         public void ScrollToCurrent(int current)
         {
-            Clients.OthersInGroup(GetGroupName()).ScrollToCurrent(current);
+            Clients.All.scrollToCurrent(current);
         }
 
         public void ConfigurePrompters(List<PrompterInfo> promptersConfig)

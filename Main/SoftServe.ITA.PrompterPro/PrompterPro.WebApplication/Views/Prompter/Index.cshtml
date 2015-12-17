@@ -10,20 +10,21 @@
 
 }
 
-<div ng-app="app" ng-controller="prompterController" style="min-width:1140px">
-    <div class="container" id="container" style="width: 1140px;min-height:400px; height:400px !important">
-        <div id="prompterRow" class="row" style="height:100%; min-width:1140px">
-            <div class="col-xs-2" style="padding-top: 200px; width:15%">
-                <img src="~/Content/Trinagles/left-triangle.png" class="pull-rigth" />
-            </div>
-            <div id="area" disabled="disabled" readonly="readonly"
-                      class="col-xs-8 textarea-prompter"
-                      ng-style="{'paddingRight':rightPadding +'%','paddingLeft':leftPadding + '%','font-size':textSize + 'px'}"
-                      style="width:70%; min-height:400px; height:100%">
-            </div>
-            <div class="col-xs-2" style="padding-top: 200px;width:15%">
-                <img src="~/Content/Trinagles/right-triangle.png" />
+
+    <div ng-app="app" ng-controller="prompterController" style="min-width:1140px;!important">
+        <div class="container" id="container" style="width: 1140px;min-height:400px; height:400px !important">
+            <div id="prompterRow" class="row" style="height:100%; min-width:1140px">
+                <div class="col-xs-2" style="padding-top: 200px; width:15%">
+                    <img src="~/Content/Trinagles/left-triangle.png" class="pull-rigth" />
+                </div>
+                <div id="area" disabled="disabled" readonly="readonly"
+                     class="col-xs-8 textarea-prompter"
+                     ng-style="{'paddingRight':rightPadding +'%','paddingLeft':leftPadding + '%','font-size':textSize + 'px'}"
+                     style="width:70%; min-height:400px; height:100%">
+                </div>
+                <div class="col-xs-2" style="padding-top: 200px;width:15%">
+                    <img src="~/Content/Trinagles/right-triangle.png" />
+                </div>
             </div>
         </div>
     </div>
-</div>

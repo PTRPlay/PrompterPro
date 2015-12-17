@@ -28,7 +28,7 @@
     	    $scope.textSizes = [50, 55, 60, 70, 80, 90, 100, 110, 130];
     	    $scope.showDialog = false;
     	    $scope.speed = 5;
-    	    speedHandlPlay = 10;
+    	    $scope.speedHandlPlay = 10;
     	    $scope.currentSize = $scope.textSizes[2];
     	    $scope.textSize = 90;
     	    $scope.leftPadding = 0;
@@ -120,6 +120,10 @@
 		        $scope.$apply();
 		    }
 
+		    broadcastHub.client.changeSpeed = function (speed) {
+		        $scope.speed = speed;
+		    }
+
 		    broadcastHub.client.textSizeUp = function () {
 		        if ($scope.textSize < maxtextSize) {
 		            $scope.textSize += textSizeStep;
@@ -162,19 +166,19 @@
             }
             
             broadcastHub.client.handPlayBack = function () {
-                broadcastHub.client.pause();
+                clearInterval(animation);
                 animation = setInterval(function () {
                     if (textBox.scrollTop() > 0) {
-                        textBox.scrollTop(textBox.scrollTop() - speedHandlPlay);
+                        textBox.scrollTop(textBox.scrollTop() - $scope.speedHandlPlay);
                     }
                 }, velocity);
             }
 
             broadcastHub.client.handPlay = function () {
-                broadcastHub.client.pause();
+                clearInterval(animation);
                 animation = setInterval(function () {
                     if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
-                        textBox.scrollTop(textBox.scrollTop() + speedHandlPlay);
+                        textBox.scrollTop(textBox.scrollTop() + $scope.speedHandlPlay);
                     }
                 }, velocity);
             }
@@ -195,7 +199,7 @@
             
             broadcastHub.client.changeScreenResolution = function (screenWidth, screenHeight) {
                 document.getElementById("prompterRow").setAttribute("style", "height:" + screenHeight + "px; " + "width:" + screenWidth + "px");
-                //document.getElementById("prompterRow").setAttribute("style", "width:" + screenWidth + "px");
+                document.getElementById("container").setAttribute("style", "display:table");
             }
 
             broadcastHub.client.padLeft = function(percentage) {
