@@ -407,6 +407,11 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
             Clients.OthersInGroup(GetGroupName()).getPrevSection(length);
         }
 
+        public void ScrollToSelected(int selectedNumber)
+        {
+            Clients.OthersInGroup(GetGroupName()).scrollToSelected(selectedNumber);
+        }
+
         public void ScrollToCurrent(int current)
         {
             Clients.OthersInGroup(GetGroupName()).ScrollToCurrent(current);

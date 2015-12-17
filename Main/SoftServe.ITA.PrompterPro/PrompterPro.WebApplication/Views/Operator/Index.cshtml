@@ -468,6 +468,9 @@
                                                     <button class="btn btn-default glyphicon glyphicon-arrow-right move-left"
                                                             ng-click="getNextSection()"></button>
 
+                                                    <input type="number" id="InputNumber" ng-model="index"/>
+
+                                                    <button class="btn btn-default" id="MoveButton" ng-click="scrollToSelected(index)">MOVE</button>
                                                     <button class="btn btn-default glyphicon glyphicon-arrow-left move-left"
                                                             ng-click="getPrevSection()"></button>
 

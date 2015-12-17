@@ -316,6 +316,11 @@
         return i;
     }
 
+    $scope.scrollToSelected = function (sectionNumber) {
+        $('#area').scrollTop($('#Section' + sectionNumber).position().top + $('#area').scrollTop());
+        broadcastHub.server.scrollToSelected(sectionNumber);
+    }
+
     $scope.scrollToCurrent = function (current) {
         $('#area').scrollTop($('#Section' + current).position().top);
         broadcastHub.server.scrollToCurrent(current);

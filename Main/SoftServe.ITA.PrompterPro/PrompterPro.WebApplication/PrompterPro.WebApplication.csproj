@@ -287,6 +287,7 @@
     <Content Include="Content\Operator\sectionAdderForHr.css" />
     <Content Include="Content\Operator\sectionAnimations.css" />
     <Content Include="Content\Operator\small-loading.css" />
+    <Content Include="Content\Operator\StyleForInputNumber.css" />
     <Content Include="Content\site.css" />
     <Content Include="Content\slider.css" />
     <Content Include="Content\styles.min.css" />

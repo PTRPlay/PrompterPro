@@ -245,6 +245,11 @@
                 $scope.$apply();
             }
 
+            broadcastHub.client.scrollToSelected = function (selectedNumber) {
+                $('#area').scrollTop($('#Section' + selectedNumber).position().top + $('#area').scrollTop());
+                $scope.$apply();
+            }
+
             broadcastHub.client.scrollToCurrent = function (current) {
                 $('#area').scrollTop($('#Section' + current).position().top);
                 $scope.$apply();
