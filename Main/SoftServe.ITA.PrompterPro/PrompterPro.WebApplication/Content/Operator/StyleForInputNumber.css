@@ -1,15 +1,8 @@
 ﻿#InputNumber {
     width: 39px;
-    height: 32px;
-    position:absolute;
-    bottom: 0px;
-    left: 188px;
+    height: 25px;
 }
 
 #MoveButton {
-    width: 69px;
-    height: 32px;
-    position:absolute;
-    bottom: 0px;
-    left: 243px;
+
 }
