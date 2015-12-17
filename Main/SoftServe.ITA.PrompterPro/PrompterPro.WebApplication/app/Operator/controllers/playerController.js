@@ -59,7 +59,6 @@
         $scope.rightPadding = 0;
         $scope.isMirroredX = undefined;
         $scope.isMirroredY = undefined;
-        $scope.element = document.getElementById("prompterRow");
  
         function setDefaultProps() {
             $scope.isMirroredX = undefined;
@@ -136,8 +135,8 @@
         }
 
         broadcastHub.client.changeScreenResolution = function (nx, ny) {
-            $scope.element.style.width = nx + 'px';
-            $scope.element.style.height = ny + 'px';
+            document.getElementById("prompterRow").style.width = nx + 'px';
+            document.getElementById("prompterRow").style.height = ny + 'px';
             document.getElementById("container").setAttribute("style", "height:" + ny + "px;" + "display:table;");
         }
 
