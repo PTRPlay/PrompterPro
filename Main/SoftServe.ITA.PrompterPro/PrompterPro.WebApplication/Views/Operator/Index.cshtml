@@ -103,8 +103,30 @@
                         </div>
                     </div>
                 </form>
+                <style>
+                    .scroll {
+                        position: fixed;
+                        overflow-y: scroll;
+                        top: 100px;
+                        left: 50px;
+                        right: 0;
+                        bottom: 0;
+                    }
 
-                <div class="side-bar">
+                        .scroll::-webkit-scrollbar {
+                            width: 8px;
+                        }
+
+                        .scroll::-webkit-scrollbar-track {
+                            border-radius: 10px;
+                        }
+
+                        .scroll::-webkit-scrollbar-thumb {
+                            border-radius: 10px;
+                        }
+                </style>
+
+                <div class="side-bar scroll">
                     <!-- script list -->
                     <div class="list-group">
                         <a class="list-group-item active btn"
@@ -189,7 +211,7 @@
 
                     </div>
                     <!-- actors list -->
-                    <div class="list-group" ng-controller ="actorController">
+                    <div class="list-group" ng-controller="actorController">
                         <a class="list-group-item active btn"
                            ng-click="actorListClick()">
                             <span class="badge">{{filteredActors.length}}</span>
@@ -453,7 +475,7 @@
                                         Options
                                         <div class="panel-body">
                                             <div class="row">
-                                                <div class="col-xs-8 pull-left">
+                                                <div class="col-xs-9 pull-left">
 
                                                     <button class="btn btn-default glyphicon glyphicon-play move-left"
                                                             ng-click="play()"
@@ -540,23 +562,23 @@
                                                             tooltip="Finish Broadcasting"></button>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div ng-controller="actorController" ng-show="showImportExport()">
-                                                    <div class="col-xs-3">
-                                                        <label>{{getActor()}}</label>
-                                                    </div>
-                                                    <div class="col-xs-1">
-                                                        <button class="btn btn-default pull-right"
-                                                                ng-click="importSettings()">
-                                                            Import settings
-                                                        </button>
-                                                    </div>
-                                                    <div class="col-xs-1">
-                                                        <button class="btn btn-default pull-right"
-                                                                ng-click="exportSettings()">
-                                                            Export settings
-                                                        </button>
-                                                    </div>
+                                            <div class="row" ng-controller="actorController" ng-show="showImportExport()" style="margin-left:0px; margin-top: 15px;">
+                                                <div class="col-xs-3">
+                                                    <h4>{{getActor()}}</h4>
+
+                                                </div>
+                                                <div class="col-xs-5">
+                                                    <button class="btn btn-default"
+                                                            ng-click="importSettings()">
+                                                        Import settings
+
+                                                    </button>
+
+                                                    <button class="btn btn-default"
+                                                            ng-click="exportSettings()">
+                                                        Export settings
+
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -568,8 +590,6 @@
                 </div>
             </div>
         </div>
-        </div>
-    </div>
 
 
 
