@@ -14,11 +14,11 @@
 		    if ($scope.selectedActor == actor) {
 		        $scope.selectedActor = null;
 		        window.currActor = null;
-		        document.getElementById("actorselect" + actor.Id).style.color = "black";
+		        document.getElementById("actorselect" + actor.Id).style.color = "dimgrey";
 		        document.getElementById("actorselect" + actor.Id).style.backgroundColor = "white";
 		    } else {
 		        if ($scope.selectedActor != null) {
-		            document.getElementById("actorselect" + $scope.selectedActor.Id).style.color = "black";
+		            document.getElementById("actorselect" + $scope.selectedActor.Id).style.color = "dimgrey";
 		            document.getElementById("actorselect" + $scope.selectedActor.Id).style.backgroundColor = "white";
 		        }
 		        $scope.selectedActor = actor;

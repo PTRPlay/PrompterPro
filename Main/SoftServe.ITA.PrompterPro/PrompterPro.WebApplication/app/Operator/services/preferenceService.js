@@ -21,11 +21,11 @@ function ($http, notify) {
                        $scope.changeTextSize();
                        $scope.changeScreenResolusion(data.ScreenWidth, data.ScreenHeight);
                        $scope.scrollToCurrent(data.LastSectionId - 1);
-                       $scope.notifySuccess('Import done!');
+                       $scope.notifySuccess('Settings loaded!');
                    }
                })
                 .error(function (data) {
-                    $scope.notifyFail('Can not import settings!');
+                    $scope.notifyFail('Can not load settings!');
                 });
         },
 
@@ -50,11 +50,11 @@ function ($http, notify) {
             preference.ScreenHeight = height;
             $http.put("api/preference/", preference)
                 .success(function (response) {
-                    $scope.notifySuccess('Export done!');
+                    $scope.notifySuccess('Settings saved!');
                     return response;
                 })
                 .error(function (error) {
-                    $scope.notifyFail('Can not export settings!');
+                    $scope.notifyFail('Can not save settings!');
                     return response;
                 });
         }
