@@ -34,12 +34,10 @@
         var textBox = $('#area');
 
         var animation;
-        var maxSpeed = 10;
-        var minSpeed = 1;
         var startVelocity = 24;
         var minVelocity = 6;
         var maxVelocity = 40;
-       
+        var speedStep = 2;
         var textSizeInput = 90;
         var cur = null;
         var textSizeStep = 5;
@@ -243,13 +241,13 @@
                 speedBtnClicked = true;
                 broadcastHub.server.speedUp();
                 $scope.speedIndicator++;
-                setTimeout(function () { speedBtnClicked = false; }, 600);
+                setTimeout(function () { speedBtnClicked = false; }, 500);
             }
         }
 
         broadcastHub.client.speedUp = function () {
             clearInterval(animation);
-            $scope.velocity -= 2;
+            $scope.velocity -= speedStep;
         }
 
         $scope.speedDown = function () {
@@ -257,13 +255,13 @@
                 speedBtnClicked = true;
                 broadcastHub.server.speedDown();
                 $scope.speedIndicator--;
-                setTimeout(function () { speedBtnClicked = false; }, 600);
+                setTimeout(function () { speedBtnClicked = false; }, 500);
             }
         }
 
         broadcastHub.client.speedDown = function () {
             clearInterval(animation);
-            $scope.velocity += 2;
+            $scope.velocity += speedStep;
         }
 
         $scope.padRight = function (percentage) {

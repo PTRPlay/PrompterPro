@@ -20,10 +20,9 @@
 
     	    var textBox = $('#area');
     	    var animation;
-    	    var maxSpeed = 10;
-    	    var minSpeed = 1;
     	    var startVelocity = 24;
     	    var resolutionMultiplier = 1;
+    	    var speedStep = 2;
 
     	    $scope.textIsChanged = false;
     	    $scope.textSizes = [50, 55, 60, 70, 80, 90, 100, 110, 130];
@@ -142,13 +141,13 @@
 
             broadcastHub.client.speedUp = function() {
                 clearInterval(animation);
-                $scope.velocity -= 2;
+                $scope.velocity -= speedStep;
                 broadcastHub.server.play();
             }
 
             broadcastHub.client.speedDown = function() {
                 clearInterval(animation);
-                $scope.velocity += 2;
+                $scope.velocity += speedStep;
                 broadcastHub.server.play();
             }
 
