@@ -122,7 +122,7 @@
 		    }
 
 		    broadcastHub.client.changeSpeed = function (speed) {
-		        $scope.speed = speed;
+		        velocity = speed;
 		    }
 
 		    broadcastHub.client.textSizeUp = function () {

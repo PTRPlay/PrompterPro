@@ -44,7 +44,7 @@ function ($http, notify) {
             preference.ReaderId = actor.Id;
             preference.ScriptId = script.ScriptId;
             preference.LastSectionId = $scope.getCurrentSection();
-            preference.ReadingSpeed = $scope.speed;
+            preference.ReadingSpeed = $scope.velocity;
             preference.FontSize = $scope.textSize;
             preference.ScreenWidth = width;
             preference.ScreenHeight = height;

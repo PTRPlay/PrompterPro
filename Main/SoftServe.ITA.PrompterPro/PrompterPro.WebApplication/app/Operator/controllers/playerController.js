@@ -58,6 +58,7 @@
         var maxtextSize = 110;
         $scope.screenWidth = 1140;
         $scope.screenHeight = 400;
+        $scope.velocity = velocity;
 
         $scope.leftPadding = 0;
         $scope.rightPadding = 0;
@@ -287,7 +288,7 @@
         }
 
         broadcastHub.client.changeSpeed = function (speed) {
-            $scope.speed = speed;
+            velocity = speed;
         }
 
         $scope.textSizeUp = function () {
