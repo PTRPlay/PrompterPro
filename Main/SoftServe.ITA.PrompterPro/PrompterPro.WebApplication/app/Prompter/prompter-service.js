@@ -23,12 +23,13 @@
     	    var maxSpeed = 10;
     	    var minSpeed = 1;
     	    var startVelocity = 24;
-    	    var velocity = startVelocity;
-	        var resolutionMultiplier = 1;
+    	    var resolutionMultiplier = 1;
+
     	    $scope.textIsChanged = false;
     	    $scope.textSizes = [50, 55, 60, 70, 80, 90, 100, 110, 130];
     	    $scope.showDialog = false;
     	    $scope.speed = 2;
+    	    $scope.velocity = startVelocity;
     	    $scope.speedHandlPlay = 10;
     	    $scope.currentSize = $scope.textSizes[2];
     	    $scope.textSize = 90;
@@ -104,7 +105,7 @@
 		            if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
 		                textBox.scrollTop(textBox.scrollTop() + $scope.speed);
 		            }
-		        }, velocity);
+		        }, $scope.velocity);
 		    }
 
 		    broadcastHub.client.pause = function () {
@@ -122,7 +123,7 @@
 		    }
 
 		    broadcastHub.client.changeSpeed = function (speed) {
-		        velocity = speed;
+		        $scope.velocity = speed;
 		    }
 
 		    broadcastHub.client.textSizeUp = function () {
@@ -141,13 +142,13 @@
 
             broadcastHub.client.speedUp = function() {
                 clearInterval(animation);
-                velocity -= 2;
+                $scope.velocity -= 2;
                 broadcastHub.server.play();
             }
 
             broadcastHub.client.speedDown = function() {
                 clearInterval(animation);
-                velocity += 2;
+                $scope.velocity += 2;
                 broadcastHub.server.play();
             }
 
@@ -172,7 +173,7 @@
                     if (textBox.scrollTop() > 0) {
                         textBox.scrollTop(textBox.scrollTop() - $scope.speedHandlPlay);
                     }
-                }, velocity);
+                }, $scope.velocity);
             }
 
             broadcastHub.client.handPlay = function () {
@@ -181,7 +182,7 @@
                     if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
                         textBox.scrollTop(textBox.scrollTop() + $scope.speedHandlPlay);
                     }
-                }, velocity);
+                }, $scope.velocity);
             }
 
             broadcastHub.client.clearText = function () {
