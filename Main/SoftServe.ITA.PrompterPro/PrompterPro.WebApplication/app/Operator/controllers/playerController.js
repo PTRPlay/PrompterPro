@@ -36,7 +36,10 @@
         var animation;
         var maxSpeed = 10;
         var minSpeed = 1;
-        var velocity = 40;
+        var startVelocity = 24;
+        var minVelocity = 6;
+        var maxVelocity = 40;
+        var velocity = startVelocity;
         var textSizeInput = 90;
         var cur = null;
         var textSizeStep = 5;
@@ -44,7 +47,8 @@
         $scope.textIsChanged = false;
         $scope.textSizes = [50, 55, 60, 70, 80, 90, 100, 110, 130];
         $scope.showDialog = false;
-        $scope.speed = 5;
+        $scope.speed = 2;
+        $scope.speedIndicator = 0;
         $scope.speedHandlPlay = 10;
         $scope.currentSize = $scope.textSizes[6];
         $scope.textSize = 90;
@@ -63,7 +67,7 @@
         function setDefaultProps() {
             $scope.isMirroredX = undefined;
             $scope.isMirroredY = undefined;
-            $scope.speed = 5;
+            $scope.speed = 2;
             $scope.leftPadding = 0;
             $scope.rightPadding = 0;
             $scope.textSize = 90;
@@ -231,25 +235,34 @@
             clearInterval(animation);
             textBox.scrollTop(0);
         }
+        var speedBtnClicked = false;
 
         $scope.speedUp = function () {
-            broadcastHub.invoke('speedUp');
+            if (velocity > minVelocity && !speedBtnClicked) {
+                speedBtnClicked = true;
+                broadcastHub.server.speedUp();
+                $scope.speedIndicator++;
+                setTimeout(function () { speedBtnClicked = false; }, 600);
+            }
         }
 
         broadcastHub.client.speedUp = function () {
-            if ($scope.speed < maxSpeed) {
-                $scope.speed++;
-            }
+            clearInterval(animation);
+            velocity -= 2;
         }
 
         $scope.speedDown = function () {
-            broadcastHub.invoke('speedDown');
+            if (velocity < maxVelocity && !speedBtnClicked) {
+                speedBtnClicked = true;
+                broadcastHub.server.speedDown();
+                $scope.speedIndicator--;
+                setTimeout(function () { speedBtnClicked = false; }, 600);
+            }
         }
 
         broadcastHub.client.speedDown = function () {
-            if ($scope.speed > minSpeed) {
-                $scope.speed--;
-            }
+            clearInterval(animation);
+            velocity += 2;
         }
 
         $scope.padRight = function (percentage) {
