@@ -5,7 +5,7 @@
 }
 
 <div ng-app="app" ng-controller="scriptController">
-    <div class=" container" style="display:table;">
+    <div id="main-container" class="container" style="display:table;">
         <div class="row">
 
             <!-- loader -->
@@ -412,7 +412,13 @@
                         </div>
                     </form>
 
-                    <div class="container" id="container" style="background-color: black; min-width:1140px; width:1140px; height:400px; display:table !important">
+                    <div class="container" id="container" style="background-color: black; min-width:1140px; width:1140px; height:400px;  display:table !important">
+                        <div id="div_img" style="z-index:1;
+                                             position:relative;
+                                             left:-30px;
+                                             cursor:move;">
+                            <span class="glyphicon glyphicon-move" ng-mousedown="hook(event)"></span>
+                        </div>
                         <div id="prompterRow" class="row" style="background:#000;height:inherit; min-width:1140px">
                             <div id="div_img" style="z-index:1;
                                              right:-30px;
@@ -420,7 +426,7 @@
                                              position:relative;
                                              float:right;
                                              cursor:se-resize;">
-                                <span class="glyphicon glyphicon-move" ng-mousedown="hook(event)" tooltip="Resize prompter screen"></span>
+                                <span class="glyphicon glyphicon-resize-vertical" ng-mousedown="hook(event)" tooltip="Resize prompter screen"></span>
                             </div>
                             <div class="col-xs-2" style="padding-top: 200px;width:15%">
                                 <img src="~/Content/Trinagles/left-triangle.png" class="pull-right" />

@@ -402,6 +402,12 @@ namespace SoftServe.ITA.PrompterPro.WebApplication.Hubs
             Clients.All.changeScreenResolution(width, height);
         }
 
+        public void MoveScreen(int left, int top)
+        {
+            Clients.All.MoveScreen(left, top);
+        }
+
+
         public void GetNextSection()
         {
             Clients.OthersInGroup(GetGroupName()).getNextSection();

@@ -40,6 +40,7 @@
         var speedStep = 2;
         var textSizeInput = 90;
         var cur = null;
+        var cur2 = null;
         var textSizeStep = 5;
 
         $scope.textIsChanged = false;
@@ -88,8 +89,12 @@
         }
 
         $scope.unhook = function (e) {
-            if (cur)
+            if (cur) {
                 cur = null;
+                nx = 0;
+                ny = 0;
+            }
+
         }
 
         $scope.move = function (e) {
@@ -97,16 +102,30 @@
                 return;
             e = e || window.event;
             with (cur) {
-                var nx = e.clientX - x;
-                var ny = e.clientY - y;
-                if (nx < 1140) nx = 1140;
-                if (ny < 400) ny = 400;
-                el.style.width = nx + 'px';
-                el.style.height = ny + 'px';
-                document.getElementById("container").setAttribute("style", "height:" + ny + "px;" + "display:table;");
-                broadcastHub.server.changeScreenResolution(nx, ny);
-                $scope.screenWidth = nx;
-                $scope.screenHeight = ny;
+                if (cur.el.id == "prompterRow") {
+                    var nx = e.clientX - x;
+                    var ny = e.clientY - y;
+                    if (nx < 1140) nx = 1140;
+                    if (ny < 400) ny = 400;
+                    el.style.width = nx + 'px';
+                    el.style.height = ny + 'px';
+                    document.getElementById("container").setAttribute("style", "height:" + ny + "px;" + "display:table;");
+                    broadcastHub.server.changeScreenResolution(nx, ny);
+                    $scope.screenWidth = nx;
+                    $scope.screenHeight = ny;
+                }
+                if (cur.el.id == "container") {
+                    bodyContent = document.getElementsByClassName("container body-content");
+                    menu = document.getElementById("menu");
+                    var nx = e.clientX - bodyContent[0].offsetLeft;
+                    var ny = e.clientY - bodyContent[0].offsetTop - 100;
+                    if (nx > 400) nx = 400;
+                    if (ny > 400) ny = 400;
+                    temp = document.getElementById("main-container");
+                    temp.style.paddingLeft = nx + "px";
+                    temp.style.paddingTop = ny + "px";
+                    broadcastHub.server.moveScreen(nx, ny);
+                }
             }
             (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
         }
@@ -155,6 +174,9 @@
 
         $scope.closePlayer = function () {
             setDefaultProps();
+            temp = document.getElementById("main-container");
+            temp.style.paddingLeft = "0px";
+            temp.style.paddingTop = "0px";
             $scope.broadcastOperator.successEndBroadcast();
         }
 

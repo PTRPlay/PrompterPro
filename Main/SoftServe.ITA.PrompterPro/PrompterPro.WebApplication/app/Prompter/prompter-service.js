@@ -203,6 +203,16 @@
                 document.getElementById("container").setAttribute("style", "display:table");
             }
 
+            broadcastHub.client.moveScreen = function (paddingLeft, paddingTop) {
+                var moveTo = document.getElementsByClassName("container-full");
+                moveTo[0].style.paddingLeft = paddingLeft + "px";
+                paddingTop += 100;
+                if (paddingTop < 100) paddingTop = 100;
+                moveTo[0].style.paddingTop = paddingTop + "px";
+            }
+
+
+
             broadcastHub.client.padLeft = function(percentage) {
                 $scope.leftPadding = percentage;
                 $scope.$apply();
