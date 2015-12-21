@@ -15,6 +15,8 @@ namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext
         IDbSet<User> Users { get; }
         IDbSet<Reader> Readers { get; set; }
         IDbSet<Preference> Preferences { get; set; }
+        IDbSet<Diagnostics> Diagnostics { get; set; }
+        IDbSet<UserActivity> UserActivities { get; set; } 
 
         DbEntityEntry Entry(object entity);
         int SaveChanges();
