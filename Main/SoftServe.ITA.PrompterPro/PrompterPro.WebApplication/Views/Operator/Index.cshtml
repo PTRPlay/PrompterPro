@@ -502,11 +502,13 @@
                                                     <button class="btn btn-default move-left glyphicon glyphicon-backward move-left"
                                                             ng-mousedown="handPlayBack()"
                                                             ng-mouseup="pause()"
+                                                            ng-mouseleave="puauseIfMouseUp()"
                                                             ng-disabled="isHandPlayDisabled"></button>
 
                                                     <button class="btn btn-default move-left glyphicon glyphicon-forward move-left"
                                                             ng-mousedown="handPlay()"
                                                             ng-mouseup="pause()"
+                                                            ng-mouseleave="puauseIfMouseUp()"
                                                             ng-disabled="isHandPlayDisabled"></button>
 
                                                     <button class="btn btn-default move-left"

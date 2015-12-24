@@ -49,7 +49,7 @@
         $scope.speed = 2;
         $scope.velocity = startVelocity;
         $scope.speedIndicator = 0;
-        $scope.speedHandlPlay = 10;
+        $scope.speedHandlPlay = 15;
         $scope.currentSize = $scope.textSizes[6];
         $scope.textSize = 90;
         $scope.isPlayDisabled = false;
@@ -205,38 +205,51 @@
             },  $scope.velocity);
         }
 
+        var IsHandPlaying = false;
+        $scope.textAreaposition = textBox.scrollTop();
 
         $scope.handPlayBack = function () {
+            IsHandPlaying = true;
             $scope.isHandPlayDisabled = false;
             $scope.isPlayDisabled = false;
-            broadcastHub.server.handPlayBack();
+            broadcastHub.server.handPlayBack($scope.textAreaposition);
         }
 
-        broadcastHub.client.handPlayBack = function () {
+        broadcastHub.client.handPlayBack = function (textAreaposition) {
             clearInterval(animation);
             animation = setInterval(function () {
                 if (textBox.scrollTop() > 0) {
-                    textBox.scrollTop(textBox.scrollTop() - $scope.speedHandlPlay);
+                    $scope.textAreaposition -= $scope.speedHandlPlay;
+                    textBox.scrollTop($scope.textAreaposition);
                 }
             }, $scope.velocity);
         }
 
         $scope.handPlay = function () {
+            IsHandPlaying = true;
             $scope.isHandPlayDisabled = false;
             $scope.isPlayDisabled = false;
-            broadcastHub.server.handPlay();
+            broadcastHub.server.handPlay($scope.textAreaposition);
         }
 
-        broadcastHub.client.handPlay = function () {
+        broadcastHub.client.handPlay = function (textAreaposition) {
             clearInterval(animation);
             animation = setInterval(function () {
                 if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
-                    textBox.scrollTop(textBox.scrollTop() + $scope.speedHandlPlay);
+                    $scope.textAreaposition += $scope.speedHandlPlay;
+                    textBox.scrollTop($scope.textAreaposition);
                 }
             }, $scope.velocity);
         }
 
+        $scope.puauseIfMouseUp = function () {
+            if (IsHandPlaying == true) {
+                $scope.pause();
+            }
+        }
+
         $scope.pause = function () {
+            IsHandPlaying = false;
             $scope.isHandPlayDisabled = false;
             $scope.isPlayDisabled = false;
             broadcastHub.invoke('pause');
