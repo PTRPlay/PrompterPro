@@ -34,18 +34,22 @@
         var textBox = $('#area');
 
         var animation;
-        var maxSpeed = 10;
-        var minSpeed = 1;
-        var velocity = 40;
+        var startVelocity = 24;
+        var minVelocity = 6;
+        var maxVelocity = 40;
+        var speedStep = 2;
         var textSizeInput = 90;
         var cur = null;
+        var cur2 = null;
         var textSizeStep = 5;
 
         $scope.textIsChanged = false;
         $scope.textSizes = [50, 55, 60, 70, 80, 90, 100, 110, 130];
         $scope.showDialog = false;
-        $scope.speed = 5;
-        $scope.speedHandlPlay = 10;
+        $scope.speed = 2;
+        $scope.velocity = startVelocity;
+        $scope.speedIndicator = 0;
+        $scope.speedHandlPlay = 15;
         $scope.currentSize = $scope.textSizes[6];
         $scope.textSize = 90;
         $scope.isPlayDisabled = false;
@@ -63,7 +67,7 @@
         function setDefaultProps() {
             $scope.isMirroredX = undefined;
             $scope.isMirroredY = undefined;
-            $scope.speed = 5;
+            $scope.speed = 2;
             $scope.leftPadding = 0;
             $scope.rightPadding = 0;
             $scope.textSize = 90;
@@ -85,8 +89,12 @@
         }
 
         $scope.unhook = function (e) {
-            if (cur)
+            if (cur) {
                 cur = null;
+                nx = 0;
+                ny = 0;
+            }
+
         }
 
         $scope.move = function (e) {
@@ -94,16 +102,30 @@
                 return;
             e = e || window.event;
             with (cur) {
-                var nx = e.clientX - x;
-                var ny = e.clientY - y;
-                if (nx < 1140) nx = 1140;
-                if (ny < 400) ny = 400;
-                el.style.width = nx + 'px';
-                el.style.height = ny + 'px';
-                document.getElementById("container").setAttribute("style", "height:" + ny + "px;" + "display:table;");
-                broadcastHub.server.changeScreenResolution(nx, ny);
-                $scope.screenWidth = nx;
-                $scope.screenHeight = ny;
+                if (cur.el.id == "prompterRow") {
+                    var nx = e.clientX - x;
+                    var ny = e.clientY - y;
+                    if (nx < 1140) nx = 1140;
+                    if (ny < 400) ny = 400;
+                    el.style.width = nx + 'px';
+                    el.style.height = ny + 'px';
+                    document.getElementById("container").setAttribute("style", "height:" + ny + "px;" + "display:table;");
+                    broadcastHub.server.changeScreenResolution(nx, ny);
+                    $scope.screenWidth = nx;
+                    $scope.screenHeight = ny;
+                }
+                if (cur.el.id == "container") {
+                    bodyContent = document.getElementsByClassName("container body-content");
+                    menu = document.getElementById("menu");
+                    var nx = e.clientX - bodyContent[0].offsetLeft;
+                    var ny = e.clientY - bodyContent[0].offsetTop - 100;
+                    if (nx > 400) nx = 400;
+                    if (ny > 400) ny = 400;
+                    temp = document.getElementById("main-container");
+                    temp.style.paddingLeft = nx + "px";
+                    temp.style.paddingTop = ny + "px";
+                    broadcastHub.server.moveScreen(nx, ny);
+                }
             }
             (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
         }
@@ -152,6 +174,9 @@
 
         $scope.closePlayer = function () {
             setDefaultProps();
+            temp = document.getElementById("main-container");
+            temp.style.paddingLeft = "0px";
+            temp.style.paddingTop = "0px";
             $scope.broadcastOperator.successEndBroadcast();
         }
 
@@ -177,41 +202,56 @@
                 if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
                     textBox.scrollTop(textBox.scrollTop() + $scope.speed);
                 }
-            }, velocity);
+            },  $scope.velocity);
         }
 
+        var IsHandPlaying = false;
+        $scope.textAreaposition = textBox.scrollTop();
 
         $scope.handPlayBack = function () {
+            $scope.textAreaposition = textBox.scrollTop();
+            IsHandPlaying = true;
             $scope.isHandPlayDisabled = false;
             $scope.isPlayDisabled = false;
-            broadcastHub.server.handPlayBack();
+            broadcastHub.server.handPlayBack($scope.textAreaposition);
         }
 
-        broadcastHub.client.handPlayBack = function () {
+        broadcastHub.client.handPlayBack = function (textAreaposition) {
             clearInterval(animation);
             animation = setInterval(function () {
                 if (textBox.scrollTop() > 0) {
-                    textBox.scrollTop(textBox.scrollTop() - $scope.speedHandlPlay);
+                    $scope.textAreaposition -= $scope.speedHandlPlay;
+                    textBox.scrollTop($scope.textAreaposition);
                 }
-            }, velocity);
+            }, $scope.velocity);
         }
 
         $scope.handPlay = function () {
+            $scope.textAreaposition = textBox.scrollTop();
+            IsHandPlaying = true;
             $scope.isHandPlayDisabled = false;
             $scope.isPlayDisabled = false;
-            broadcastHub.server.handPlay();
+            broadcastHub.server.handPlay($scope.textAreaposition);
         }
 
-        broadcastHub.client.handPlay = function () {
+        broadcastHub.client.handPlay = function (textAreaposition) {
             clearInterval(animation);
             animation = setInterval(function () {
                 if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
-                    textBox.scrollTop(textBox.scrollTop() + $scope.speedHandlPlay);
+                    $scope.textAreaposition += $scope.speedHandlPlay;
+                    textBox.scrollTop($scope.textAreaposition);
                 }
-            }, velocity);
+            }, $scope.velocity);
+        }
+
+        $scope.puauseIfMouseUp = function () {
+            if (IsHandPlaying == true) {
+                $scope.pause();
+            }
         }
 
         $scope.pause = function () {
+            IsHandPlaying = false;
             $scope.isHandPlayDisabled = false;
             $scope.isPlayDisabled = false;
             broadcastHub.invoke('pause');
@@ -231,25 +271,34 @@
             clearInterval(animation);
             textBox.scrollTop(0);
         }
+        var speedBtnClicked = false;
 
         $scope.speedUp = function () {
-            broadcastHub.invoke('speedUp');
+            if ($scope.velocity > minVelocity && !speedBtnClicked) {
+                speedBtnClicked = true;
+                broadcastHub.server.speedUp();
+                $scope.speedIndicator++;
+                setTimeout(function () { speedBtnClicked = false; }, 500);
+            }
         }
 
         broadcastHub.client.speedUp = function () {
-            if ($scope.speed < maxSpeed) {
-                $scope.speed++;
-            }
+            clearInterval(animation);
+            $scope.velocity -= speedStep;
         }
 
         $scope.speedDown = function () {
-            broadcastHub.invoke('speedDown');
+            if ($scope.velocity < maxVelocity && !speedBtnClicked) {
+                speedBtnClicked = true;
+                broadcastHub.server.speedDown();
+                $scope.speedIndicator--;
+                setTimeout(function () { speedBtnClicked = false; }, 500);
+            }
         }
 
         broadcastHub.client.speedDown = function () {
-            if ($scope.speed > minSpeed) {
-                $scope.speed--;
-            }
+            clearInterval(animation);
+            $scope.velocity += speedStep;
         }
 
         $scope.padRight = function (percentage) {
@@ -274,7 +323,8 @@
         }
 
         broadcastHub.client.changeSpeed = function (speed) {
-            $scope.speed = speed;
+            $scope.velocity = speed;
+            $scope.speedIndicator = (startVelocity - $scope.velocity)/2;
         }
 
         $scope.textSizeUp = function () {

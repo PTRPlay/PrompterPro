@@ -20,15 +20,16 @@
 
     	    var textBox = $('#area');
     	    var animation;
-    	    var maxSpeed = 10;
-    	    var minSpeed = 1;
-    	    var velocity = 40;
-	        var resolutionMultiplier = 1;
+    	    var startVelocity = 24;
+    	    var resolutionMultiplier = 1;
+    	    var speedStep = 2;
+
     	    $scope.textIsChanged = false;
     	    $scope.textSizes = [50, 55, 60, 70, 80, 90, 100, 110, 130];
     	    $scope.showDialog = false;
-    	    $scope.speed = 5;
-    	    $scope.speedHandlPlay = 10;
+    	    $scope.speed = 2;
+    	    $scope.velocity = startVelocity;
+    	    $scope.speedHandlPlay = 15;
     	    $scope.currentSize = $scope.textSizes[2];
     	    $scope.textSize = 90;
     	    $scope.leftPadding = 0;
@@ -41,7 +42,7 @@
 		    function setDefaultProps() {
 		        $scope.isMirroredX = undefined;
 		        $scope.isMorroredY = undefined;
-		        $scope.speed = 5;
+		        $scope.speed = 2;
 		        $scope.leftPadding = 0;
 		        $scope.rightPadding = 0;
 		        $scope.textSize = 90;
@@ -103,7 +104,7 @@
 		            if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
 		                textBox.scrollTop(textBox.scrollTop() + $scope.speed);
 		            }
-		        }, velocity);
+		        }, $scope.velocity);
 		    }
 
 		    broadcastHub.client.pause = function () {
@@ -121,7 +122,7 @@
 		    }
 
 		    broadcastHub.client.changeSpeed = function (speed) {
-		        $scope.speed = speed;
+		        $scope.velocity = speed;
 		    }
 
 		    broadcastHub.client.textSizeUp = function () {
@@ -139,15 +140,15 @@
 		    }
 
             broadcastHub.client.speedUp = function() {
-                if ($scope.speed < maxSpeed) {
-                    $scope.speed++;
-                }
+                clearInterval(animation);
+                $scope.velocity -= speedStep;
+                broadcastHub.server.play();
             }
 
             broadcastHub.client.speedDown = function() {
-                if ($scope.speed > minSpeed) {
-                    $scope.speed--;
-                }
+                clearInterval(animation);
+                $scope.velocity += speedStep;
+                broadcastHub.server.play();
             }
 
             broadcastHub.client.mirrorText = function (isMirroredX, isMirroredY) {
@@ -164,23 +165,29 @@
                     textBox.css({ 'transform': 'matrix(1, 0, 0, 1, 0, 0)' });
                 }
             }
+
+            $scope.textAreaposition = textBox.scrollTop();
             
-            broadcastHub.client.handPlayBack = function () {
+            broadcastHub.client.handPlayBack = function (textAreaposition) {
                 clearInterval(animation);
+                $scope.textAreaposition = textAreaposition;
                 animation = setInterval(function () {
                     if (textBox.scrollTop() > 0) {
-                        textBox.scrollTop(textBox.scrollTop() - $scope.speedHandlPlay);
+                        $scope.textAreaposition -= $scope.speedHandlPlay;
+                        textBox.scrollTop($scope.textAreaposition);
                     }
-                }, velocity);
+                }, $scope.velocity);
             }
 
-            broadcastHub.client.handPlay = function () {
+            broadcastHub.client.handPlay = function (textAreaposition) {
                 clearInterval(animation);
+                $scope.textAreaposition = textAreaposition;
                 animation = setInterval(function () {
                     if (textBox.scrollTop() <= textBox.get(0).scrollHeight) {
-                        textBox.scrollTop(textBox.scrollTop() + $scope.speedHandlPlay);
+                        $scope.textAreaposition += $scope.speedHandlPlay;
+                        textBox.scrollTop($scope.textAreaposition);
                     }
-                }, velocity);
+                }, $scope.velocity);
             }
 
             broadcastHub.client.clearText = function () {
@@ -201,6 +208,16 @@
                 document.getElementById("prompterRow").setAttribute("style", "height:" + screenHeight + "px; " + "width:" + screenWidth + "px");
                 document.getElementById("container").setAttribute("style", "display:table");
             }
+
+            broadcastHub.client.moveScreen = function (paddingLeft, paddingTop) {
+                var moveTo = document.getElementsByClassName("container-full");
+                moveTo[0].style.paddingLeft = paddingLeft + "px";
+                paddingTop += 100;
+                if (paddingTop < 100) paddingTop = 100;
+                moveTo[0].style.paddingTop = paddingTop + "px";
+            }
+
+
 
             broadcastHub.client.padLeft = function(percentage) {
                 $scope.leftPadding = percentage;

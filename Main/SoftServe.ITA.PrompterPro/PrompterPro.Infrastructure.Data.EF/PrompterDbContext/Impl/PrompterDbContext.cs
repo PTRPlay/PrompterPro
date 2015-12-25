@@ -14,6 +14,8 @@ namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext.Imp
         public IDbSet<User> Users { get; set; }
         public IDbSet<Reader> Readers { get; set; }
         public IDbSet<Preference> Preferences { get; set; }
+        public IDbSet<Diagnostics> Diagnostics { get; set; }
+        public IDbSet<UserActivity> UserActivities { get; set; } 
 
         public PrompterDbContext()
             : base()
@@ -31,8 +33,10 @@ namespace SoftServe.ITA.PrompterPro.Infrastructure.Data.EF.PrompterDbContext.Imp
                 modelBuilder.Configurations.Add(new ScriptMapping());
                 modelBuilder.Configurations.Add(new SectionMapping());
                 modelBuilder.Configurations.Add(new UserMapping());
-                modelBuilder.Configurations.Add (new ReaderMapping());
+                modelBuilder.Configurations.Add(new ReaderMapping());
                 modelBuilder.Configurations.Add(new PreferenceMapping());
+                modelBuilder.Configurations.Add(new DiagnosticsMapping());
+                modelBuilder.Configurations.Add(new UserActivityMapping());
             }
 
             base.OnModelCreating(modelBuilder);
