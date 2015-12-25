@@ -278,7 +278,7 @@
                 speedBtnClicked = true;
                 broadcastHub.server.speedUp();
                 $scope.speedIndicator++;
-                setTimeout(function () { speedBtnClicked = false; }, 500);
+                setTimeout(function () { speedBtnClicked = false; }, 300);
             }
         }
 
@@ -292,7 +292,7 @@
                 speedBtnClicked = true;
                 broadcastHub.server.speedDown();
                 $scope.speedIndicator--;
-                setTimeout(function () { speedBtnClicked = false; }, 500);
+                setTimeout(function () { speedBtnClicked = false; }, 300);
             }
         }
 
