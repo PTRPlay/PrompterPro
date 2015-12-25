@@ -45,7 +45,7 @@
                 //for adding text into operator screen :)
                 var sections = $scope.sortedScripts[$scope.index].Sections;
                 var area = $('#area')
-                if (area.length == 0) {
+                if (area.children.length > 0) {
                     area.empty();
                 }
                 _.each(sections, function (section) {
