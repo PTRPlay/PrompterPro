@@ -209,6 +209,7 @@
         $scope.textAreaposition = textBox.scrollTop();
 
         $scope.handPlayBack = function () {
+            $scope.textAreaposition = textBox.scrollTop();
             IsHandPlaying = true;
             $scope.isHandPlayDisabled = false;
             $scope.isPlayDisabled = false;
@@ -226,6 +227,7 @@
         }
 
         $scope.handPlay = function () {
+            $scope.textAreaposition = textBox.scrollTop();
             IsHandPlaying = true;
             $scope.isHandPlayDisabled = false;
             $scope.isPlayDisabled = false;
